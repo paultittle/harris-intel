@@ -113,5 +113,5 @@ The scraper attempts to download parcel data from multiple HCAD bulk data URLs. 
 - Populate `prop_address`, `prop_city`, `prop_zip`
 - Populate `mail_address`, `mail_city`, `mail_state`, `mail_zip`
 
-If HCAD data is unavailable, records are still saved — just without address enrichment.
+If HCAD data is unavailable, records are still saved — just without address enrichment. 
 
