@@ -47,11 +47,11 @@ LOOKBACK_DAYS  = int(os.getenv("LOOKBACK_DAYS", "7"))
 CLERK_RP_URL   = "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx"
 CLERK_FRCL_URL = "https://www.cclerk.hctx.net/Applications/WebSearch/FRCL_R.aspx"
 
-# HCAD bulk data — tab-delimited text files (updated regularly)
-# The 'real_acct_owner' file has: acct, name, addr, site addr, etc.
+# HCAD bulk data — tab-delimited text files
+# Primary confirmed working URL (2025 dataset)
 HCAD_TXT_URLS = [
-    "https://pdata.hcad.org/data/2026/real_acct_owner.zip",
     "https://pdata.hcad.org/data/2025/real_acct_owner.zip",
+    "https://pdata.hcad.org/data/2026/real_acct_owner.zip",
     "https://pdata.hcad.org/data/2024/real_acct_owner.zip",
     "https://pdata.hcad.org/Pdata/real_acct_owner.zip",
 ]
@@ -509,29 +509,57 @@ async def scrape_all(start_date, end_date):
 
 # ── HCAD download ────────────────────────────────────────────────────────────
 
-def download_parcel_db(session):
+HCAD_CACHE_PATH = Path("data/hcad_owner.zip")
+HCAD_CACHE_MAX_AGE_DAYS = 7  # re-download once a week
+
+
+def _cache_is_fresh() -> bool:
+    """Return True if the cached ZIP exists and is less than 7 days old."""
+    if not HCAD_CACHE_PATH.exists():
+        return False
+    age = time.time() - HCAD_CACHE_PATH.stat().st_mtime
+    return age < (HCAD_CACHE_MAX_AGE_DAYS * 86400)
+
+
+def download_parcel_db(session: requests.Session) -> ParcelDB:
     db = ParcelDB()
+
+    # ── Use cached file if fresh ────────────────────────────────────────────
+    if _cache_is_fresh():
+        log.info("Using cached HCAD parcel file (%s)", HCAD_CACHE_PATH)
+        try:
+            db.load_zip(HCAD_CACHE_PATH.read_bytes())
+            if db.loaded:
+                return db
+        except Exception as e:
+            log.warning("Cache load failed: %s — will re-download.", e)
+
+    # ── Download fresh copy ─────────────────────────────────────────────────
     all_urls = HCAD_TXT_URLS + HCAD_DBF_URLS
     for url in all_urls:
-        log.info("HCAD trying: %s", url)
+        log.info("HCAD downloading: %s", url)
         for attempt in range(1, 4):
             try:
-                r = session.get(url, timeout=180, stream=True)
+                r = session.get(url, timeout=300, stream=True)
                 if r.status_code == 200:
-                    log.info("  Downloading parcel data (%s)…", url.split("/")[-1])
+                    log.info("  Download complete — saving to cache…")
+                    HCAD_CACHE_PATH.parent.mkdir(parents=True, exist_ok=True)
+                    HCAD_CACHE_PATH.write_bytes(r.content)
                     db.load_zip(r.content)
                     if db.loaded:
+                        log.info("  Parcel DB ready. Cache saved → %s", HCAD_CACHE_PATH)
                         return db
                     break
                 elif r.status_code == 404:
-                    log.warning("  404 for %s", url)
+                    log.warning("  404: %s", url)
                     break
                 else:
-                    log.warning("  HTTP %d", r.status_code)
+                    log.warning("  HTTP %d for %s", r.status_code, url)
                     break
             except Exception as e:
-                log.warning("  Attempt %d: %s", attempt, e)
+                log.warning("  Attempt %d failed: %s", attempt, e)
                 time.sleep(2 ** attempt)
+
     log.warning("No parcel data available — records saved without addresses.")
     return db
 
