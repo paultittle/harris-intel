@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<!-- Meta Data -->
+<title>PDATA - Harris Central Appraisal District</title>
+<link rel="canonical" href="https://hcad.org/hcad-online-services/pdata/" />
+<meta name="description" content="Harris Central Appraisal District">
+<meta name="keywords" content="HCAD, Harris Central Appraisal, Harris central appraisal district, Harris Central Appraisal, Harris central appraisal district, Harris Cad, hcad exemptions, hcad renditions, hcad owners, hcad ifile, hcad pdata, hcad agents">
+ 
+<!-- Facebook OG -->
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="HCAD" />
+<meta property="og:url" content="https://hcad.org/hcad-online-services/pdata/"/>
+<meta property="og:title" content="Harris Central Appraisal District" />
+<meta property="og:description" content="Harris Central Appraisal District"/>
+
+<!-- Viewport params (for iOS) -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+
+<!-- CSS Styles -->
+<!--<link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"/>
+<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"/>
+<link rel="stylesheet" type="text/css" href="/assets/bower_components/DataTables/media/css/jquery.dataTables.min.css"/>
+<link rel="stylesheet" href="/assets/css/master.css">
+<script src="/assets/js/master.min.js" type="text/javascript" charset="utf-8"></script>-->
+
+<script src="/assets/js/modernizr-custom.min.js"></script>
+<link href="https://hcad.org/cpresources/bc06c8a5/selectize.css?v=1774533224" rel="stylesheet">
+<link href="https://hcad.org/cpresources/9104be2f/css/craft.css?v=1774533224" rel="stylesheet">
+<link href="https://hcad.org/cpresources/9104be2f/css/charts.css?v=1774533224" rel="stylesheet">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link href="/assets/bower_components/jQuery.mmenu/dist/css/jquery.mmenu.all.css?v=1639714144" rel="stylesheet">
+<link href="/assets/bower_components/DataTables/media/css/jquery.dataTables.min.css?v=1639714144" rel="stylesheet">
+<link href="/assets/css/master.css?v=1709824648" rel="stylesheet">
+<link href="/assets/css/hcad.css?v=1746111521" rel="stylesheet">
+<link href="https://hcad.org/cpresources/77d82c52/css/HCADModule.css?v=1774533223" rel="stylesheet">
+<link href="https://hcad.org/cpresources/492c02e3/css/slider.css?v=1774533224" rel="stylesheet">
+<link href="https://hcad.org/cpresources/4452603b/css/HcadMessages.css?v=1774533224" rel="stylesheet">
+<script>window.Craft = {"actionTrigger":"actions","actionUrl":"https:\/\/hcad.org\/index.php?p=actions\/","allowAdminChanges":true,"allowUpdates":true,"allowUppercaseInSlug":false,"announcements":[],"apiParams":null,"asciiCharMap":{"Á":"A","á":"a","Ä":"A","ä":"a","À":"A","à":"a","Â":"A","â":"a","É":"E","é":"e","Ë":"E","ë":"e","È":"E","è":"e","Ê":"E","ê":"e","Í":"I","í":"i","Ï":"I","ï":"i","Ì":"I","ì":"i","Î":"I","î":"i","Ó":"O","ó":"o","Ö":"O","ö":"o","Ò":"O","ò":"o","Ô":"O","ô":"o","Ú":"U","ú":"u","Ü":"U","ü":"u","Ù":"U","ù":"u","Û":"U","û":"u","Ý":"Y","ý":"y","Ÿ":"Y","А":"A","Б":"B","В":"V","Г":"G","Д":"D","Ѓ":"Gj","Е":"E","Ж":"Z","З":"Z","Ѕ":"Dz","И":"I","Ј":"j","К":"K","Л":"L","Љ":"Lj","М":"M","Н":"N","Њ":"Nj","О":"O","П":"P","Р":"R","С":"S","Т":"T","Ќ":"Kj","У":"U","Ф":"F","Х":"X","Ц":"C","Ч":"C","Џ":"Dz","Ш":"S","а":"a","б":"b","в":"v","г":"g","д":"d","ѓ":"gj","е":"e","ж":"z","з":"z","ѕ":"dz","и":"i","ј":"j","к":"k","л":"l","љ":"lj","м":"m","н":"n","њ":"nj","о":"o","п":"p","р":"r","с":"s","т":"t","ќ":"kj","у":"u","ф":"f","х":"x","ц":"c","ч":"c","џ":"dz","ш":"s","æ":"ae","ǽ":"ae","Ã":"A","Å":"A","Ǻ":"A","Ă":"A","Ǎ":"A","Æ":"AE","Ǽ":"AE","ã":"a","å":"a","ǻ":"a","ă":"a","ǎ":"a","ª":"a","Ĉ":"C","Ċ":"C","Ç":"C","ç":"c","ĉ":"c","ċ":"c","Ð":"D","Đ":"D","ð":"d","đ":"d","Ĕ":"E","Ė":"E","ĕ":"e","ė":"e","ƒ":"f","Ĝ":"G","Ġ":"G","ĝ":"g","ġ":"g","Ĥ":"H","Ħ":"H","ĥ":"h","ħ":"h","Ĩ":"I","Ĭ":"I","Ǐ":"I","Į":"I","Ĳ":"IJ","ĩ":"i","ĭ":"i","ǐ":"i","į":"i","ĳ":"ij","Ĵ":"J","ĵ":"j","Ĺ":"L","Ľ":"L","Ŀ":"L","ĺ":"l","ľ":"l","ŀ":"l","Ñ":"N","ñ":"n","ŉ":"n","Õ":"O","Ō":"O","Ŏ":"O","Ǒ":"O","Ő":"O","Ơ":"O","Ø":"O","Ǿ":"O","Œ":"OE","õ":"o","ō":"o","ŏ":"o","ǒ":"o","ő":"o","ơ":"o","ø":"o","ǿ":"o","º":"o","œ":"oe","Ŕ":"R","Ŗ":"R","ŕ":"r","ŗ":"r","Ŝ":"S","Ș":"S","ŝ":"s","ș":"s","ſ":"s","Ţ":"T","Ț":"T","Ŧ":"T","Þ":"TH","ţ":"t","ț":"t","ŧ":"t","þ":"th","Ũ":"U","Ŭ":"U","Ű":"U","Ų":"U","Ư":"U","Ǔ":"U","Ǖ":"U","Ǘ":"U","Ǚ":"U","Ǜ":"U","ũ":"u","ŭ":"u","ű":"u","ų":"u","ư":"u","ǔ":"u","ǖ":"u","ǘ":"u","ǚ":"u","ǜ":"u","Ŵ":"W","ŵ":"w","Ŷ":"Y","ÿ":"y","ŷ":"y","ΑΥ":"AU","ΑΎ":"AU","Αυ":"Au","Αύ":"Au","ΕΊ":"I","ΕΙ":"I","Ει":"Ei","ΕΥ":"EF","ΕΎ":"EU","Εί":"I","Ευ":"Ef","Εύ":"Eu","ΟΙ":"I","ΟΊ":"I","ΟΥ":"U","ΟΎ":"OU","Οι":"Oi","Οί":"I","Ου":"Oy","Ού":"Ou","ΥΙ":"I","ΎΙ":"I","Υι":"Yi","Ύι":"I","ΥΊ":"I","Υί":"I","αυ":"au","αύ":"au","εί":"i","ει":"ei","ευ":"ef","εύ":"eu","οι":"oi","οί":"i","ου":"oy","ού":"ou","υι":"yi","ύι":"i","υί":"i","Α":"A","Ά":"A","Β":"B","Δ":"D","Ε":"E","Έ":"E","Φ":"F","Γ":"G","Η":"H","Ή":"I","Ι":"I","Ί":"I","Ϊ":"I","Κ":"K","Ξ":"Ks","Λ":"L","Μ":"M","Ν":"N","Π":"P","Ο":"O","Ό":"O","Ψ":"Ps","Ρ":"R","Σ":"S","Τ":"T","Θ":"Th","Ω":"O","Ώ":"W","Χ":"X","ϒ":"Y","Υ":"Y","Ύ":"Y","Ϋ":"Y","Ζ":"Z","α":"a","ά":"a","β":"v","δ":"d","ε":"e","έ":"e","φ":"f","γ":"gh","η":"i","ή":"i","ι":"i","ί":"i","ϊ":"i","ΐ":"i","κ":"k","ξ":"ks","λ":"l","μ":"m","ν":"n","ο":"o","ό":"o","π":"p","ψ":"ps","ρ":"r","σ":"s","ς":"s","τ":"t","ϑ":"th","θ":"th","ϐ":"v","ω":"o","ώ":"w","χ":"kh","υ":"i","ύ":"y","ΰ":"y","ϋ":"y","ζ":"z","अ":"a","आ":"aa","ए":"e","ई":"ii","ऍ":"ei","ऎ":"ae","ऐ":"ai","इ":"i","ओ":"o","ऑ":"oi","ऒ":"oii","ऊ":"uu","औ":"ou","उ":"u","ब":"B","भ":"Bha","च":"Ca","छ":"Chha","ड":"Da","ढ":"Dha","फ":"Fa","फ़":"Fi","ग":"Ga","घ":"Gha","ग़":"Ghi","ह":"Ha","ज":"Ja","झ":"Jha","क":"Ka","ख":"Kha","ख़":"Khi","ल":"L","ळ":"Li","ऌ":"Li","ऴ":"Lii","ॡ":"Lii","म":"Ma","न":"Na","ङ":"Na","ञ":"Nia","ण":"Nae","ऩ":"Ni","ॐ":"oms","प":"Pa","क़":"Qi","र":"Ra","ऋ":"Ri","ॠ":"Ri","ऱ":"Ri","स":"Sa","श":"Sha","ष":"Shha","ट":"Ta","त":"Ta","ठ":"Tha","द":"Tha","थ":"Tha","ध":"Thha","ड़":"ugDha","ढ़":"ugDhha","व":"Va","य":"Ya","य़":"Yi","ज़":"Za","Ա":"A","Բ":"B","Գ":"G","Դ":"D","Ե":"E","Զ":"Z","Է":"E","Ը":"Y","Թ":"Th","Ժ":"Zh","Ի":"I","Լ":"L","Խ":"Kh","Ծ":"Ts","Կ":"K","Հ":"H","Ձ":"Dz","Ղ":"Gh","Ճ":"Tch","Մ":"M","Յ":"Y","Ն":"N","Շ":"Sh","Ո":"Vo","Չ":"Ch","Պ":"P","Ջ":"J","Ռ":"R","Ս":"S","Վ":"V","Տ":"T","Ր":"R","Ց":"C","Ւ":"u","Փ":"Ph","Ք":"Q","և":"ev","Օ":"O","Ֆ":"F","ա":"a","բ":"b","գ":"g","դ":"d","ե":"e","զ":"z","է":"e","ը":"y","թ":"th","ժ":"zh","ի":"i","լ":"l","խ":"kh","ծ":"ts","կ":"k","հ":"h","ձ":"dz","ղ":"gh","ճ":"tch","մ":"m","յ":"y","ն":"n","շ":"sh","ո":"vo","չ":"ch","պ":"p","ջ":"j","ռ":"r","ս":"s","վ":"v","տ":"t","ր":"r","ց":"c","ւ":"u","փ":"ph","ք":"q","օ":"o","ֆ":"f","Ž":"Z","Ň":"N","Ş":"S","ž":"z","ň":"n","ş":"s","ı":"i","İ":"I","ğ":"g","Ğ":"G","ьо":"yo","Й":"i","Щ":"Shh","Ъ":"","Ь":"","Ю":"Yu","Я":"Ya","й":"i","щ":"shh","ъ":"","ь":"","ю":"yu","я":"ya","Ē":"E","ē":"e","န်ုပ်":"nub","ောင်":"aung","ိုက်":"aik","ိုဒ်":"ok","ိုင်":"aing","ိုလ်":"ol","ေါင်":"aung","သြော":"aw","ောက်":"auk","ိတ်":"eik","ုတ်":"ok","ုန်":"on","ေတ်":"it","ုဒ်":"ait","ာန်":"an","ိန်":"ein","ွတ်":"ut","ေါ်":"aw","ွန်":"un","ိပ်":"eik","ုပ်":"ok","ွပ်":"ut","ိမ်":"ein","ုမ်":"on","ော်":"aw","ွမ်":"un","က်":"et","ေါ":"aw","ော":"aw","ျွ":"ywa","ြွ":"yw","ို":"o","ုံ":"on","တ်":"at","င်":"in","ည်":"i","ဒ်":"d","န်":"an","ပ်":"at","မ်":"an","စျ":"za","ယ်":"e","ဉ်":"in","စ်":"it","ိံ":"ein","ဲ":"e","း":"","ာ":"a","ါ":"a","ေ":"e","ံ":"an","ိ":"i","ီ":"i","ု":"u","ူ":"u","်":"at","္":"","့":"","က":"k","၉":"9","တ":"t","ရ":"ya","ယ":"y","မ":"m","ဘ":"ba","ဗ":"b","ဖ":"pa","ပ":"p","န":"n","ဓ":"da","ဒ":"d","ထ":"ta","ဏ":"na","ဝ":"w","ဎ":"da","ဍ":"d","ဌ":"ta","ဋ":"t","ည":"ny","ဇ":"z","ဆ":"sa","စ":"s","င":"ng","ဃ":"ga","ဂ":"g","လ":"l","သ":"th","၈":"8","ဩ":"aw","ခ":"kh","၆":"6","၅":"5","၄":"4","၃":"3","၂":"2","၁":"1","၀":"0","၌":"hnaik","၍":"ywae","ဪ":"aw","ဦ":"-u","ဟ":"h","ဉ":"u","ဤ":"-i","ဣ":"i","၏":"-e","ဧ":"e","ှ":"h","ွ":"w","ျ":"ya","ြ":"y","အ":"a","ဠ":"la","၇":"7","DŽ":"DZ","Dž":"Dz","dž":"dz","Ǳ":"DZ","ǲ":"Dz","ǳ":"dz","Ǉ":"LJ","ǈ":"Lj","ǉ":"lj","Ǌ":"NJ","ǋ":"Nj","ǌ":"nj","č":"c","Č":"C","ć":"c","Ć":"C","š":"s","Š":"S","ა":"a","ბ":"b","გ":"g","დ":"d","ე":"e","ვ":"v","ზ":"z","თ":"t","ი":"i","კ":"k","ლ":"l","მ":"m","ნ":"n","ო":"o","პ":"p","ჟ":"zh","რ":"r","ს":"s","ტ":"t","უ":"u","ფ":"f","ქ":"q","ღ":"gh","ყ":"y","შ":"sh","ჩ":"ch","ც":"ts","ძ":"dz","წ":"ts","ჭ":"ch","ხ":"kh","ჯ":"j","ჰ":"h","Ё":"Yo","ё":"yo","Ы":"Y'","ы":"y'","Э":"E'","э":"e'","І":"I","і":"i","Ѳ":"F","ѳ":"f","Ѣ":"E","ѣ":"e","Ѵ":"I","ѵ":"i","Є":"Je","є":"je","Ѥ":"Je","ѥ":"je","Ꙋ":"U","ꙋ":"u","Ѡ":"O","ѡ":"o","Ѿ":"Ot","ѿ":"ot","Ѫ":"U","ѫ":"u","Ѧ":"Ja","ѧ":"ja","Ѭ":"Ju","ѭ":"ju","Ѩ":"Ja","ѩ":"Ja","Ѯ":"Ks","ѯ":"ks","Ѱ":"Ps","ѱ":"ps","Ї":"Yi","ї":"yi","Ґ":"G","ґ":"g","Ә":"A","Ғ":"G","Қ":"Q","Ң":"N","Ө":"O","Ұ":"U","Ү":"U","Һ":"H","ә":"a","ғ":"g","қ":"q","ң":"n","ө":"o","ұ":"u","ү":"u","һ":"h","ď":"d","Ď":"D","ě":"e","Ě":"E","ř":"r","Ř":"R","ť":"t","Ť":"T","ů":"u","Ů":"U","ą":"a","ę":"e","ł":"l","ń":"n","ś":"s","ź":"z","ż":"z","Ą":"A","Ę":"E","Ł":"L","Ń":"N","Ś":"S","Ź":"Z","Ż":"Z","ā":"a","ģ":"g","ī":"i","ķ":"k","ļ":"l","ņ":"n","ū":"u","Ā":"A","Ģ":"G","Ī":"I","Ķ":"k","Ļ":"L","Ņ":"N","Ū":"U","Ả":"A","Ạ":"A","Ắ":"A","Ằ":"A","Ẳ":"A","Ẵ":"A","Ặ":"A","Ấ":"A","Ầ":"A","Ẩ":"A","Ẫ":"A","Ậ":"A","ả":"a","ạ":"a","ắ":"a","ằ":"a","ẳ":"a","ẵ":"a","ặ":"a","ấ":"a","ầ":"a","ẩ":"a","ẫ":"a","ậ":"a","Ẻ":"E","Ẽ":"E","Ẹ":"E","Ế":"E","Ề":"E","Ể":"E","Ễ":"E","Ệ":"E","ẻ":"e","ẽ":"e","ẹ":"e","ế":"e","ề":"e","ể":"e","ễ":"e","ệ":"e","Ỉ":"I","Ị":"I","ỉ":"i","ị":"i","Ỏ":"O","Ọ":"O","Ố":"O","Ồ":"O","Ổ":"O","Ỗ":"O","Ộ":"O","Ớ":"O","Ờ":"O","Ở":"O","Ỡ":"O","Ợ":"O","ỏ":"o","ọ":"o","ố":"o","ồ":"o","ổ":"o","ỗ":"o","ộ":"o","ớ":"o","ờ":"o","ở":"o","ỡ":"o","ợ":"o","Ủ":"U","Ụ":"U","Ứ":"U","Ừ":"U","Ử":"U","Ữ":"U","Ự":"U","ủ":"u","ụ":"u","ứ":"u","ừ":"u","ử":"u","ữ":"u","ự":"u","Ỳ":"Y","Ỷ":"Y","Ỹ":"Y","Ỵ":"Y","ỳ":"y","ỷ":"y","ỹ":"y","ỵ":"y","ا":"a","ب":"b","پ":"b","ت":"t","ث":"th","ج":"g","چ":"ch","ح":"h","خ":"kh","د":"d","ذ":"th","ر":"r","ز":"z","س":"s","ش":"sh","ص":"s","ض":"d","ط":"t","ظ":"th","ع":"aa","غ":"gh","ف":"f","ق":"k","ک":"k","گ":"g","ل":"l","ژ":"zh","ك":"k","م":"m","ن":"n","ه":"h","و":"o","ی":"y","آ":"a","٠":"0","١":"1","٢":"2","٣":"3","٤":"4","٥":"5","٦":"6","٧":"7","٨":"8","٩":"9","أ":"a","ي":"y","إ":"a","ؤ":"o","ئ":"y","ء":"aa","ђ":"dj","ћ":"c","Ђ":"Dj","Ћ":"C","ə":"e","Ə":"E","ß":"ss","ẞ":"SS","ভ্ল":"vl","পশ":"psh","ব্ধ":"bdh","ব্জ":"bj","ব্দ":"bd","ব্ব":"bb","ব্ল":"bl","ভ":"v","ব":"b","চ্ঞ":"cNG","চ্ছ":"cch","চ্চ":"cc","ছ":"ch","চ":"c","ধ্ন":"dhn","ধ্ম":"dhm","দ্ঘ":"dgh","দ্ধ":"ddh","দ্ভ":"dv","দ্ম":"dm","ড্ড":"DD","ঢ":"Dh","ধ":"dh","দ্গ":"dg","দ্দ":"dd","ড":"D","দ":"d","।":".","ঘ্ন":"Ghn","গ্ধ":"Gdh","গ্ণ":"GN","গ্ন":"Gn","গ্ম":"Gm","গ্ল":"Gl","জ্ঞ":"jNG","ঘ":"Gh","গ":"g","হ্ণ":"hN","হ্ন":"hn","হ্ম":"hm","হ্ল":"hl","হ":"h","জ্ঝ":"jjh","ঝ":"jh","জ্জ":"jj","জ":"j","ক্ষ্ণ":"kxN","ক্ষ্ম":"kxm","ক্ষ":"ksh","কশ":"ksh","ক্ক":"kk","ক্ট":"kT","ক্ত":"kt","ক্ল":"kl","ক্স":"ks","খ":"kh","ক":"k","ল্ভ":"lv","ল্ধ":"ldh","লখ":"lkh","লঘ":"lgh","লফ":"lph","ল্ক":"lk","ল্গ":"lg","ল্ট":"lT","ল্ড":"lD","ল্প":"lp","ল্ম":"lm","ল্ল":"ll","ল্ব":"lb","ল":"l","ম্থ":"mth","ম্ফ":"mf","ম্ভ":"mv","মপ্ল":"mpl","ম্ন":"mn","ম্প":"mp","ম্ম":"mm","ম্ল":"ml","ম্ব":"mb","ম":"m","০":"0","১":"1","২":"2","৩":"3","৪":"4","৫":"5","৬":"6","৭":"7","৮":"8","৯":"9","ঙ্ক্ষ":"Ngkx","ঞ্ছ":"nch","ঙ্ঘ":"ngh","ঙ্খ":"nkh","ঞ্ঝ":"njh","ঙ্গৌ":"ngOU","ঙ্গৈ":"ngOI","ঞ্চ":"nc","ঙ্ক":"nk","ঙ্ষ":"Ngx","ঙ্গ":"ngo","ঙ্ম":"Ngm","ঞ্জ":"nj","ন্ধ":"ndh","ন্ঠ":"nTh","ণ্ঠ":"NTh","ন্থ":"nth","ঙ্গা":"nga","ঙ্গি":"ngi","ঙ্গী":"ngI","ঙ্গু":"ngu","ঙ্গূ":"ngU","ঙ্গে":"nge","ঙ্গো":"ngO","ণ্ঢ":"NDh","নশ":"nsh","ঙর":"Ngr","ঞর":"NGr","ংর":"ngr","ঙ":"Ng","ঞ":"NG","ং":"ng","ন্ন":"nn","ণ্ণ":"NN","ণ্ন":"Nn","ন্ম":"nm","ণ্ম":"Nm","ন্দ":"nd","ন্ট":"nT","ণ্ট":"NT","ন্ড":"nD","ণ্ড":"ND","ন্ত":"nt","ন্স":"ns","ন":"n","ণ":"N","ৈ":"OI","ৌ":"OU","ো":"O","ঐ":"OI","ঔ":"OU","অ":"o","ও":"oo","ফ্ল":"fl","প্ট":"pT","প্ত":"pt","প্ন":"pn","প্প":"pp","প্ল":"pl","প্স":"ps","ফ":"f","প":"p","ৃ":"rri","ঋ":"rri","রর‍্য":"rry","্র্য":"ry","্রর":"rr","ড়্গ":"Rg","ঢ়":"Rh","ড়":"R","র":"r","্র":"r","শ্ছ":"Sch","ষ্ঠ":"ShTh","ষ্ফ":"Shf","স্ক্ল":"skl","স্খ":"skh","স্থ":"sth","স্ফ":"sf","শ্চ":"Sc","শ্ত":"St","শ্ন":"Sn","শ্ম":"Sm","শ্ল":"Sl","ষ্ক":"Shk","ষ্ট":"ShT","ষ্ণ":"ShN","ষ্প":"Shp","ষ্ম":"Shm","স্প্ল":"spl","স্ক":"sk","স্ট":"sT","স্ত":"st","স্ন":"sn","স্প":"sp","স্ম":"sm","স্ল":"sl","শ":"S","ষ":"Sh","স":"s","ু":"u","উ":"u","অ্য":"oZ","ত্থ":"tth","ৎ":"tt","ট্ট":"TT","ট্ম":"Tm","ঠ":"Th","ত্ন":"tn","ত্ম":"tm","থ":"th","ত্ত":"tt","ট":"T","ত":"t","অ্যা":"AZ","া":"a","আ":"a","য়া":"ya","য়":"y","ি":"i","ই":"i","ী":"ee","ঈ":"ee","ূ":"uu","ঊ":"uu","ে":"e","এ":"e","য":"z","্য":"Z","ইয়":"y","ওয়":"w","্ব":"w","এক্স":"x","ঃ":":","ঁ":"nn","্‌":"","˚":"0","¹":"1","²":"2","³":"3","⁴":"4","⁵":"5","⁶":"6","⁷":"7","⁸":"8","⁹":"9","₀":"0","₁":"1","₂":"2","₃":"3","₄":"4","₅":"5","₆":"6","₇":"7","₈":"8","₉":"9","௦":"0","௧":"1","௨":"2","௩":"3","௪":"4","௫":"5","௬":"6","௭":"7","௮":"8","௯":"9","௰":"10","௱":"100","௲":"1000","Ꜳ":"AA","ꜳ":"aa","Ꜵ":"AO","ꜵ":"ao","Ꜷ":"AU","ꜷ":"au","Ꜹ":"AV","ꜹ":"av","Ꜻ":"av","ꜻ":"av","Ꜽ":"AY","ꜽ":"ay","ȸ":"db","ʣ":"dz","ʥ":"dz","ʤ":"dezh","🙰":"et","ﬀ":"ff","ﬃ":"ffi","ﬄ":"ffl","ﬁ":"fi","ﬂ":"fl","ʩ":"feng","ʪ":"ls","ʫ":"lz","ɮ":"lezh","ȹ":"qp","ʨ":"tc","ʦ":"ts","ʧ":"tesh","Ꝏ":"OO","ꝏ":"oo","ﬆ":"st","ﬅ":"st","Ꜩ":"TZ","ꜩ":"tz","ᵫ":"ue","Aι":"Ai","αι":"ai","ἀ":"a","ἁ":"a","ἂ":"a","ἃ":"a","ἄ":"a","ἅ":"a","ἆ":"a","ἇ":"a","Ἀ":"A","Ἁ":"A","Ἂ":"A","Ἃ":"A","Ἄ":"A","Ἅ":"A","Ἆ":"A","Ἇ":"A","ᾰ":"a","ᾱ":"a","ᾲ":"a","ᾳ":"a","ᾴ":"a","ᾶ":"a","ᾷ":"a","Ᾰ":"A","Ᾱ":"A","Ὰ":"A","Ά":"A","ᾼ":"A","A̧":"A","a̧":"a","Ⱥ":"A","ⱥ":"a","Ȧ":"A","ȧ":"a","Ɓ":"B","C̈":"C","c̈":"c","C̨":"C","c̨":"c","Ȼ":"C","ȼ":"c","C̀":"C","c̀":"c","C̣":"C","c̣":"c","C̄":"C","c̄":"c","C̃":"C","c̃":"c","Ȩ":"E","ȩ":"e","Ɇ":"E","ɇ":"e","I̧":"I","i̧":"i","Ɨ":"I","ɨ":"i","i":"i","J́́":"J","j́":"j","J̀̀":"J","j̀":"j","J̈":"J","j̈":"j","J̧":"J","j̧":"j","J̨":"J","j̨":"j","Ɉ":"J","ɉ":"j","J̌":"J","ǰ":"j","J̇":"J","j":"j","J̣":"J","j̣":"j","J̄":"J","j̄":"j","J̃":"J","j̃":"j","ĸ":"k","L̀":"L","l̀":"l","L̂":"L","l̂":"l","L̈":"L","l̈":"l","L̨":"L","l̨":"l","Ƚ":"L","ƚ":"l","L̇":"L","l̇":"l","Ḷ":"L","ḷ":"l","L̄":"L","l̄":"l","L̃":"L","l̃":"l","Ŋ":"N","ŋ":"n","Ǹ":"N","ǹ":"n","N̂":"N","n̂":"n","N̈":"N","n̈":"n","N̨":"N","n̨":"n","Ꞥ":"N","ꞥ":"n","Ṅ":"N","ṅ":"n","Ṇ":"N","ṇ":"n","N̄":"N","n̄":"n","O̧":"O","o̧":"o","Ǫ":"O","ǫ":"o","Ɵ":"O","ɵ":"o","Ȯ":"O","ȯ":"o","S̀":"S","s̀":"s","Ŝ̀":"S","S̈":"S","s̈":"s","S̨":"S","s̨":"s","Ꞩ":"S","ꞩ":"s","Ṡ":"S","ṡ":"s","Ṣ":"S","ṣ":"s","S̄":"S","s̄":"s","S̃":"S","s̃":"s","T́":"T","t́":"t","T̀":"T","t̀":"t","T̂":"T","t̂":"t","T̈":"T","ẗ":"t","T̨":"T","t̨":"t","Ⱦ":"T","ⱦ":"t","Ṫ":"T","ṫ":"t","Ṭ":"T","ṭ":"t","T̄":"T","t̄":"t","T̃":"T","t̃":"t","U̧":"U","u̧":"u","Ʉ":"U","ʉ":"u","U̇":"U","u̇":"u","Ʊ":"U","ʊ":"u","Ẁ":"W","ẁ":"w","Ẃ":"W","ẃ":"w","Ẅ":"W","ẅ":"w","Ꙗ":"Ja","ꙗ":"ja","Y̧":"Y","y̧":"y","Y̨":"Y","y̨":"y","Ɏ":"Y","ɏ":"y","Y̌":"Y","y̌":"y","Ẏ":"Y","ẏ":"y","Ȳ":"Y","ȳ":"y","Z̀":"Z","z̀":"z","Ẑ":"Z","ẑ":"z","Z̈":"Z","z̈":"z","Z̧":"Z","z̧":"z","Z̨":"Z","z̨":"z","Ƶ":"Z","ƶ":"z","Ẓ":"Z","ẓ":"z","Z̄":"Z","z̄":"z","Z̃":"Z","z̃":"z"," ":" "," ":" "," ":" "," ":" "," ":" "," ":" "," ":" "," ":" "," ":" "," ":" "," ":" "," ":" "," ":" ","\u2028":" ","\u2029":" ","​":" "," ":" "," ":" ","　":" ","ﾠ":" ","«":"<<","»":">>","‘":"'","’":"'","‚":"'","‛":"'","“":"\"","”":"\"","„":"\"","‟":"\"","‹":"'","›":"'","–":"-","—":"-","…":"...","€":"EUR","$":"$","₢":"Cr","₣":"Fr.","£":"PS","₤":"L.","ℳ":"M","₥":"mil","₦":"N","₧":"Pts","₨":"Rs","රු":"LKR","ரூ":"LKR","௹":"Rs","रू":"NPR","₹":"Rs","૱":"Rs","₩":"W","₪":"NS","₸":"KZT","₫":"D","֏":"AMD","₭":"K","₺":"TL","₼":"AZN","₮":"T","₯":"Dr","₲":"PYG","₾":"GEL","₳":"ARA","₴":"UAH","₽":"RUB","₵":"GHS","₡":"CL","¢":"c","¥":"YEN","円":"JPY","৳":"BDT","元":"CNY","﷼":"SAR","៛":"KR","₠":"ECU","¤":"$?","฿":"THB","؋":"AFN"},"autosaveDrafts":true,"baseApiUrl":"https:\/\/api.craftcms.com\/v1\/","baseCpUrl":"https:\/\/hcad.org\/admin","baseSiteUrl":"https:\/\/hcad.org\/","baseUrl":"https:\/\/hcad.org\/","canAccessQueueManager":false,"clientOs":"Windows","cpTrigger":"admin","datepickerOptions":{"constrainInput":false,"dateFormat":"m\/d\/yy","dayNames":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"dayNamesMin":["S","M","T","W","T","F","S"],"dayNamesShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"firstDay":1,"monthNames":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesShort":["J","F","M","A","M","J","J","A","S","O","N","D"],"nextText":"Next","prevText":"Prev"},"defaultCookieOptions":{"path":"\/","domain":"","secure":true,"sameSite":"strict"},"defaultIndexCriteria":[],"deltaNames":[],"editableCategoryGroups":[],"edition":1,"elementTypeNames":{"craft\\elements\\Asset":["Asset","Assets","asset","assets"],"craft\\elements\\Category":["Category","Categories","category","categories"],"craft\\elements\\Entry":["Entry","Entries","entry","entries"],"craft\\elements\\GlobalSet":["Global Set","Global Sets","global set","global sets"],"craft\\elements\\MatrixBlock":["Matrix Block","Matrix Blocks","Matrix block","Matrix blocks"],"craft\\elements\\Tag":["Tag","Tags","tag","tags"],"craft\\elements\\User":["User","Users","user","users"],"verbb\\supertable\\elements\\SuperTableBlockElement":["SuperTable Block","SuperTable Blocks","SuperTable block","SuperTable blocks"]},"fileKinds":{"access":{"label":"Access","extensions":["accdb","accde","accdr","accdt","adp","mdb"]},"audio":{"label":"Audio","extensions":["3gp","aac","act","aif","aifc","aiff","alac","amr","au","dct","dss","dvf","flac","gsm","iklax","ivs","m4a","m4p","mmf","mp3","mpc","msv","oga","ogg","opus","ra","tta","vox","wav","wma","wv"]},"captionsSubtitles":{"label":"Captions\/Subtitles","extensions":["asc","cap","cin","dfxp","itt","lrc","mcc","mpsub","rt","sami","sbv","scc","smi","srt","stl","sub","tds","ttml","vtt"]},"compressed":{"label":"Compressed","extensions":["7z","bz2","dmg","gz","rar","s7z","tar","tgz","zip","zipx"]},"excel":{"label":"Excel","extensions":["xls","xlsm","xlsx","xltm","xltx"]},"html":{"label":"HTML","extensions":["htm","html"]},"illustrator":{"label":"Illustrator","extensions":["ai"]},"image":{"label":"Image","extensions":["bmp","gif","jfif","jp2","jpe","jpeg","jpg","jpx","pam","pfm","pgm","png","pnm","ppm","svg","tif","tiff","webp"]},"json":{"label":"JSON","extensions":["json"]},"javascript":{"label":"JavaScript","extensions":["js"]},"pdf":{"label":"PDF","extensions":["pdf"]},"php":{"label":"PHP","extensions":["php"]},"photoshop":{"label":"Photoshop","extensions":["psb","psd"]},"powerpoint":{"label":"PowerPoint","extensions":["potx","pps","ppsm","ppsx","ppt","pptm","pptx"]},"text":{"label":"Text","extensions":["text","txt"]},"video":{"label":"Video","extensions":["asf","asx","avchd","avi","fla","flv","flv","m1s","m2s","m2t","m2v","m4v","mkv","mng","mov","mp2v","mp4","mp4","mpeg","mpg","ogg","ogv","qt","rm","vob","webm","wmv"]},"word":{"label":"Word","extensions":["doc","docm","docx","dot","dotm","dotx"]},"xml":{"label":"XML","extensions":["xml"]}},"handleCasing":"camel","httpProxy":null,"initialDeltaValues":[],"isImagick":true,"isMultiSite":false,"language":"en-US","left":"left","limitAutoSlugsToAscii":false,"maxUploadSize":16777216,"modifiedDeltaNames":[],"omitScriptNameInUrls":true,"orientation":"ltr","pageNum":1,"pageTrigger":"p","path":"hcad-online-services\/pdata","pathParam":"p","previewIframeResizerOptions":false,"primarySiteId":1,"primarySiteLanguage":"en-US","Pro":1,"publishableSections":[],"registeredAssetBundles":{"":""},"registeredJsFiles":{"":""},"remainingSessionTime":0,"right":"right","runQueueAutomatically":true,"scriptName":"index.php","siteId":1,"sites":[{"handle":"en_us","id":1,"uid":"8775267e-81c2-4132-82fe-fc00a97cf810","name":"HCAD"}],"siteToken":"siteToken","slugWordSeparator":"-","Solo":0,"systemUid":"dd6935f1-195a-489d-933c-67a7a4ca37a9","timepickerOptions":{"closeOnWindowScroll":false,"lang":{"AM":"AM","am":"am","PM":"PM","pm":"pm"},"orientation":"l","timeFormat":"g:i A"},"timezone":"America\/Chicago","tokenParam":"token","translations":{"":""},"useCompressedJs":true,"usePathInfo":false,"username":null,"csrfTokenName":"CRAFT_CSRF_TOKEN","csrfTokenValue":"ZQ8us0M6QvWCLl2R9_SAuauc9HKN1SL-dO10VTPzEatHVCfW1XHrXhNtQvp3DgCxukYP0sfA8MOezpIdw-JHtRraESMGsF3zMRt9u4Q2iSw="};</script></head>
+<body><script>window.d3FormatLocaleDefinition = {"decimal":".","thousands":",","grouping":[3],"currency":"$","numerals":["0","1","2","3","4","5","6","7","8","9"],"percent":"%","minus":"-","nan":"NaN"};
+window.d3TimeFormatLocaleDefinition = {"dateTime":"%x, %X","date":"%-m/%-d/%Y","time":"%-I:%M:%S %p","periods":["AM","PM"],"days":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"shortDays":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"months":["January","February","March","April","May","June","July","August","September","October","November","December"],"shortMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]};
+window.d3Formats = {"shortDateFormats":{"day":"%-m/%-d","month":"%-m/%Y","year":"%Y"}};</script>
+<div class="page" id="mmenu-page">
+<!-- DESKTOP TOP BAR -->
+<!-- Collapsible header -->
+<!-- END Collapsible header -->
+
+<div class="o-block c-topbar c-topbar--desktop" id="topbar">
+	<div class="o-block__inner">
+		<a href="https://hcad.org/" class="c-topbar__branding" title="homepage"><span>Harris Central Appraisal District homepage</span></a>
+
+		<div class="c-topbar__menu">
+			<form class="c-topbar__search" action="https://hcad.org/search">
+				<label for="search-desktop" class="u-sr-only">Search</label>
+
+				<input type="search" class="c-topbar__search-input" name="q" placeholder="search" value="" />
+
+				<button type="submit" class="c-topbar__search-submit" name="submit">
+					<span class="c-topbar__search-icon fa fa-search"></span>
+					<span class="c-topbar__search-submit-label">Search</span>
+				</button>
+			</form>
+
+			<!-- <a href="https://hcad.org/about/contact" class="c-btn c-topbar__contact">Contact</a> -->
+		</div>
+		<div style="padding-top:7px;">
+		    <a href="/assets/uploads/pdf/24-15-HCAD-Named-Top-Workplace.pdf" target="_blank"><img src="/assets/img/TWP2017-2024.png" style="height:90px; padding-bottom:5px;" alt="top work places 2024" class="c-topbar__topworkplaces" /></a>
+	        &nbsp;
+            <!--<a href="http://hcad.org/assets/uploads/pdf/18-11-HCAD-Houston-Top-Workplace-11.2.18.pdf" target="_blank"><img src="/assets/img/2018.png" style="height:77px;" alt="top work places 2018" class="c-topbar__topworkplaces" /></a>
+	        &nbsp;
+            <a href="http://hcad.org/assets/uploads/pdf/19-12-HCAD-Named-Top-Workplace.pdf" target="_blank"><img src="/assets/img/2019.png"  style="height:77px;" alt="top work places 2019" class="c-topbar__topworkplaces" /></a>
+            &nbsp;
+            <a href="http://hcad.org/assets/uploads/pdf/20-15-HCAD-Named-Top-Workplace.pdf" target="_blank"><img src="/assets/img/2020.png" style="height:77px;" alt="top work places 2020" class="c-topbar__topworkplaces" /></a>-->
+		</div>
+	</div>
+</div>
+
+<!-- MOBILE FIXED TOP BAR -->
+<div class="o-block c-topbar c-topbar--mobile Fixed">
+	<div class="o-block__inner">
+		<a href="https://hcad.org/" class="c-topbar__branding" title="homepage"><span>Harris Central Appraisal District</span></a>
+
+		<div class="c-topbar__menu">
+<a href="http://hcad.org/assets/uploads/pdf/22-12-HCAD-Named-Top-Workplace.pdf" target="_blank"><img src="/assets/img/TWP_Houston_Portrait_2017-2022_AW.svg" alt="top work places 2020" class="c-topbar__topworkplaces-mobile" /></a>&nbsp;
+<!--<a href="http://hcad.org/assets/uploads/pdf/19-12-HCAD-Named-Top-Workplace.pdf" target="_blank"><img src="/assets/img/2019.png" alt="top work places 2019" class="c-topbar__topworkplaces-mobile" /></a>&nbsp;
+<a href="http://hcad.org/assets/uploads/pdf/18-11-HCAD-Houston-Top-Workplace-11.2.18.pdf" target="_blank"><img src="/assets/img/2018.png" alt="top work places 2018" class="c-topbar__topworkplaces-mobile" /></a>&nbsp;
+        <a href="http://hcad.org/assets/uploads/pdf/17-16-HCAD-Houston-Top-Workplace.pdf" target="_blank"><img src="/assets/img/2017.png" alt="top work places 2017" class="c-topbar__topworkplaces-mobile" /></a>-->
+
+			<a href="#" class="js-mobile-search-toggle" style="padding-left: 25px;" title="search"><span class="fa fa-search"></span></a>
+
+			<!-- <a href="https://hcad.org/about/contact" class="c-btn c-topbar__contact">Contact</a> -->
+
+			<a href="#menu" class="c-topbar__menu-toggle js-menu-toggle" id="menu-toggle" title="menu">
+				<span class="open fa fa-bars"></span>
+				<span class="close fa fa-close"></span>
+			</a>
+		</div>
+	</div>
+
+	<div class="o-block__inner c-topbar__mobile-search js-mobile-search">
+		<form class="c-topbar__search" action="https://hcad.org/search">
+			<label for="search-desktop" class="u-sr-only">Search</label>
+
+			<input type="search" class="c-topbar__search-input" name="q" placeholder="search" value="" />
+
+			<button type="submit" class="c-topbar__search-submit" name="submit">
+				<span class="c-topbar__search-icon fa fa-search"></span>
+				<span class="c-topbar__search-submit-label">Search</span>
+			</button>
+		</form>
+	</div>
+</div>
+
+<!-- DESKTOP MENU -->
+<div class="o-block c-navigation">
+	<div class="o-block__inner">
+		<nav class="c-navigation__menu">
+			<ul>
+				<li class="c-navigation__home">
+					<a href="https://hcad.org/"><span><img alt="home" src="/assets/img/icon-home.svg"></span></a>
+				</li>
+				<li>
+					<a aria-hidden="true" href="javascript:void(0);" title="Property Search"><span>Property Search</span></a>
+					<ul>
+						<li>
+							<a href="https://search.hcad.org/" target="_self"><span>Property Search</span></a>
+						</li>
+
+						<li>
+							<a href="/property-search/search-help/"><span>How to Search</span></a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a aria-hidden="true" href="javascript:void(0);" title="About HCAD"><span>About</span></a>
+					<ul>
+                        <li>
+                            <a href="/about/"><span>Our Mission</span></a>
+                        </li>
+						<li>
+							<a href="/about/latest-updates/"><span>HCAD Events</span></a>
+						</li>
+						<!-- <li>
+							<a href="/about/contact/"><span>Contact Us</span></a>
+						</li> -->
+						<!-- <li>
+							<a href="/events/"><span>Calendar</span></a>
+						</li> -->
+						<li>
+							<a href="/news/"><span>News</span></a>
+						</li>
+						<li>
+							<a href="/about/hcad-board-of-directors/"><span>Board of Directors</span></a>
+						</li>
+						<li>
+							<a href="/hcad-online-services/streaming"><span>Livestream</span></a>
+						</li>
+						<li>
+							<a href="/about/message-from-hcad-chief-appraiser/"><span>Chief Appraiser</span></a>
+						</li>
+						<li>
+							<a href="/about/taxpayer-liaison-officer/"><span>Taxpayer Liaison Officer</span></a>
+						</li>						
+						<li>
+							<a href="/about/hcad-financials/"><span>Financials</span></a>
+						</li>
+						<li>
+							<a href="/about/hcad-procurement/"><span>Procurement</span></a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="/about/contact/" title="Contact Us"><span>Contact Us</span></a>
+				</li>
+				<li>
+					<a href="/careers/" title="Careers"><span>Careers</span></a>
+				</li>
+				<li>
+					<a aria-hidden="true" href="javascript:void(0);" title="Online Services"><span>Online Services</span></a>
+					<ul>
+						<li>
+							<a href="/hcad-online-services/ifile-protest/"><span>iFile Protest</span></a>
+						</li>
+						<li>
+							<a href="/hcad-online-services/ifile-rendition/"><span>iFile Rendition</span></a>
+						</li>
+						<!-- <li>
+							<a href="/property-owner-instructions-for-remote-meetings/"><span>Accessing Remote Hearings</span></a>
+						</li> -->
+						<li>
+							<a href="/hcad-online-services/mobileapp/"><span>Mobile App</span></a>
+						</li>
+						<li>
+							<a href="/hcad-online-services/homestead/"><span>Homestead</span></a>
+						</li>
+						<li>
+							<a href="https://owners.hcad.org//"><span>Owners</span></a>
+						</li>
+						<li>
+							<a href="https://agents.hcad.org//"><span>Agents</span></a>
+						</li>
+						<li>
+							<a href="/hcad-online-services/pdata/"><span>Public Data</span></a>
+						</li>
+						<li>
+							<a href="/hcad-online-services/property-tax-database"><span>Property Tax Database</span></a>
+						</li>
+						<li>
+							<a href="/hcad-online-services/protest-hearings-database"><span>Protest Hearings Database</span></a>
+						</li>
+						<li>
+							<a href="/hcad-online-services/electronic-notices/"><span>Electronic Notices</span></a>
+						</li>
+						<li>
+							<a href="https://hcad.org/hcad-help/texas-first-time-property-owner/exemptions/tax-deferral-for-homeowners/"><span>Tax Deferral</span></a>
+						</li>						
+						<li>
+							<a href="/hcad-forms/exemption-wizard"><span>Exemption Wizard</span></a>
+						</li>						
+						<li>
+							<a href="/hcad-online-services/rendition-assistance"><span>Rendition Assistance</span></a>
+						</li>
+						<li>
+							<a href="/hcad-online-services/exemption-assistance"><span>Exemption Assistance</span></a>
+						</li>						
+						<li>
+							<a href="/hcad-online-services/electronic-communications"><span>Electronic Communications</span></a>
+						</li>
+						<li>
+							<a href="http://hcad.org/hcad-online-services/social-media"><span>Social Media</span></a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a aria-hidden="true" href="javascript:void(0);" title="Forms"><span>Forms</span></a>
+					<ul>
+						<li>
+							<a href="/hcad-forms/hcad-all-forms/"><span>All Forms</span></a>
+						</li>
+						<!-- <li>
+							<a href="/hcad-forms/hcad-popular-forms/"><span>Popular Forms</span></a>
+						</li> -->
+						<li>
+							<a href="/hcad-forms/hcad-form-instructions/"><span>Form Instructions</span></a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a aria-hidden="true" href="javascript:void(0);" title="Maps"><span>Maps</span></a>
+					<ul>
+						<li>
+							<a href="/hcad-maps/facet-maps/"><span>Facet Maps</span></a>
+						</li>
+						<li>
+							<a href="https://arcweb.hcad.org/parcel-viewer-v2.0/"><span>Interactive Maps</span></a>
+                        </li>						
+						<!-- <li>
+							<a href="https://arcweb.hcad.org/parcelviewer/"><span>Interactive Maps Classic</span></a>
+                        </li> -->
+                        <li>
+                            <a href="https://geo.hcad.org/appraisalops/"><span>Field Operations Map</span></a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a aria-hidden="true" href="javascript:void(0);" title="Appraisal"><span>Appraisal</span></a>
+					<ul>
+						<li>
+							<a href="/hcad-resources/hcad-residential-property/"><span>Residential Property</span></a>
+						</li>
+						<li>
+							<a href="/assets/uploads/pdf/CommercialComparablePropertyAnalysisPacket.pdf"><span>Commercial Property</span></a>
+						</li>
+						<li>
+							<a href="/hcad-resources/hcad-industrial-personal-property/"><span>Industrial &amp; Personal Property</span></a>
+						</li>
+						<li>
+							<a href="/hcad-resources/hcad-agriculture-property/"><span>Agricultural Property</span></a>
+						</li>
+						<li>
+							<a href="/hcad-resources/hcad-reports/"><span>Reports</span></a>
+						</li>
+						<li>
+							<a href="/hcad-resources/hcad-appraisal-codes/"><span>Appraisal Codes</span></a>
+						</li>
+						<li>
+							<a href="/search/jurisdictions/"><span>Jurisdictions</span></a>
+						</li>
+						<li>
+							<a href="/hcad-resources/reappraisal/"><span>Reappraisal</span></a>
+						</li>
+						<li>
+							<a href="/hcad-help/circuit-breaker-cap"><span>Circuit Breaker Cap</span></a>
+						</li>						
+					</ul>
+				</li>
+				<li>
+					<a aria-hidden="true" href="javascript:void(0);" title="Help"><span>Help</span></a>
+					<ul>
+						<li>
+							<a href="/hcad-help/hcad-videos/" title="Videos"><span>Videos</span></a>
+						</li>						
+						<li>
+							<a href="/hcad-help/protests-and-corrections/"><span>Protests and Corrections</span></a>
+						</li>
+						<li>
+							<a href="/property-owner-instructions-for-remote-meetings/"><span>Accessing Remote Hearings</span></a>
+						</li>
+						<li>
+							<a href="/hcad-help/frequently-asked-questions/"><span>Frequently Asked Questions</span></a>
+						</li>						
+						<li>
+							<a href="/hcad-resources/hcad-resources-en-espanol/"><span>En Español</span></a>
+						</li>						
+						<!-- <li>
+							<a href="/hcad-help/hcad-videos/"><span>Videos</span></a>
+						</li>						 -->
+						<li>
+							<a href="/hcad-help/hcad-understanding-the-property-tax-process/"><span>Understanding the Property Tax Process</span></a>
+						</li>
+						<!-- <li>
+							<a href="/hcad-help/texas-first-time-property-owner/"><span>First Time Property Owner</span></a>
+						</li> -->
+						<li>
+							<a href="/hcad-help/open-records-request"><span>Open Records Request</span></a>
+						</li>	
+						<li>
+							<a href="/alerts/"><span>Consumer Alerts</span></a>
+						</li>
+						<li>
+							<a href="/assets/uploads/pdf/resources/2026/PUBLIC-ACCESS-document-found-on-HCAD-website-rev-1.15.26-005-PO-box-updated-1.16.26.pdf"><span>Public Access Policies</span></a>
+						</li>
+						<li>
+							<a href="/hcad-help/hcad-laws-rules/"><span>Laws &amp; Rules</span></a>
+						</li>
+						<li>
+							<a href="/hcad-help/hcad-properties-split-by-county-line/"><span>Properties Split by County Line</span></a>
+						</li>
+						<li>
+							<a href="https://hcad.org/hcad-privacy-policy"><span>Privacy Policy</span></a>
+						</li>
+						<li>
+							<a href="/hcad-help/hcad-disclaimer/"><span>Disclaimer</span></a>
+						</li>
+					</ul>
+				</li>
+				
+			</ul>
+		</nav>
+	</div>
+</div>
+
+
+
+	<!-- PAGE CONTENT -->
+<div class="o-block">
+	<div class="o-block__inner">
+		        <p>&nbsp;</p>
+		<h1 class="u-page-title">Public Data</h1>
+				
+		
+<!-- general:4518 -->
+
+<!-- BLOCK: General -->
+<div class="c-general">
+		<p>HCAD's data files are available to users for import into other applications. Some of the ASCII tab-delimited text files are complex and most of the files are very large. Download times can be excessive and should not be attempted with a slower internet connection. A file compression utility (<a href="http://www.winzip.com/" title="http://www.winzip.com/" target="_blank">WinZip</a>) is needed to extract the files.</p>
+</div>
+
+
+
+<!-- columns:4519 -->
+
+<!-- BLOCK: Columns -->
+<div class="c-general">
+		<div class="c-2cols">
+				<div class="c-2cols__col">
+			<h2>Public Data Timeline</h2>
+<ul><li><strong>January</strong>: All Values Pending - Real and Personal
+</li><li><strong>April</strong>: Preliminary Values - Real
+</li><li><strong>May (Tentatively)</strong>: Preliminary Values - ARB Hearings
+</li><li><strong>June(Tentatively)</strong>: Preliminary Values - Personal
+</li><li><strong>May thru August</strong>: Preliminary Values are updated Weekly
+</li><li><strong>Mid August</strong>: Certified Values
+</li></ul>
+		</div>
+						<div class="c-2cols__col">
+			<h2><a href="http://hcad.org/pdata/pdata-property-downloads.html" target="_blank">Download Property Data</a></h2>
+<p>Consists of certified/preliminary values from the HCAD Real and Personal property databases.
+</p>
+<h2><a href="http://hcad.org/pdata/pdata-gis-downloads.html" target="_blank">Download GIS Data</a> </h2>
+<p>Please reference the GIS Help document <a href="https://hcad.org/assets/uploads/pdf/resources/2026/GIS-ReadMeV2-2.pdf">here</a> for a full list of fields being provided and system generated fields being dropped.</p>
+<p>Consists of current year GIS format files including the prior year shapefiles.
+</p>
+<h2><a href="/hcad-online-services/pdata/pdata-help" target="_blank">Need Help?</a></h2>
+<p>Data import instructions, Data definitions, Codebook and GIS help.
+</p>
+<hr>
+<p> 
+</p>
+<h4><strong><em>HCAD does not provide technical support for the usage of this data.</em></strong></h4>
+		</div>
+					</div>
+</div>
+
+
+
+
+
+
+		
+		<p>&nbsp;</p>
+	</div>
+</div>
+
+
+
+
+<footer class="o-block c-footer">
+	<div class="o-block__inner">
+		<div class="c-footer__logos">
+			<div class="c-footer__logo">
+				<img src="/assets/img/logo-ceaa-iaao.png" alt="logo CEAA IAAO" width="88" height="98" />
+			</div>
+
+			<div class="c-footer__logo" style="z-index: 100;">
+				&nbsp;&nbsp;
+				<a href="https://dir.texas.gov/information-security/texas-cyberstar-certificate-program" target="_blank"><img src="/assets/img/Cyberstar-Logo.png" alt="Cyberstar Logo" style="width:100px;height:auto;" /></a>
+				&nbsp;&nbsp;	
+				<img src="/assets/img/logo-transparency-star-tf.png" alt="Transparency Star - Traditional Finances" style="width:88px;height:auto;" />
+			</div>
+		</div>
+		
+		<div class="c-footer__info">
+			<div class="c-footer__info-block" style="width: 30% !important;"> 
+				<p>
+					<strong style="color: #10069F;">Harris Central Appraisal District</strong><br />
+					13013 Northwest Freeway<br />
+					Houston, Texas 77040-6305
+				</p>
+			</div>
+			
+			<div class="c-footer__info-block" style="width: 30% !important;">
+				<p>
+					<strong style="color: #10069F;">Office Hours</strong><br />
+					Hours: 8:00 AM - 5:00 PM<br />
+					Monday - Friday<br />
+					Saturday Hearings: Jun, Jul
+				</p>
+				<p>
+					<a href="https://www.facebook.com/harriscad" class="fa fa-facebook-square c-footer__social c-footer__facebook"><span>HCAD Facebook</span></a>
+					<a href="https://twitter.com/HCAD_Info" class="fa fa-twitter-square c-footer__social c-footer__twitter"><span>HCAD Twitter</span></a>
+					<a href="https://www.linkedin.com/company/harris-county-appraisal-district?trk=ppro_cprof" class="fa fa-linkedin c-footer__social c-footer__linkedin"><span>HCAD LinkedIn</span></a>
+				</p>
+				<p>
+					<a href="https://hcad.org/hcad-privacy-policy">Privacy Policy</a> |
+					<a href="https://hcad.org/sitemap">Sitemap</a>					
+				</p>
+			</div>
+			
+			<div class="c-footer__info-block" style="width: 30% !important;">
+				<p>
+					<strong style="color: #10069F;">Telephone Information Center</strong><br />
+					(713) 957-7800<br />
+					Hours: 8:00 AM - 5:00 PM<br />
+					Monday - Friday
+				</p>
+			</div>
+		</div>
+		
+		<div class="c-footer__copyright">
+			<p>Thank You for Visiting Harris Central Appraisal District. &copy;<span id="spnYear"></span> All Rights Reserved.</p>
+		</div>
+	</div>
+</footer>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<!--script async src="https://www.googletagmanager.com/gtag/js?id=UA-138207160-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-138207160-1');
+</script -->
+
+
+
+<!--<script src="/assets/bower_components/DataTables/media/js/jquery.dataTables.min.js" type="text/javascript" charset="utf-8"></script>-->
+
+
+<!--<script src="/assets/js/bodyAppendMessage.js" type="text/javascript" charset="utf-8"></script>-->
+<a href="#topbar" id="backtotop">
+	<span class="fa fa-angle-up"></span>
+	<span class="label">Back to top</span>
+</a>
+</div>
+<!-- //.mmenu-page -->
+
+<!-- OFFCANVAS MENU -->
+<nav id="menu" class="c-offcanvas-menu">
+	<ul>
+		<li><a href="https://hcad.org/">Home</a></li>
+		<li>
+			<a aria-hidden="true" href="javascript:void(0);" title="Property Search"><span>Property Search</span></a>
+			<ul>
+				<li>
+					<a href="https://search.hcad.org/" target="_self"><span>Property Search</span></a>
+				</li>
+<!---
+				<li>
+					<a href="/property-search/real-property/"><span>Real Property</span></a>
+				</li>						
+				<li>
+					<a href="/property-search/real-property-advanced-records/"><span>Real Property Advanced</span></a>
+				</li>
+				<li>
+					<a href="/property-search/business-personal-mineral/"><span>Business Personal &amp; Mineral</span></a>
+				</li>
+				<li>
+					<a href="/property-search/personal-advanced/"><span>Personal Advanced</span></a>
+				</li>
+--->
+				<li>
+					<a href="/property-search/search-help/"><span>How to Search</span></a>
+				</li>
+			</ul>
+		</li>
+		<li>
+			<a aria-hidden="true" href="/about/" title="About HCAD"><span>About</span></a>
+			<ul>
+				<li>
+					<a href="/about/latest-updates/"><span>HCAD Events</span></a>
+				</li>
+				<!-- <li>
+					<a href="/events/"><span>Calendar</span></a>
+				</li> -->
+				<li>
+					<a href="/news/"><span>News</span></a>
+				</li>
+				<li>
+					<a href="/about/hcad-board-of-directors/"><span>Board of Directors</span></a>
+				</li>
+				<li>
+					<a href="/hcad-online-services/streaming"><span>Livestream</span></a>
+				</li>
+				<li>
+					<a href="/about/message-from-hcad-chief-appraiser/"><span>Chief Appraiser</span></a>
+				</li>
+				<li>
+					<a href="/about/taxpayer-liaison-officer/"><span>Taxpayer Liaison Officer</span></a>
+				</li>
+				<li>
+					<a href="/about/hcad-financials/"><span>Financials</span></a>
+				</li>
+				<li>
+					<a href="/about/hcad-procurement/"><span>Procurement</span></a>
+				</li>
+			</ul>
+		</li>
+		<li>
+			<a href="/about/contact/" title="Contact Us"><span>Contact Us</span></a>
+		</li>		
+		<li>
+			<a href="/careers/" title="Careers"><span>Careers</span></a>
+		</li>
+		<li>
+			<a aria-hidden="true" href="javascript:void(0);" title="Online Services"><span>Online Services</span></a>
+			<ul>
+				<li>
+					<a href="/hcad-online-services/ifile-protest/"><span>iFile Protest</span></a>
+				</li>
+				<li>
+					<a href="/hcad-online-services/ifile-rendition/"><span>iFile Rendition</span></a>
+				</li>
+				<li>
+					<a href="/hcad-online-services/mobileapp/"><span>Mobile App</span></a>
+				</li>
+				<li>
+					<a href="/hcad-online-services/homestead/"><span>Homestead</span></a>
+				</li>
+				<li>
+					<a href="https://owners.hcad.org//"><span>Owners</span></a>
+				</li>
+				<li>
+					<a href="https://agents.hcad.org//"><span>Agents</span></a>
+				</li>
+				<li>
+					<a href="/hcad-online-services/pdata/"><span>Public Data</span></a>
+				</li>
+				<li>
+					<a href="/hcad-online-services/property-tax-database"><span>Property Tax Database</span></a>
+				</li>
+				<li>
+					<a href="/hcad-online-services/protest-hearings-database"><span>Protest Hearings Database</span></a>
+				</li>
+				<li>
+					<a href="/hcad-online-services/electronic-notices/"><span>Electronic Notices</span></a>
+				</li>
+				<li>
+					<a href="https://hcad.org/hcad-help/texas-first-time-property-owner/exemptions/tax-deferral-for-homeowners/"><span>Tax Deferral</span></a>
+				</li>				
+				<li>
+					<a href="/hcad-forms/exemption-wizard"><span>Exemption Wizard</span></a>
+				</li>				
+				<li>
+					<a href="/hcad-online-services/rendition-assistance"><span>Rendition Assistance</span></a>
+				</li>
+				<li>
+					<a href="/hcad-online-services/exemption-assistance"><span>Exemption Assistance</span></a>
+				</li>				
+				<li>
+					<a href="/hcad-online-services/electronic-communications"><span>Electronic Communications</span></a>
+				</li>
+				<li>
+					<a href="http://hcad.org/hcad-online-services/social-media"><span>Social Media</span></a>
+				</li>
+			</ul>
+		</li>
+		<li>
+			<a aria-hidden="true" href="javascript:void(0);" title="Forms"><span>Forms</span></a>
+			<ul>
+				<li>
+					<a href="/hcad-forms/hcad-all-forms/"><span>All Forms</span></a>
+				</li>
+				<!-- <li>
+					<a href="/hcad-forms/hcad-popular-forms/"><span>Popular Forms</span></a>
+				</li> -->
+				<li>
+					<a href="/hcad-forms/hcad-form-instructions/"><span>Form Instructions</span></a>
+				</li>
+			</ul>
+		</li>
+		<li>
+			<a aria-hidden="true" href="javascript:void(0);" title="Maps"><span>Maps</span></a>
+			<ul>
+				<li>
+					<a href="/hcad-maps/facet-maps/"><span>Facet Maps</span></a>
+				</li>
+						<li>
+							<a href="https://arcweb.hcad.org/parcel-viewer-v2.0/"><span>Interactive Maps</span></a>
+                        </li>						
+				<!-- <li>
+					<a href="https://arcweb.hcad.org/parcelviewer/"><span>Interactive Maps Classic</span></a>
+                        </li> -->
+                        <li>
+                            <a href="https://geo.hcad.org/appraisalops/"><span>Field Operations Map</span></a>
+						</li>
+			</ul>
+		</li>
+		<li>
+			<a aria-hidden="true" href="javascript:void(0);" title="Appraisal"><span>Appraisal</span></a>
+			<ul>
+				<li>
+					<a href="/hcad-resources/hcad-residential-property/"><span>Residential Property</span></a>
+				</li>
+				<li>
+					<a href="/assets/uploads/pdf/CommercialComparablePropertyAnalysisPacket.pdf"><span>Commercial Property</span></a>
+				</li>
+				<li>
+					<a href="/hcad-resources/hcad-industrial-personal-property/"><span>Industrial &amp; Personal Property</span></a>
+				</li>
+				<li>
+					<a href="/hcad-resources/hcad-agriculture-property/"><span>Agricultural Property</span></a>
+				</li>
+				<li>
+					<a href="/hcad-resources/hcad-reports/"><span>Reports</span></a>
+				</li>
+				<li>
+					<a href="/hcad-resources/hcad-appraisal-codes/"><span>Appraisal Codes</span></a>
+				</li>
+				<li>
+					<a href="/search/jurisdictions/"><span>Jurisdictions</span></a>
+				</li>
+				<li>
+					<a href="/hcad-resources/reappraisal/"><span>Reappraisal</span></a>
+				</li>
+				<li>
+					<a href="/hcad-help/circuit-breaker-cap"><span>Circuit Breaker Cap</span></a>
+				</li>				
+			</ul>
+		</li>
+		<li>
+			<a aria-hidden="true" href="javascript:void(0);" title="Help"><span>Help</span></a>
+			<ul>
+				<li>
+					<a href="/hcad-help/hcad-videos/" title="Videos"><span>Videos</span></a>
+				</li>	
+				<li>
+					<a href="/hcad-help/protests-and-corrections/"><span>Protests and Corrections</span></a>
+				</li>
+				<li>
+					<a href="/hcad-help/frequently-asked-questions/"><span>Frequently Asked Questions</span></a>
+				</li>						
+				<li>
+					<a href="/hcad-resources/hcad-resources-en-espanol/"><span>En Espa�ol</span></a>
+				</li>						
+				<li>
+					<a href="/hcad-help/hcad-understanding-the-property-tax-process/"><span>Understanding the Property Tax Process</span></a>
+				</li>
+				<li>
+					<a href="/hcad-help/open-records-request"><span>Open Records Request</span></a>
+				</li>				
+				<li>
+					<a href="/alerts/"><span>Consumer Alerts</span></a>
+				</li>
+				<li>
+					<a href="/assets/uploads/pdf/resources/2026/PUBLIC-ACCESS-document-found-on-HCAD-website-rev-1.15.26-005-PO-box-updated-1.16.26.pdf"><span>Public Access Policies</span></a>
+				</li>
+				<li>
+					<a href="/hcad-help/hcad-laws-rules/"><span>Laws &amp; Rules</span></a>
+				</li>
+				<li>
+					<a href="/hcad-help/hcad-properties-split-by-county-line/"><span>Properties Split by County Line</span></a>
+				</li>
+				<li>
+					<a href="/hcad-help/hcad-disclaimer/"><span>Disclaimer</span></a>
+				</li>
+			</ul>
+		</li>
+	</ul>
+</nav>
+
+<!-- Global Site JS -->
+<script src="/assets/js/master.min.js" type="text/javascript" charset="utf-8"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.googletagmanager.com/gtag/js?id=G-YELVXWFQJ4','ga');
+
+  ga('create', 'G-YELVXWFQJ4', 'auto');
+  ga('send', 'pageview');
+</script>
+    <div style="display:none">
+		<script>
+class LiveChatManager {
+
+    _page = "";
+    _logger = null;
+    _env = "development";
+    _apiUrl = "";
+    _chatId = 0;
+
+    constructor() {
+        this._apiUrl = 'https://maestro.hcad.org/livechat/LiveChat';
+        this._page = GetPage();
+    }
+
+    CheckStatus() {
+        var base = this;
+        this._page = GetPage();
+		//alert(this._page )
+		if( 1 != 1 )
+		{
+			//LiveChatWidget.call("hide");
+			return null;
+		}
+		else {	
+			var mUrl = this._apiUrl + '/CheckStatus?page=' + this._page;
+			$.ajax({
+				url: mUrl,
+				type: 'POST',
+				crossDomain: true,
+				success: function (data) {
+					var sjson = data.substring(1, data.length - 1);
+					var json= $.parseJSON(sjson);
+
+					if( json.ChatId != null && json.bitEnabled === true ) {
+						//window.__lc.license = '15365838/' + json.ChatId;
+						if( json.Page.replace( /=/g, '*' ) == GetPage() && json.bitEnabled == true) {
+							window.__lc = window.__lc || {};
+							window.__lc.license = 15365838;
+							; (function (n, t, c) {
+								function i(n) { return e._h ? e._h.apply(null, n) : e._q.push(n) };
+								var e = {
+									_q: [], _h: null, _v: "2.0", on: function () { i(["on", c.call(arguments)]) }, once: function () {
+										i(["once", c.call(arguments)])
+									}, off: function () { i(["off", c.call(arguments)]) },
+									get: function () {
+										if (!e._h) throw new Error("[LiveChatWidget] You can't use getters before load.");
+										return i(["get", c.call(arguments)])
+									}, call: function () { i(["call", c.call(arguments)]) }, init: function () {
+										var n = t.createElement("script");
+										n.async = !0, n.type = "text/javascript",
+											n.src = "https://cdn.livechatinc.com/tracking.js", t.head.appendChild(n)
+									}
+								};
+								!n.__lc.asyncInit && e.init(), n.LiveChatWidget = n.LiveChatWidget || e
+							}(window, document, [].slice))
+						}
+					}
+					//else {
+					//	if( LiveChatWidget != undefined )
+					//		LiveChatWidget.call("hide");
+					//}
+				}
+			});
+		}
+    }
+}
+
+function GetPage() {
+    var page = document.location.href;
+    var del = "";
+    for( var i=0; i<3;i++){
+        if( del.length > 0) del += "/"
+        del += page.split( '/' )[i]
+    }
+    page = page.replace(del + '/','');
+    page = btoa( page ).replace( /=/g, '*' );
+    if( page == '' || page == null ) page = 'default';
+    return page;
+}
+
+var chat = new LiveChatManager();
+chat.CheckStatus();
+
+        </script>
+
+
+    </div>
+    <script src="//rum-static.pingdom.net/pa-5d39a0c19623b00008000059.js" async></script>
+    <!--<script src="https://cdn.hcad.org/hcad/mim/mim.js" type="text/javascript" charset="utf-8"></script>-->
+<script src="https://hcad.org/cpresources/3123f537/axios.min.js?v=1774533224"></script>
+<script src="https://hcad.org/cpresources/e6ddc570/d3.js?v=1774533224"></script>
+<script src="https://hcad.org/cpresources/4b427253/element-resize-detector.js?v=1774533224"></script>
+<script src="https://hcad.org/cpresources/64d2d9a6/jquery.js?v=1774533224"></script>
+<script src="https://hcad.org/cpresources/efdcd9e3/jquery.mobile-events.js?v=1774533224"></script>
+<script src="https://hcad.org/cpresources/755d2edb/velocity.js?v=1774533224"></script>
+<script src="https://hcad.org/cpresources/d560d2f6/garnish.js?v=1774533224"></script>
+<script src="https://hcad.org/cpresources/3bf4b57e/jquery-ui.js?v=1774533224"></script>
+<script src="https://hcad.org/cpresources/697a8133/jquery.payment.js?v=1774533224"></script>
+<script src="https://hcad.org/cpresources/e878e521/picturefill.js?v=1774533224"></script>
+<script src="https://hcad.org/cpresources/bc06c8a5/selectize.js?v=1774533224"></script>
+<script src="https://hcad.org/cpresources/f090e4df/jquery.fileupload.js?v=1774533224"></script>
+<script src="https://hcad.org/cpresources/b66a8c2f/xregexp-all.js?v=1774533224"></script>
+<script src="https://hcad.org/cpresources/c02606c8/fabric.js?v=1774533224"></script>
+<script src="https://hcad.org/cpresources/fc33dbc8/iframeResizer.js?v=1774533224"></script>
+<script src="https://hcad.org/cpresources/9104be2f/js/Craft.min.js?v=1774533223"></script>
+<script src="/assets/js/master.js?v=1642079009"></script>
+<script src="/assets/bower_components/popper/popper.min.js?v=1641474225"></script>
+<script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
+<script src="/assets/bower_components/jQuery.mmenu/dist/js/jquery.mmenu.all.min.js?v=1639714144"></script>
+<script src="/assets/bower_components/DataTables/media/js/jquery.dataTables.min.js?v=1639714144"></script>
+<script src="/assets/js/auto-search.js?v=1639714144"></script>
+<script src="/assets/js/iframeResizer.min.js?v=1684210379"></script>
+<script src="/assets/js/main.js?v=1687052320"></script>
+<script src="https://hcad.org/cpresources/77d82c52/js/HCADModule.js?v=1774533223"></script>
+<script src="https://www.googletagmanager.com/gtag/js?id=UA-138207160-1"></script>
+<script src="https://hcad.org/cpresources/492c02e3/js/slider.js?v=1774533224"></script>
+<script src="https://hcad.org/cpresources/492c02e3/js/hcadScroller.js?v=1774533224"></script>
+<script src="https://hcad.org/cpresources/4452603b/js/HcadMessages.js?v=1774533224"></script>
+<script src="https://hcad.org/cpresources/4452603b/js/hcadMessageScroller.js?v=1774533224"></script>
+<script>window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YELVXWFQJ4');
+jQuery(function($){
+        $("#spnYear").html(new Date().getFullYear());
+    });</script><script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9ef91b1a3ab856fd',t:'MTc3Njc0MDA4NA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
