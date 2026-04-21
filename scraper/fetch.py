@@ -413,7 +413,9 @@ async def scrape_type(page, doc_type, start_date, end_date):
             if not cells: continue
             try:
                 rec = make_rec(cells, headers, doc_type, cat, cat_label)
-                if rec: records.append(rec); new_n += 1
+                if rec:
+                    records.append(rec)
+                    new_n += 1
             except: pass
 
         log.info("    page %d: %d rows", page_num, new_n)
@@ -566,10 +568,33 @@ def download_parcel_db(session: requests.Session) -> ParcelDB:
 
 # ── Pipeline ─────────────────────────────────────────────────────────────────
 
+def _normalize_for_lookup(name: str) -> list[str]:
+    # Generate multiple lookup attempts for a name
+    name = name.strip().upper()
+    attempts = [name]
+    # Remove common suffixes
+    for suffix in [" LLC"," INC"," CORP"," LTD"," LP"," GP"," TRUST"," ESTATE"," ET AL"," JR"," SR"," II"," III"]:
+        if name.endswith(suffix):
+            attempts.append(name[:-len(suffix)].strip())
+    # Try without middle initial: SMITH J D -> SMITH J, SMITH
+    parts = name.split()
+    if len(parts) >= 3:
+        attempts.append(f"{parts[0]} {parts[1]}")
+        attempts.append(parts[0])
+    return list(dict.fromkeys(a for a in attempts if a))
+
+
 def enrich(records, db):
     n = 0
     for r in records:
-        hit = db.lookup(r.get("owner",""))
+        owner = r.get("owner","").strip()
+        if not owner:
+            continue
+        hit = None
+        for attempt in _normalize_for_lookup(owner):
+            hit = db.lookup(attempt)
+            if hit:
+                break
         if hit:
             for k, v in hit.items():
                 if v: r[k] = v
