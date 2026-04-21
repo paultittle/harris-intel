@@ -47,10 +47,18 @@ LOOKBACK_DAYS  = int(os.getenv("LOOKBACK_DAYS", "7"))
 CLERK_RP_URL   = "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx"
 CLERK_FRCL_URL = "https://www.cclerk.hctx.net/Applications/WebSearch/FRCL_R.aspx"
 
+# HCAD bulk data — tab-delimited text files (updated regularly)
+# The 'real_acct_owner' file has: acct, name, addr, site addr, etc.
+HCAD_TXT_URLS = [
+    "https://pdata.hcad.org/data/2026/real_acct_owner.zip",
+    "https://pdata.hcad.org/data/2025/real_acct_owner.zip",
+    "https://pdata.hcad.org/data/2024/real_acct_owner.zip",
+    "https://pdata.hcad.org/Pdata/real_acct_owner.zip",
+]
+# Fallback DBF URLs (older format)
 HCAD_DBF_URLS = [
     "https://pdata.hcad.org/data/cama/2024/account_appraiser.zip",
     "https://pdata.hcad.org/Pdata/pdata.zip",
-    "https://pdata.hcad.org/data/2024/account_appraiser.zip",
 ]
 
 DOC_TYPE_MAP = {
@@ -100,20 +108,104 @@ class ParcelDB:
         self.loaded = False
 
     def load_zip(self, data):
-        if not HAS_DBF: return
         try:
             with zipfile.ZipFile(io.BytesIO(data)) as z:
-                dbf_files = [n for n in z.namelist() if n.lower().endswith(".dbf")]
-                if not dbf_files: return
-                tmp = Path("/tmp/p.dbf")
-                tmp.write_bytes(z.read(dbf_files[0]))
-                tbl = DBF(str(tmp), encoding="latin-1", ignore_missing_memofile=True)
-                for rec in tbl:
-                    self._ingest(dict(rec))
-                self.loaded = True
-                log.info("Parcel DB loaded: %d owner keys", len(self._idx))
+                names = z.namelist()
+                log.info("ZIP contains: %s", names[:10])
+                # Try txt/csv first (HCAD current format)
+                txt_files = [n for n in names if n.lower().endswith((".txt",".csv"))]
+                dbf_files = [n for n in names if n.lower().endswith(".dbf")]
+                if txt_files:
+                    raw = z.read(txt_files[0])
+                    self._load_txt(raw)
+                elif dbf_files and HAS_DBF:
+                    tmp = Path("/tmp/p.dbf")
+                    tmp.write_bytes(z.read(dbf_files[0]))
+                    tbl = DBF(str(tmp), encoding="latin-1", ignore_missing_memofile=True)
+                    for rec in tbl:
+                        self._ingest(dict(rec))
+                    self.loaded = True
+                    log.info("Parcel DB (DBF): %d owner keys", len(self._idx))
         except Exception as e:
             log.error("Parcel load error: %s", e)
+
+    def _load_txt(self, raw_bytes):
+        """Load HCAD tab-delimited real_acct_owner.txt"""
+        try:
+            text = raw_bytes.decode("latin-1")
+            lines = text.splitlines()
+            if not lines:
+                return
+            # HCAD real_acct_owner columns (tab-delimited, no header):
+            # 0:acct 1:name 2:addr_1 3:addr_2 4:addr_3
+            # 5:city 6:state 7:zip 8:country
+            # 9:site_addr 10:site_city 11:site_state 12:site_zip
+            # Detect if first line is a header
+            first = lines[0].split("\t")
+            has_header = any(c.upper() in ("ACCT","ACCOUNT","NAME","OWNER") for c in first)
+            if has_header:
+                header = [c.strip().upper() for c in first]
+                data_lines = lines[1:]
+            else:
+                header = None
+                data_lines = lines
+
+            count = 0
+            for line in data_lines:
+                if not line.strip():
+                    continue
+                parts = line.split("\t")
+                if len(parts) < 5:
+                    continue
+                try:
+                    if header:
+                        def hg(*keys):
+                            for k in keys:
+                                if k in header:
+                                    v = parts[header.index(k)].strip()
+                                    if v: return v
+                            return ""
+                        owner      = hg("NAME","OWNER","OWN1","OWNERNAME")
+                        mail_addr  = hg("ADDR_1","ADDRESS","MAILADR1","MAIL_ADDR","ADDR1")
+                        mail_city  = hg("CITY","MAILCITY","MAIL_CITY")
+                        mail_state = hg("STATE","MAILSTATE") or "TX"
+                        mail_zip   = hg("ZIP","MAILZIP","MAIL_ZIP")
+                        site_addr  = hg("SITE_ADDR","SITEADDR","SITE_ADDRESS","ADDR_SITE")
+                        site_city  = hg("SITE_CITY","SITECITY")
+                        site_zip   = hg("SITE_ZIP","SITEZIP")
+                    else:
+                        def p(i): return parts[i].strip() if i < len(parts) else ""
+                        owner      = p(1)
+                        mail_addr  = p(2)
+                        mail_city  = p(5)
+                        mail_state = p(6) or "TX"
+                        mail_zip   = p(7)
+                        site_addr  = p(9)  if len(parts) > 9  else ""
+                        site_city  = p(10) if len(parts) > 10 else ""
+                        site_zip   = p(12) if len(parts) > 12 else ""
+
+                    if not owner:
+                        continue
+                    entry = {
+                        "prop_address": site_addr,
+                        "prop_city":    site_city,
+                        "prop_state":   "TX",
+                        "prop_zip":     site_zip,
+                        "mail_address": mail_addr,
+                        "mail_city":    mail_city,
+                        "mail_state":   mail_state,
+                        "mail_zip":     mail_zip,
+                    }
+                    for v in _variants(owner):
+                        self._idx.setdefault(v, []).append(entry)
+                    count += 1
+                except Exception:
+                    continue
+
+            self.loaded = True
+            log.info("Parcel DB (TXT): %d records, %d owner keys", count, len(self._idx))
+        except Exception as e:
+            log.error("TXT load error: %s", e)
 
     def _ingest(self, r):
         def g(*keys):
@@ -419,20 +511,28 @@ async def scrape_all(start_date, end_date):
 
 def download_parcel_db(session):
     db = ParcelDB()
-    for url in HCAD_DBF_URLS:
-        log.info("HCAD: %s", url)
+    all_urls = HCAD_TXT_URLS + HCAD_DBF_URLS
+    for url in all_urls:
+        log.info("HCAD trying: %s", url)
         for attempt in range(1, 4):
             try:
-                r = session.get(url, timeout=120)
+                r = session.get(url, timeout=180, stream=True)
                 if r.status_code == 200:
+                    log.info("  Downloading parcel data (%s)…", url.split("/")[-1])
                     db.load_zip(r.content)
-                    if db.loaded: return db
+                    if db.loaded:
+                        return db
+                    break
+                elif r.status_code == 404:
+                    log.warning("  404 for %s", url)
+                    break
                 else:
+                    log.warning("  HTTP %d", r.status_code)
                     break
             except Exception as e:
-                log.warning("Attempt %d: %s", attempt, e)
+                log.warning("  Attempt %d: %s", attempt, e)
                 time.sleep(2 ** attempt)
-    log.warning("No parcel data — addresses will be empty.")
+    log.warning("No parcel data available — records saved without addresses.")
     return db
 
 
