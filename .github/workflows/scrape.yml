@@ -65,7 +65,6 @@ jobs:
           LOOKBACK_DAYS: ${{ github.event.inputs.lookback_days || '7' }}
           PYTHONUNBUFFERED: "1"
           GDRIVE_REAL_ACCT_ID: ${{ secrets.GDRIVE_REAL_ACCT_ID }}
-          GDRIVE_OWNERS_ID: ${{ secrets.GDRIVE_OWNERS_ID }}
         run: |
           python scraper/fetch.py
 
