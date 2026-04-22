@@ -580,28 +580,22 @@ async def search_date_range(page, start_date, end_date):
         table = best_table(soup)
         if not table: break
 
-        rows = table.find_all("tr")
+        # Use recursive=False to get only direct child rows (not nested table rows)
+        rows = table.find_all("tr", recursive=False)
+        if len(rows) < 2:
+            # Fallback: try tbody
+            tbody = table.find("tbody")
+            if tbody:
+                rows = [table.find("tr")] + tbody.find_all("tr", recursive=False)
+            else:
+                rows = table.find_all("tr")
         if len(rows) < 2: break
-        headers = [c.get_text(strip=True).upper() for c in rows[0].find_all(["th","td"])]
+        headers = [c.get_text(strip=True).upper() for c in
+                   rows[0].find_all(["th","td"], recursive=False)]
 
         if page_num == 1:
             log.info("  Table headers: %s", headers)
-            log.info("  Total rows on page 1: %d", len(rows)-1)
-            # Count rows by cell count
-            cell_counts = {}
-            for tr in rows[1:]:
-                n = len(tr.find_all("td", recursive=False))
-                cell_counts[n] = cell_counts.get(n, 0) + 1
-            log.info("  Row cell count distribution: %s",
-                     sorted(cell_counts.items(), key=lambda x: -x[1])[:10])
-            # Show first row with >8 cells
-            for tr in rows[1:20]:
-                tds = tr.find_all("td", recursive=False)
-                if len(tds) > 8:
-                    texts = [td.get_text(" ",strip=True)[:30] for td in tds[:8]]
-                    log.info("  First >8-cell row (%d cells): %s",
-                             len(tds), " | ".join(texts))
-                    break
+            log.info("  Rows found: %d", len(rows)-1)
 
         new_n = 0
         for tr in rows[1:]:
