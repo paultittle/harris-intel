@@ -522,20 +522,45 @@ def clean_grantee(raw):
     return g
 
 def parse_row(cells, headers, doc_type, cat, cat_label):
-    def col(*names):
+    def col_exact(*names):
+        # Exact header match
         for nm in names:
+            for i,h in enumerate(headers):
+                if h == nm and i<len(cells):
+                    v=cells[i].get_text(strip=True)
+                    if v: return v
+        return ""
+
+    def col(*names):
+        # Partial header match — longer names take priority
+        for nm in sorted(names, key=len, reverse=True):
             for i,h in enumerate(headers):
                 if nm in h and i<len(cells):
                     v=cells[i].get_text(strip=True)
                     if v: return v
         return ""
-    doc_num=col("FILE","DOC","INSTRUMENT","NUMBER","FILM")
-    filed  =col("DATE","FILED","RECORD")
-    grantor=col("GRANTOR","OWNER","FROM","SELLER","NAME")
+
+    # Doc number — try exact matches first, then partial
+    doc_num = (col_exact("FILE NUMBER","FILE NO","DOC NUMBER","DOC NO","INSTRUMENT NO") or
+               col("FILE NO","FILE NUM","DOC NO","DOC NUM","FILM CODE","FILE"))
+
+    # Validate doc_num — must look like a document number not a name
+    # Real doc numbers: RP-2026-151928, 2026-RP-151928, numeric strings
+    if doc_num and not re.match(r'^[\dA-Z]{2,}-[\d-]+$|^\d+$', doc_num.upper().replace(' ','')):
+        # Doesn't look like a doc number — try finding one in all cells
+        for i, cell in enumerate(cells):
+            txt = cell.get_text(strip=True)
+            if re.match(r'^RP-\d{4}-\d+$|^\d{4}-RP-\d+$|^\d{6,}$', txt):
+                doc_num = txt
+                break
+
+    filed  =col("DATE FILED","DATE","FILED","RECORD DATE","REC DATE")
+    grantor=col("GRANTOR","OWNER","FROM","SELLER")
     grantee=col("GRANTEE","TO","BUYER","LENDER")
-    legal  =col("LEGAL","DESCRIPTION","SUBDIV","ABSTRACT")
+    legal  =col("LEGAL DESCRIPTION","LEGAL","DESCRIPTION","SUBDIV","ABSTRACT")
     amt_s  =col("AMOUNT","AMT","VALUE","CONSIDER")
-    dtype  =col("TYPE","INSTRUMENT") or doc_type
+    # Instrument type — avoid matching "FILE NUMBER" as "NUMBER"
+    dtype  =col_exact("INSTRUMENT TYPE","DOC TYPE","TYPE") or col("INSTR TYPE","INST TYPE") or doc_type
     if "Grantor:" in grantor or "Grantee:" in grantor:
         grantor, grantee_from_cell = _extract_all_names(grantor)
         if not grantee: grantee = grantee_from_cell
@@ -609,61 +634,75 @@ async def scrape_type(page, doc_type, start_date, end_date):
             log.info("  FORM: %s", json.dumps(inputs))
         except: pass
 
-    # Fill dates
-    date_filled=False
-    for df,dt in [
-        ("input[id*='DateFrom']","input[id*='DateTo']"),
-        ("input[id*='dateFrom']","input[id*='dateTo']"),
-        ("input[name*='DateFrom']","input[name*='DateTo']"),
-        ("input[id*='StartDate']","input[id*='EndDate']"),
-        ("input[id*='dFrom']","input[id*='dTo']"),
-        ("input[id*='txtFrom']","input[id*='txtTo']"),
-        ("input[id*='BeginDate']","input[id*='EndDate']"),
-    ]:
-        try:
-            dfe=page.locator(df).first; dte=page.locator(dt).first
-            if await dfe.count()>0 and await dte.count()>0:
-                await dfe.fill(start_date,timeout=3000)
-                await dte.fill(end_date,timeout=3000)
-                date_filled=True; break
-        except: pass
+    # Fill form using exact field IDs from portal inspection
+    # Field IDs: ctl00_ContentPlaceHolder1_txtFileNo (known)
+    # Date/Type IDs — filled via JS evaluate for reliability
 
-    if not date_filled:
-        try:
-            vis=[i for i in await page.query_selector_all("input[type='text'],input:not([type])")
-                 if await i.is_visible()]
-            if len(vis)>=2:
-                await vis[0].fill(start_date); await vis[1].fill(end_date)
-                date_filled=True
-        except: pass
+    filled = await page.evaluate(f"""() => {{
+        // Helper to set a field value and fire events
+        function set(id, val) {{
+            const el = document.getElementById(id) ||
+                       document.querySelector('[name="' + id + '"]');
+            if (!el) return false;
+            el.value = val;
+            el.dispatchEvent(new Event('input', {{bubbles:true}}));
+            el.dispatchEvent(new Event('change', {{bubbles:true}}));
+            return true;
+        }}
 
-    # Set instrument type via JS
-    try:
-        result=await page.evaluate(f"""() => {{
-            for(const s of document.querySelectorAll('select')){{
-                for(const o of s.options){{
-                    if(o.value==='{doc_type}'||o.text.trim()==='{doc_type}'){{
-                        s.value=o.value;
-                        s.dispatchEvent(new Event('change',{{bubbles:true}}));
-                        return 'OK:'+s.id+'='+o.value;
-                    }}
-                }}
+        const results = {{}};
+
+        // Try all known date field ID patterns
+        const dateFromIds = ['ctl00_ContentPlaceHolder1_txtFrom'];
+        const dateToIds   = ['ctl00_ContentPlaceHolder1_txtTo'];
+        const itIds       = ['ctl00_ContentPlaceHolder1_txtInstrument'];
+
+        for (const id of dateFromIds) {{
+            if (set(id, '{start_date}')) {{ results.dateFrom = id; break; }}
+        }}
+        for (const id of dateToIds) {{
+            if (set(id, '{end_date}')) {{ results.dateTo = id; break; }}
+        }}
+
+        // Set instrument type — txtInstrument is a text input
+        for (const id of itIds) {{
+            if (set(id, '{doc_type}')) {{
+                results.instrType = id + '=' + '{doc_type}';
+                break;
             }}
-            const opts=[];
-            document.querySelectorAll('select option').forEach(o=>opts.push(o.value));
-            return 'NOT_FOUND. opts:'+opts.slice(0,15).join(',');
-        }}""")
-        log.info("  IT: %s", result)
-    except: pass
+        }}
 
-    # Submit
-    for sel in ["input[type='submit']","button[type='submit']",
-                "input[value='Search']","button:has-text('Search')",
-                "input[id*='earch']","button[id*='earch']"]:
+        // If no exact ID matched, try by input type/position
+        if (!results.dateFrom) {{
+            const inputs = Array.from(document.querySelectorAll('input[type=text]'))
+                .filter(e => e.offsetParent !== null);
+            if (inputs.length >= 2) {{
+                inputs[0].value = '{start_date}';
+                inputs[1].value = '{end_date}';
+                results.dateFrom = 'positional[0]';
+                results.dateTo   = 'positional[1]';
+            }}
+        }}
+
+        return JSON.stringify(results);
+    }}""")
+    log.info("  Form fill: %s", filled)
+
+    # Submit — exact ID confirmed from portal inspection
+    for sel in [
+        "#ctl00_ContentPlaceHolder1_btnSearch",
+        "input[id='ctl00_ContentPlaceHolder1_btnSearch']",
+        "input[id*='btnSearch']",
+        "input[type='submit']",
+        "button[type='submit']",
+        "input[value='Search']",
+    ]:
         try:
             el=page.locator(sel).first
             if await el.count()>0:
-                await el.click(timeout=5000); break
+                await el.click(timeout=5000)
+                log.info("  Submitted: %s", sel)
+                break
         except: pass
 
     try: await page.wait_for_load_state("networkidle",timeout=25_000)
