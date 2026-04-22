@@ -540,19 +540,30 @@ def parse_row(cells, headers, doc_type, cat, cat_label):
                     if v: return v
         return ""
 
-    # Doc number — try exact matches first, then partial
-    doc_num = (col_exact("FILE NUMBER","FILE NO","DOC NUMBER","DOC NO","INSTRUMENT NO") or
-               col("FILE NO","FILE NUM","DOC NO","DOC NUM","FILM CODE","FILE"))
+    # Doc number — scan ALL cells for RP-YYYY-NNNNNN pattern first
+    doc_num = ""
+    clerk_url_from_row = ""
 
-    # Validate doc_num — must look like a document number not a name
-    # Real doc numbers: RP-2026-151928, 2026-RP-151928, numeric strings
-    if doc_num and not re.match(r'^[\dA-Z]{2,}-[\d-]+$|^\d+$', doc_num.upper().replace(' ','')):
-        # Doesn't look like a doc number — try finding one in all cells
-        for i, cell in enumerate(cells):
-            txt = cell.get_text(strip=True)
-            if re.match(r'^RP-\d{4}-\d+$|^\d{4}-RP-\d+$|^\d{6,}$', txt):
-                doc_num = txt
+    # Priority 1: Find a cell containing a valid doc number pattern
+    for i, cell in enumerate(cells):
+        txt = cell.get_text(strip=True)
+        # Check for RP-YYYY-NNNNNN or YYYY-RP-NNNNNN or long numeric
+        if re.match(r'^RP-\d{4}-\d+$', txt) or re.match(r'^\d{4}-RP-\d+$', txt):
+            doc_num = txt
+            break
+        # Also check anchors for file IDs
+        a = cell.find("a", href=True)
+        if a:
+            m = re.search(r'FileID=(RP-[\d-]+|\d{4}-RP-[\d]+)', a["href"])
+            if m:
+                doc_num = m.group(1)
+                clerk_url_from_row = a["href"] if a["href"].startswith("http") else "https://www.cclerk.hctx.net" + a["href"]
                 break
+
+    # Priority 2: Try header-based column matching
+    if not doc_num:
+        doc_num = (col_exact("FILE NUMBER","FILE NO","DOC NUMBER","DOC NO") or
+                   col("FILE NO","FILE NUM","DOC NO","FILM CODE"))
 
     filed  =col("DATE FILED","DATE","FILED","RECORD DATE","REC DATE")
     grantor=col("GRANTOR","OWNER","FROM","SELLER")
@@ -664,9 +675,14 @@ async def scrape_type(page, doc_type, start_date, end_date):
             if (set(id, '{end_date}')) {{ results.dateTo = id; break; }}
         }}
 
-        // Set instrument type — txtInstrument is a text input
+        // txtInstrument is an autocomplete text input
+        // Type the code, wait for autocomplete, then select the match
         for (const id of itIds) {{
-            if (set(id, '{doc_type}')) {{
+            const el = document.getElementById(id);
+            if (el) {{
+                el.value = '{doc_type}';
+                el.dispatchEvent(new Event('input', {{bubbles:true}}));
+                el.dispatchEvent(new Event('keyup', {{bubbles:true}}));
                 results.instrType = id + '=' + '{doc_type}';
                 break;
             }}
@@ -687,6 +703,28 @@ async def scrape_type(page, doc_type, start_date, end_date):
         return JSON.stringify(results);
     }}""")
     log.info("  Form fill: %s", filled)
+
+    # Handle autocomplete dropdown for instrument type
+    await asyncio.sleep(1)
+    try:
+        # Look for autocomplete suggestions and click the matching one
+        autocomplete_selectors = [
+            f"li:has-text('{doc_type}')",
+            f".autocomplete-suggestion:has-text('{doc_type}')",
+            f"[class*='suggestion']:has-text('{doc_type}')",
+            f"[class*='autocomplete'] li:first-child",
+            f"ul.ui-autocomplete li:first-child",
+            f".ui-menu-item:first-child",
+        ]
+        for sel in autocomplete_selectors:
+            try:
+                el = page.locator(sel).first
+                if await el.count() > 0:
+                    await el.click(timeout=2000)
+                    log.info("  Autocomplete selected: %s", sel)
+                    break
+            except: pass
+    except: pass
 
     # Submit — exact ID confirmed from portal inspection
     for sel in [
