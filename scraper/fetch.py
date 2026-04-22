@@ -473,24 +473,47 @@ def parse_row(cells, headers):
     raw_file = pos(1)
     # Col 2: FILE DATE
     filed    = pos(2)
-    # Col 3: TYPEVOL PAGE — merged column, type is first line/token before digits
-    # Get raw text with newlines preserved
+    # Col 3: TYPEVOL PAGE — merged column
+    # The cell structure is: <td>TYPE<br>VOL<br>PAGE</td>
+    # We need to read direct child text nodes, not all text
     typecol_cell = cells[3] if len(cells) > 3 else None
-    raw_typecol  = ""
-    if typecol_cell:
-        # Try to get just the first text node or first line
-        raw_typecol = typecol_cell.get_text("\n", strip=True)
-    # Extract type = first line that contains only letters/slashes
     raw_type = ""
-    for line in raw_typecol.split("\n"):
-        line = line.strip()
-        if line and not line.isdigit() and re.match(r'^[A-Z][A-Z0-9/ ]*$', line):
-            raw_type = line
-            break
-    if not raw_type:
-        # Fall back: first token before any digit
-        m = re.match(r'^([A-Z][A-Z0-9/]*(?:\s[A-Z][A-Z0-9/]*)*)', raw_typecol.strip())
-        raw_type = m.group(1).strip() if m else raw_typecol.split()[0] if raw_typecol.split() else ""
+    if typecol_cell:
+        # Method 1: Get text of first direct text node (before any <br>)
+        for child in typecol_cell.children:
+            txt = str(child).strip()
+            if txt and txt != '<br/>' and txt != '<br>':
+                # NavigableString
+                if hasattr(child, 'strip') or child.name is None:
+                    clean = str(child).strip()
+                    if clean and not clean.isdigit():
+                        raw_type = clean
+                        break
+                # Tag element (span, etc)
+                elif hasattr(child, 'get_text'):
+                    clean = child.get_text(strip=True)
+                    if clean and not clean.isdigit():
+                        raw_type = clean
+                        break
+
+        # Method 2: Split on <br> tags
+        if not raw_type:
+            html_str = str(typecol_cell)
+            parts = re.split(r'<br\s*/?>', html_str, flags=re.I)
+            if parts:
+                first = BeautifulSoup(parts[0], "lxml").get_text(strip=True)
+                if first and not first.isdigit():
+                    raw_type = first
+
+        # Method 3: First non-numeric line of text
+        if not raw_type:
+            raw_typecol = typecol_cell.get_text("\n", strip=True)
+            for line in raw_typecol.split("\n"):
+                line = line.strip()
+                if line and not line.isdigit():
+                    raw_type = line
+                    break
+
     # Col 4: NAMES
     raw_names = pos(4)
     # Col 5: LEGAL DESCRIPTION
