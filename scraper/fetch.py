@@ -473,44 +473,25 @@ def parse_row(cells, headers):
     raw_file = pos(1)
     # Col 2: FILE DATE
     filed    = pos(2)
-    # Col 3: TYPEVOL PAGE — merged column
-    # The cell structure is: <td>TYPE<br>VOL<br>PAGE</td>
-    # We need to read direct child text nodes, not all text
+    # Col 3: TYPEVOL PAGE — contains an <a href="javascript:__doPostBack...">TYPE</a>
+    # The doc type is the TEXT INSIDE the anchor tag
+    # The __doPostBack parameters contain the row control ID for detail lookup
     typecol_cell = cells[3] if len(cells) > 3 else None
     raw_type = ""
+    postback_id = ""
     if typecol_cell:
-        # Method 1: Get text of first direct text node (before any <br>)
-        for child in typecol_cell.children:
-            txt = str(child).strip()
-            if txt and txt != '<br/>' and txt != '<br>':
-                # NavigableString
-                if hasattr(child, 'strip') or child.name is None:
-                    clean = str(child).strip()
-                    if clean and not clean.isdigit():
-                        raw_type = clean
-                        break
-                # Tag element (span, etc)
-                elif hasattr(child, 'get_text'):
-                    clean = child.get_text(strip=True)
-                    if clean and not clean.isdigit():
-                        raw_type = clean
-                        break
-
-        # Method 2: Split on <br> tags
+        # Primary: get text from the anchor tag
+        a_tag = typecol_cell.find("a")
+        if a_tag:
+            raw_type = a_tag.get_text(strip=True)
+            # Extract __doPostBack control ID for building doc URL
+            href = a_tag.get("href","") or a_tag.get("onclick","")
+            postback_id = href
+        # Fallback: first non-numeric text in cell
         if not raw_type:
-            html_str = str(typecol_cell)
-            parts = re.split(r'<br\s*/?>', html_str, flags=re.I)
-            if parts:
-                first = BeautifulSoup(parts[0], "lxml").get_text(strip=True)
-                if first and not first.isdigit():
-                    raw_type = first
-
-        # Method 3: First non-numeric line of text
-        if not raw_type:
-            raw_typecol = typecol_cell.get_text("\n", strip=True)
-            for line in raw_typecol.split("\n"):
+            for line in typecol_cell.get_text("\n", strip=True).split("\n"):
                 line = line.strip()
-                if line and not line.isdigit():
+                if line and not line.isdigit() and "<" not in line:
                     raw_type = line
                     break
 
@@ -556,8 +537,13 @@ def parse_row(cells, headers):
             if re.match(r'^RP-\d{4}-\d+$', txt):
                 doc_num = txt; break
 
-    if not clerk_url and doc_num:
-        clerk_url = f"{CLERK_BASE}?FileID={doc_num}"
+    # Build clerk URL — prefer postback-derived URL, then FileID
+    if not clerk_url:
+        if postback_id and doc_num:
+            # Use the results page URL pattern
+            clerk_url = f"https://www.cclerk.hctx.net/Applications/WebSearch/RP_R.aspx?FileID={doc_num}"
+        elif doc_num:
+            clerk_url = f"{CLERK_BASE}?FileID={doc_num}"
 
     amt_s = ""  # Amount not in standard results table
 
