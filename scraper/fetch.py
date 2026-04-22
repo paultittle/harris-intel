@@ -76,35 +76,67 @@ DOC_TYPE_MAP = {
     "RELLP":    ("RELLP",   "Release Lis Pendens"),
 }
 
+# Track unknown types for debugging
+_UNKNOWN_TYPES: dict[str,int] = {}
+
 def categorize(doc_type: str) -> tuple[str,str] | None:
-    """Map a raw doc type string to (cat, cat_label). Returns None if not a target type."""
+    # Map a raw doc type string to (cat, cat_label). Returns None if not a target type.
     dt = doc_type.upper().strip()
+
     # Direct match
     if dt in DOC_TYPE_MAP:
         return DOC_TYPE_MAP[dt]
-    # Partial keyword match
-    kw = {
-        "LIS PEND":("LP","Lis Pendens"), "LP":("LP","Lis Pendens"),
-        "FORECLOS":("NOFC","Notice of Foreclosure"), "NOFC":("NOFC","Notice of Foreclosure"),
-        "TAX DEED":("TAXDEED","Tax Deed"), "TAXDEED":("TAXDEED","Tax Deed"),
-        "JUDGMENT":("JUD","Judgment"), "JUD":("JUD","Judgment"),
-        "CCJ":("JUD","Certified Judgment"), "DRJUD":("JUD","Domestic Judgment"),
-        "IRS":("LIEN","IRS Lien"), "LNIRS":("LIEN","IRS Lien"),
-        "FED":("LIEN","Federal Lien"), "LNFED":("LIEN","Federal Lien"),
-        "CORP TAX":("LIEN","Corp Tax Lien"), "LNCORPTX":("LIEN","Corp Tax Lien"),
-        "MECHANIC":("LIEN","Mechanic Lien"), "LNMECH":("LIEN","Mechanic Lien"),
-        "MECH LN":("LIEN","Mechanic Lien"),
-        "HOA":("LIEN","HOA Lien"), "LNHOA":("LIEN","HOA Lien"),
-        "MEDICAID":("LIEN","Medicaid Lien"), "MEDLN":("LIEN","Medicaid Lien"),
-        "LIEN":("LIEN","Lien"), " LN":("LIEN","Lien"),
-        "PROBATE":("PRO","Probate Document"), "PRO":("PRO","Probate Document"),
-        "COMMENCE":("NOC","Notice of Commencement"), "NOC":("NOC","Notice of Commencement"),
-        "RELLP":("RELLP","Release Lis Pendens"),
-        "RELEASE":("RELLP","Release Lis Pendens"),
-    }
-    for key, val in kw.items():
+
+    # Partial keyword match — ordered by specificity
+    kw = [
+        ("LIS PEND", ("LP","Lis Pendens")),
+        ("FORECLOS", ("NOFC","Notice of Foreclosure")),
+        ("TAX DEED", ("TAXDEED","Tax Deed")),
+        ("TAXDEED",  ("TAXDEED","Tax Deed")),
+        ("DRJUD",    ("JUD","Domestic Judgment")),
+        ("CCJ",      ("JUD","Certified Judgment")),
+        ("JUDGMENT", ("JUD","Judgment")),
+        ("JUD",      ("JUD","Judgment")),
+        ("IRS LN",   ("LIEN","IRS Lien")),
+        ("LNIRS",    ("LIEN","IRS Lien")),
+        ("FED LN",   ("LIEN","Federal Lien")),
+        ("LNFED",    ("LIEN","Federal Lien")),
+        ("CORP TAX", ("LIEN","Corp Tax Lien")),
+        ("LNCORPTX", ("LIEN","Corp Tax Lien")),
+        ("MECH",     ("LIEN","Mechanic Lien")),
+        ("LNMECH",   ("LIEN","Mechanic Lien")),
+        ("HOA LN",   ("LIEN","HOA Lien")),
+        ("LNHOA",    ("LIEN","HOA Lien")),
+        ("MEDICAID", ("LIEN","Medicaid Lien")),
+        ("MEDLN",    ("LIEN","Medicaid Lien")),
+        ("COMMENCE", ("NOC","Notice of Commencement")),
+        ("NOC",      ("NOC","Notice of Commencement")),
+        ("RELLP",    ("RELLP","Release Lis Pendens")),
+        ("REL LP",   ("RELLP","Release Lis Pendens")),
+        ("PROBATE",  ("PRO","Probate Document")),
+        ("PRO",      ("PRO","Probate Document")),
+        # Common lien types from portal
+        ("LN ",      ("LIEN","Lien")),
+        (" LN",      ("LIEN","Lien")),
+        ("LIEN",     ("LIEN","Lien")),
+        # Abstract of judgment
+        ("ABST",     ("JUD","Judgment")),
+        ("AJ",       ("JUD","Judgment")),
+        # Tax lien variants
+        ("TAX LN",   ("LIEN","Tax Lien")),
+        ("FED TAX",  ("LIEN","Federal Tax Lien")),
+        ("ST TAX",   ("LIEN","State Tax Lien")),
+        ("CITY TAX", ("LIEN","City Tax Lien")),
+        # Lis pendens variants
+        ("LIS P",    ("LP","Lis Pendens")),
+        ("LP",       ("LP","Lis Pendens")),
+    ]
+    for key, val in kw:
         if key in dt:
             return val
+
+    # Track for debugging
+    _UNKNOWN_TYPES[dt] = _UNKNOWN_TYPES.get(dt, 0) + 1
     return None
 
 # ── Clerk ID normalization ────────────────────────────────────────────────────
@@ -582,6 +614,11 @@ async def search_date_range(page, start_date, end_date):
             break
 
     log.info("Scraped %d total rows, kept %d target records", total_rows, len(records))
+    if _UNKNOWN_TYPES:
+        # Log top unknown types to help expand categorize()
+        top = sorted(_UNKNOWN_TYPES.items(), key=lambda x: -x[1])[:20]
+        log.info("TOP UNKNOWN DOC TYPES (not captured): %s",
+                 ", ".join(f"{k}:{v}" for k,v in top))
     return records
 
 
