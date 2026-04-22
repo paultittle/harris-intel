@@ -461,91 +461,9 @@ def parse_row(cells, headers):
                     if v: return v
         return ""
 
-    # CONFIRMED TABLE HEADERS:
-    # ['', 'FILE NUMBER', 'FILE DATE', 'TYPEVOL PAGE', 'NAMES', 'LEGAL DESCRIPTION', 'PGS', 'FILM CODE']
-    # Indices:  0     1              2             3              4       5                   6    7
 
-    # Use positional access since we know exact column order
-    def pos(i):
-        return cells[i].get_text(" ", strip=True) if i < len(cells) else ""
 
-    # Col 1: FILE NUMBER
-    raw_file = pos(1)
-    # Col 2: FILE DATE
-    filed    = pos(2)
-    # Col 3: TYPEVOL PAGE — contains an <a href="javascript:__doPostBack...">TYPE</a>
-    # The doc type is the TEXT INSIDE the anchor tag
-    # The __doPostBack parameters contain the row control ID for detail lookup
-    typecol_cell = cells[3] if len(cells) > 3 else None
-    raw_type = ""
-    postback_id = ""
-    if typecol_cell:
-        # Primary: get text from the anchor tag
-        a_tag = typecol_cell.find("a")
-        if a_tag:
-            raw_type = a_tag.get_text(strip=True)
-            # Extract __doPostBack control ID for building doc URL
-            href = a_tag.get("href","") or a_tag.get("onclick","")
-            postback_id = href
-        # Fallback: first non-numeric text in cell
-        if not raw_type:
-            for line in typecol_cell.get_text("\n", strip=True).split("\n"):
-                line = line.strip()
-                if line and not line.isdigit() and "<" not in line:
-                    raw_type = line
-                    break
 
-    # Col 4: NAMES
-    raw_names = pos(4)
-    # Col 5: LEGAL DESCRIPTION
-    raw_legal = pos(5)
-    # Col 7: FILM CODE (has the document link)
-    film_col  = pos(7)
-
-    # Get doc number and URL
-    doc_num = ""; clerk_url = ""
-
-    # Check FILE NUMBER column first
-    if re.match(r'^RP-\d{4}-\d+$', raw_file) or re.match(r'^\d{4}-RP-\d+$', raw_file):
-        doc_num = raw_file
-
-    # Check FILM CODE column for link
-    film_cell = cells[7] if len(cells) > 7 else None
-    if film_cell:
-        a = film_cell.find("a", href=True)
-        if a:
-            h = a["href"]
-            clerk_url = h if h.startswith("http") else "https://www.cclerk.hctx.net" + h
-            # Extract doc num from URL if not found yet
-            if not doc_num:
-                m = re.search(r'FileID=(RP-[\d-]+|\d{4}-RP-[\d]+)', h)
-                if m: doc_num = m.group(1)
-
-    # Also check FILE NUMBER cell for link
-    if not clerk_url:
-        file_cell = cells[1] if len(cells) > 1 else None
-        if file_cell:
-            a = file_cell.find("a", href=True)
-            if a:
-                h = a["href"]
-                clerk_url = h if h.startswith("http") else "https://www.cclerk.hctx.net" + h
-
-    if not doc_num:
-        # Scan all cells for RP pattern
-        for cell in cells:
-            txt = cell.get_text(strip=True)
-            if re.match(r'^RP-\d{4}-\d+$', txt):
-                doc_num = txt; break
-
-    # Build clerk URL — prefer postback-derived URL, then FileID
-    if not clerk_url:
-        if postback_id and doc_num:
-            # Use the results page URL pattern
-            clerk_url = f"https://www.cclerk.hctx.net/Applications/WebSearch/RP_R.aspx?FileID={doc_num}"
-        elif doc_num:
-            clerk_url = f"{CLERK_BASE}?FileID={doc_num}"
-
-    amt_s = ""  # Amount not in standard results table
 
     # Parse names
     grantor, grantee = _parse_names_cell(raw_names)
@@ -668,12 +586,7 @@ async def search_date_range(page, start_date, end_date):
 
         if page_num == 1:
             log.info("  Table headers: %s", headers)
-            # Debug: dump first 10 rows fully
-            for di, debug_tr in enumerate(rows[1:11]):
-                debug_cells = debug_tr.find_all("td")
-                row_texts = [c.get_text(" ", strip=True)[:40] for c in debug_cells]
-                log.info("  DEBUG row %d (%d cells): %s",
-                         di, len(debug_cells), " | ".join(row_texts))
+            log.info("  Total rows on page 1: %d", len(rows)-1)
 
         new_n = 0
         for tr in rows[1:]:
