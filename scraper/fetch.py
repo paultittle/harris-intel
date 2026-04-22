@@ -26,8 +26,10 @@ CLERK_FRCL    = "https://www.cclerk.hctx.net/Applications/WebSearch/FRCL_R.aspx"
 CLERK_HOME    = "https://www.cclerk.hctx.net/Applications/WebSearch/Home.aspx"
 
 GDRIVE_REAL_ACCT_ID = os.getenv("GDRIVE_REAL_ACCT_ID", "1CwLnPOw1HlzuKpG4iuBIcqBv6XU_g4hy")
+GDRIVE_DEEDS_ID     = os.getenv("GDRIVE_DEEDS_ID",     "1EsmdzaeRb95UB6Ti9m5ANrV3prSzvU5V")
 CACHE_DIR           = Path("data")
 REAL_ACCT_CACHE     = CACHE_DIR / "real_acct.txt"
+DEEDS_CACHE         = CACHE_DIR / "deeds.txt"
 CACHE_MAX_DAYS      = 7
 
 OUTPUT_PATHS = [Path("dashboard/records.json"), Path("data/records.json")]
@@ -58,6 +60,27 @@ DOC_TYPE_MAP = {
     "NOC":      ("NOC",     "Notice of Commencement"),
     "RELLP":    ("RELLP",   "Release Lis Pendens"),
 }
+
+# ── Clerk ID normalization ───────────────────────────────────────────────────
+
+def _clerk_id_variants(raw: str) -> list[str]:
+    # Return all possible normalized forms of a clerk document ID.
+    s = raw.strip().upper().replace(" ", "")
+    variants = {s}
+    m = re.match(r'^RP-(\d{4})-(\d+)$', s)
+    if m:
+        variants.add(f"{m.group(1)}-RP-{m.group(2)}")
+        variants.add(f"RP-{m.group(2)}")
+        variants.add(m.group(2).lstrip('0') or '0')
+    m2 = re.match(r'^(\d{4})-RP-(\d+)$', s)
+    if m2:
+        variants.add(f"RP-{m2.group(1)}-{m2.group(2)}")
+        variants.add(f"RP-{m2.group(2)}")
+        variants.add(m2.group(2).lstrip('0') or '0')
+    if s.isdigit():
+        variants.add(s.lstrip('0') or '0')
+    return list(variants)
+
 
 # ── Name normalization ────────────────────────────────────────────────────────
 
@@ -117,6 +140,7 @@ class ParcelDB:
         self._by_name  : dict[str, list[dict]] = {}
         self._by_legal : dict[str, dict]       = {}
         self._by_acct  : dict[str, dict]       = {}
+        self._by_clerk : dict[str, str]        = {}  # clerk_id -> acct
         self.loaded = False
 
     def load_real_acct(self, path: Path) -> None:
@@ -193,7 +217,45 @@ class ParcelDB:
         except Exception as e:
             log.error("real_acct load error: %s", e)
 
+    def load_deeds(self, path: Path) -> None:
+        # Load deeds.txt: maps clerk_id -> acct for deterministic doc lookup
+        if not path.exists():
+            log.warning("deeds.txt not found: %s", path); return
+        sz = round(path.stat().st_size / 1_000_000, 1)
+        log.info("Loading deeds.txt (%s MB) ...", sz)
+        count = 0
+        try:
+            with path.open(encoding="latin-1") as f:
+                hdr = f.readline().strip().split("	")
+                # Columns: acct, dos, clerk_yr, clerk_id, deed_id
+                ia = hdr.index("acct")     if "acct"     in hdr else 0
+                ic = hdr.index("clerk_id") if "clerk_id" in hdr else 3
+                for line in f:
+                    if not line.strip(): continue
+                    p = line.split("	")
+                    if len(p) <= max(ia, ic): continue
+                    acct     = p[ia].strip()
+                    clerk_id = p[ic].strip()
+                    if acct and clerk_id:
+                        for v in _clerk_id_variants(clerk_id):
+                            self._by_clerk[v] = acct
+                        count += 1
+            log.info("Deeds index: %d records, %d clerk_id keys",
+                     count, len(self._by_clerk))
+        except Exception as e:
+            log.error("deeds.txt load error: %s", e)
+
     # ── Lookup methods ────────────────────────────────────────────────────────
+
+    def lookup_by_doc(self, doc_num: str) -> tuple[dict | None, str]:
+        # Layer 0: Exact doc number match via deeds index (highest confidence)
+        for v in _clerk_id_variants(doc_num):
+            acct = self._by_clerk.get(v)
+            if acct:
+                entry = self._by_acct.get(acct)
+                if entry:
+                    return entry, "high"
+        return None, "none"
 
     def lookup_legal(self, legal: str) -> tuple[dict, str] | tuple[None, None]:
         """Layer 1: Match by legal description. Returns (entry, confidence)."""
@@ -223,31 +285,29 @@ class ParcelDB:
                 return hits[0], "medium"
         return None, None
 
-    def lookup(self, name: str, legal: str, grantee: str,
-               cat: str) -> tuple[dict | None, str]:
-        """
-        Full 4-layer enrichment:
-        1. Legal description match (high confidence)
-        2. Grantee match for LP/NOFC (the actual homeowner)
-        3. Name (grantor) match
-        4. None
-        """
-        # Layer 1: Legal description
+    def lookup(self, doc_num: str, name: str, legal: str,
+               grantee: str, cat: str) -> tuple[dict | None, str]:
+        # Layer 0: Doc number -> deeds.txt -> acct -> address (deterministic)
+        hit, conf = self.lookup_by_doc(doc_num)
+        if hit:
+            return hit, conf
+
+        # Layer 1: Legal description index
         hit, conf = self.lookup_legal(legal)
         if hit:
             return hit, conf
 
-        # Layer 2: For LP/foreclosure, grantee is often the homeowner
-        if cat in ("LP", "NOFC") and grantee:
+        # Layer 2: For LP/foreclosure grantee is the homeowner
+        if cat in ("LP", "NOFC", "JUD", "LIEN") and grantee:
             hit, conf = self.lookup_name(grantee)
             if hit:
-                return hit, conf
+                return hit, "low"
 
-        # Layer 3: Grantor/owner name
-        if name:
+        # Layer 3: Grantor name (least reliable — only use if person not corp)
+        if name and _is_person(name):
             hit, conf = self.lookup_name(name)
             if hit:
-                return hit, conf
+                return hit, "low"
 
         return None, "none"
 
@@ -327,17 +387,33 @@ def download_gdrive(session: requests.Session, file_id: str, dest: Path) -> bool
 
 def load_parcel_db(session: requests.Session) -> ParcelDB:
     db = ParcelDB()
+
+    # Load real_acct.txt (owner names + addresses)
     if _cache_fresh(REAL_ACCT_CACHE):
         log.info("Using cached real_acct.txt")
     elif GDRIVE_REAL_ACCT_ID:
         ok = download_gdrive(session, GDRIVE_REAL_ACCT_ID, REAL_ACCT_CACHE)
         if not ok:
-            log.warning("Download failed — addresses will be empty this run.")
-            return db
+            log.warning("real_acct.txt download failed.")
     else:
-        log.warning("No GDRIVE_REAL_ACCT_ID — skipping address enrichment.")
-        return db
-    db.load_real_acct(REAL_ACCT_CACHE)
+        log.warning("No GDRIVE_REAL_ACCT_ID set.")
+
+    if REAL_ACCT_CACHE.exists():
+        db.load_real_acct(REAL_ACCT_CACHE)
+
+    # Load deeds.txt (clerk doc number -> acct mapping)
+    if _cache_fresh(DEEDS_CACHE):
+        log.info("Using cached deeds.txt")
+    elif GDRIVE_DEEDS_ID:
+        ok = download_gdrive(session, GDRIVE_DEEDS_ID, DEEDS_CACHE)
+        if not ok:
+            log.warning("deeds.txt download failed.")
+    else:
+        log.warning("No GDRIVE_DEEDS_ID set.")
+
+    if DEEDS_CACHE.exists():
+        db.load_deeds(DEEDS_CACHE)
+
     return db
 
 
@@ -395,25 +471,55 @@ def best_table(soup):
         if n>bn: bn,best=n,t
     return best if bn>2 else None
 
+CORP_SKIP = {"BANK","TRUST","CORP","LLC","INC","MORTGAGE","ELECTRONIC",
+              "REGISTRATION","SYSTEMS","SERIES","NATIONAL","FEDERAL","AMERICA",
+              "FINANCE","CAPITAL","INVESTMENT","SERVICES","FUNDING","ASSOCIATION",
+              "HOLDINGS","PROPERTIES","REALTY","FINANCIAL","SOLUTIONS"}
+
+def _is_person(name: str) -> bool:
+    n = name.upper()
+    return not any(s in n for s in CORP_SKIP) and len(name.split()) >= 2
+
+def _extract_all_names(raw: str) -> tuple[str, str]:
+    """Return (best_grantor, best_grantee) from a concatenated cell."""
+    if not raw:
+        return "", ""
+    if "Grantor:" not in raw and "Grantee:" not in raw:
+        return raw.strip(), ""
+
+    grantors = re.findall(r"Grantor:([^G]+?)(?=Grantor:|Grantee:|$)", raw)
+    grantees = re.findall(r"Grantee:([^G]+?)(?=Grantor:|Grantee:|$)", raw)
+
+    grantors = [n.strip() for n in grantors if n.strip()]
+    grantees = [n.strip() for n in grantees if n.strip()]
+
+    # Pick best grantor — prefer a person over a corp
+    best_grantor = ""
+    for n in grantors:
+        if _is_person(n):
+            best_grantor = n; break
+    if not best_grantor and grantors:
+        best_grantor = grantors[0]
+
+    # Pick best grantee — prefer a person over a corp
+    best_grantee = ""
+    for n in grantees:
+        if _is_person(n):
+            best_grantee = n; break
+    if not best_grantee and grantees:
+        best_grantee = grantees[0]
+
+    return best_grantor, best_grantee
+
 def clean_grantor(raw):
     if not raw: return ""
-    if "Grantor:" in raw or "Grantee:" in raw:
-        names=re.findall(r"Grantor:([^G]+?)(?=Grantor:|Grantee:|$)",raw)
-        if names:
-            skip={"BANK","TRUST","CORP","LLC","INC","MORTGAGE","ELECTRONIC",
-                  "REGISTRATION","SYSTEMS","SERIES","NATIONAL","FEDERAL","AMERICA"}
-            for n in names:
-                n=n.strip()
-                if n and not any(s in n.upper() for s in skip): return n
-            return names[0].strip()
-    return raw.strip()
+    g, _ = _extract_all_names(raw)
+    return g or raw.strip()
 
 def clean_grantee(raw):
     if not raw: return ""
-    if "Grantee:" in raw:
-        m=re.search(r"Grantee:([^G]+?)(?=Grantor:|Grantee:|$)",raw)
-        if m: return m.group(1).strip()
-    return raw.strip()
+    _, g = _extract_all_names(raw)
+    return g
 
 def parse_row(cells, headers, doc_type, cat, cat_label):
     def col(*names):
@@ -431,8 +537,10 @@ def parse_row(cells, headers, doc_type, cat, cat_label):
     amt_s  =col("AMOUNT","AMT","VALUE","CONSIDER")
     dtype  =col("TYPE","INSTRUMENT") or doc_type
     if "Grantor:" in grantor or "Grantee:" in grantor:
-        if not grantee: grantee=clean_grantee(grantor)
-        grantor=clean_grantor(grantor)
+        grantor, grantee_from_cell = _extract_all_names(grantor)
+        if not grantee: grantee = grantee_from_cell
+    if "Grantor:" in grantee or "Grantee:" in grantee:
+        _, grantee = _extract_all_names(grantee)
     if "Grantor:" in legal: legal=""
     if not doc_num and not grantor: return None
     clerk_url=""
@@ -646,10 +754,11 @@ def enrich(records, db: ParcelDB):
     counts={"high":0,"medium":0,"low":0,"none":0}
     for r in records:
         hit, conf = db.lookup(
-            name   = r.get("owner",""),
-            legal  = r.get("legal",""),
-            grantee= r.get("grantee",""),
-            cat    = r.get("cat",""),
+            doc_num = r.get("doc_num",""),
+            name    = r.get("owner",""),
+            legal   = r.get("legal",""),
+            grantee = r.get("grantee",""),
+            cat     = r.get("cat",""),
         )
         if hit:
             for k,v in hit.items():
