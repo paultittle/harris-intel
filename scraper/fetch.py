@@ -587,6 +587,21 @@ async def search_date_range(page, start_date, end_date):
         if page_num == 1:
             log.info("  Table headers: %s", headers)
             log.info("  Total rows on page 1: %d", len(rows)-1)
+            # Count rows by cell count
+            cell_counts = {}
+            for tr in rows[1:]:
+                n = len(tr.find_all("td", recursive=False))
+                cell_counts[n] = cell_counts.get(n, 0) + 1
+            log.info("  Row cell count distribution: %s",
+                     sorted(cell_counts.items(), key=lambda x: -x[1])[:10])
+            # Show first row with >8 cells
+            for tr in rows[1:20]:
+                tds = tr.find_all("td", recursive=False)
+                if len(tds) > 8:
+                    texts = [td.get_text(" ",strip=True)[:30] for td in tds[:8]]
+                    log.info("  First >8-cell row (%d cells): %s",
+                             len(tds), " | ".join(texts))
+                    break
 
         new_n = 0
         for tr in rows[1:]:
