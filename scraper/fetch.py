@@ -137,10 +137,19 @@ def categorize(doc_type: str) -> tuple[str,str] | None:
         # Financing statement = UCC/commercial lien
         ("FI STM",   ("LIEN","Financing Statement")),
         ("FIN STM",  ("LIEN","Financing Statement")),
-        # Notice types
+        # Notice types — check content for subtype
         ("NOTICE OF FORECL", ("NOFC","Notice of Foreclosure")),
         ("NOTICE OF COMMENCE",("NOC","Notice of Commencement")),
         ("NOTICE OF LIS",    ("LP","Lis Pendens")),
+        ("NOTICE",           ("NOC","Notice")),
+        # Release types
+        ("REL LP",           ("RELLP","Release Lis Pendens")),
+        ("PT REL",           ("RELLP","Release Lis Pendens")),
+        # Affidavit types — keep as they often relate to judgments/liens
+        ("AFFT",             ("JUD","Affidavit")),
+        ("L AFFT",           ("JUD","Affidavit of Lien")),
+        # Assignment — keep for lien tracking
+        ("ASSGN",            ("LIEN","Assignment")),
     ]
     for key, val in kw:
         if key in dt:
@@ -409,18 +418,23 @@ def _extract_names(raw):
     return bg, be
 
 def _parse_names_cell(raw):
-    # Portal puts Names like: "Grantor: SMITH JOHN\nGrantee: BANK OF AMERICA"
-    # or just "SMITH JOHN" with separate grantee column
-    grantor = grantee = ""
-    if "Grantor:" in raw or "Grantee:" in raw:
-        grantor, grantee = _extract_names(raw)
-    elif "\n" in raw:
-        parts = [p.strip() for p in raw.split("\n") if p.strip()]
-        grantor = parts[0] if parts else ""
-        grantee = parts[1] if len(parts)>1 else ""
-    else:
-        grantor = raw.strip()
-    return grantor, grantee
+    # Portal names cell format (confirmed):
+    # "Grantor : SMITH JOHN\nGrantor : BANK OF AMERICA\nGrantee : JONES MARY"
+    # Note spaces around colon: "Grantor :" not "Grantor:"
+    if not raw: return "", ""
+
+    # Normalize — handle both "Grantor:" and "Grantor :"
+    normalized = re.sub(r'Grantor\s*:', 'Grantor:', raw)
+    normalized = re.sub(r'Grantee\s*:', 'Grantee:', normalized)
+    normalized = re.sub(r'Trustee\s*:', 'Trustee:', normalized)
+
+    if "Grantor:" in normalized or "Grantee:" in normalized:
+        grantor, grantee = _extract_names(normalized)
+        return grantor, grantee
+
+    # No labels — split by newline
+    parts = [p.strip() for p in raw.split("\n") if p.strip()]
+    return parts[0] if parts else "", parts[1] if len(parts)>1 else ""
 
 def _extract_legal_from_cell(raw):
     # Portal legal cell format: "Desc:HAPPY HIDE A WAY\nSec: 3\nLot: 434\nComment:..."
@@ -459,11 +473,24 @@ def parse_row(cells, headers):
     raw_file = pos(1)
     # Col 2: FILE DATE
     filed    = pos(2)
-    # Col 3: TYPEVOL PAGE — contains "LP 1000 300" or just "LP" — extract type only
-    raw_typecol = pos(3)
-    # Type is the first token before any digits
-    raw_type = re.match(r'^([A-Z/][A-Z0-9/ ]*?)(?:\s+\d|\s*$)', raw_typecol)
-    raw_type = raw_type.group(1).strip() if raw_type else raw_typecol.split()[0] if raw_typecol.split() else ""
+    # Col 3: TYPEVOL PAGE — merged column, type is first line/token before digits
+    # Get raw text with newlines preserved
+    typecol_cell = cells[3] if len(cells) > 3 else None
+    raw_typecol  = ""
+    if typecol_cell:
+        # Try to get just the first text node or first line
+        raw_typecol = typecol_cell.get_text("\n", strip=True)
+    # Extract type = first line that contains only letters/slashes
+    raw_type = ""
+    for line in raw_typecol.split("\n"):
+        line = line.strip()
+        if line and not line.isdigit() and re.match(r'^[A-Z][A-Z0-9/ ]*$', line):
+            raw_type = line
+            break
+    if not raw_type:
+        # Fall back: first token before any digit
+        m = re.match(r'^([A-Z][A-Z0-9/]*(?:\s[A-Z][A-Z0-9/]*)*)', raw_typecol.strip())
+        raw_type = m.group(1).strip() if m else raw_typecol.split()[0] if raw_typecol.split() else ""
     # Col 4: NAMES
     raw_names = pos(4)
     # Col 5: LEGAL DESCRIPTION
