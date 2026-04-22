@@ -668,6 +668,12 @@ async def search_date_range(page, start_date, end_date):
 
         if page_num == 1:
             log.info("  Table headers: %s", headers)
+            # Debug: dump first 5 rows' type cell (col 3) raw HTML
+            for debug_tr in rows[1:6]:
+                debug_cells = debug_tr.find_all("td")
+                if len(debug_cells) > 3:
+                    log.info("  DEBUG type cell HTML: %s",
+                             str(debug_cells[3])[:300])
 
         new_n = 0
         for tr in rows[1:]:
