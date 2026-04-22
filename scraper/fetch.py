@@ -26,10 +26,10 @@ CLERK_BASE    = "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx"
 CLERK_FRCL    = "https://www.cclerk.hctx.net/Applications/WebSearch/FRCL_R.aspx"
 CLERK_HOME    = "https://www.cclerk.hctx.net/Applications/WebSearch/Home.aspx"
 
-# Google Drive direct download links — set via environment variables
-# Format: https://drive.google.com/uc?export=download&id=FILE_ID
-GDRIVE_REAL_ACCT_ID  = os.getenv("GDRIVE_REAL_ACCT_ID", "")
-GDRIVE_OWNERS_ID     = os.getenv("GDRIVE_OWNERS_ID", "")
+# Google Drive direct download — real_acct.txt (public file)
+GDRIVE_REAL_ACCT_ID = os.getenv("GDRIVE_REAL_ACCT_ID",
+                                 "1CwLnPOw1HlzuKpG4iuBIcqBv6XU_g4hy")
+GDRIVE_OWNERS_ID    = os.getenv("GDRIVE_OWNERS_ID", "")
 
 # Local cache paths
 CACHE_DIR        = Path("data")
