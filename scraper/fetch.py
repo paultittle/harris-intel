@@ -563,6 +563,9 @@ async def search_date_range(page, start_date, end_date):
     log.info("  After search URL: %s", current_url[:80])
     title = await page.title()
     log.info("  Page title: %s", title[:60])
+    # Log page text snippet to verify results are present
+    body_text = await page.evaluate("() => document.body.innerText.substring(0,300)")
+    log.info("  Page body: %s", body_text.replace('\n',' ')[:200])
 
     # Paginate through all results
     page_num = 0
@@ -578,7 +581,15 @@ async def search_date_range(page, start_date, end_date):
             break
 
         table = best_table(soup)
-        if not table: break
+        if not table:
+            # Log all tables found for debugging
+            all_tables = soup.find_all("table")
+            log.info("  No target table found. All tables: %d",len(all_tables))
+            for i,t in enumerate(all_tables[:5]):
+                rows_count = len(t.find_all("tr"))
+                log.info("  Table %d: id=%s class=%s rows=%d",
+                         i, t.get("id",""), t.get("class",""), rows_count)
+            break
 
         # Use recursive=False to get only direct child rows (not nested table rows)
         rows = table.find_all("tr", recursive=False)
@@ -596,6 +607,12 @@ async def search_date_range(page, start_date, end_date):
         if page_num == 1:
             log.info("  Table headers: %s", headers)
             log.info("  Rows found: %d", len(rows)-1)
+            # Log first data row
+            if len(rows) > 1:
+                tds = rows[1].find_all("td", recursive=False)
+                log.info("  First row cells: %d | %s",
+                         len(tds),
+                         " | ".join(td.get_text(" ",strip=True)[:25] for td in tds[:6]))
 
         new_n = 0
         for tr in rows[1:]:
