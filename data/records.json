@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-04-22T03:09:26.938960+00:00",
+  "fetched_at": "2026-04-22T03:16:25.698055+00:00",
   "source": "Harris County Clerk – Real Property Records",
   "date_range": {
     "from": "2026-04-15",
@@ -10,7 +10,7 @@
   "records": [
     {
       "doc_num": "RP-2026-151889",
-      "doc_type": "A/J",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl33$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl33_lnkdetailtest\">A/J</a>",
       "filed": "2026-04-21",
       "cat": "JUD",
       "cat_label": "Abstract of Judgment",
@@ -38,7 +38,7 @@
     },
     {
       "doc_num": "RP-2026-151869",
-      "doc_type": "A/J",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl50$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl50_lnkdetailtest\">A/J</a>",
       "filed": "2026-04-21",
       "cat": "JUD",
       "cat_label": "Abstract of Judgment",
@@ -66,7 +66,7 @@
     },
     {
       "doc_num": "RP-2026-151859",
-      "doc_type": "AFFT",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl58$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl58_lnkdetailtest\">AFFT</a>",
       "filed": "2026-04-21",
       "cat": "JUD",
       "cat_label": "Affidavit",
@@ -94,7 +94,7 @@
     },
     {
       "doc_num": "RP-2026-151747",
-      "doc_type": "A/J",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl154$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl154_lnkdetailtest\">A/J</a>",
       "filed": "2026-04-21",
       "cat": "JUD",
       "cat_label": "Abstract of Judgment",
@@ -122,7 +122,7 @@
     },
     {
       "doc_num": "RP-2026-151737",
-      "doc_type": "A/J",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl163$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl163_lnkdetailtest\">A/J</a>",
       "filed": "2026-04-21",
       "cat": "JUD",
       "cat_label": "Abstract of Judgment",
@@ -150,7 +150,7 @@
     },
     {
       "doc_num": "RP-2026-151723",
-      "doc_type": "L/P",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl176$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl176_lnkdetailtest\">L/P</a>",
       "filed": "2026-04-21",
       "cat": "LP",
       "cat_label": "Lis Pendens",
@@ -178,7 +178,7 @@
     },
     {
       "doc_num": "RP-2026-151586",
-      "doc_type": "AFFT",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl72$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl72_lnkdetailtest\">AFFT</a>",
       "filed": "2026-04-21",
       "cat": "JUD",
       "cat_label": "Affidavit",
@@ -206,7 +206,7 @@
     },
     {
       "doc_num": "RP-2026-151552",
-      "doc_type": "AFFT",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl100$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl100_lnkdetailtest\">AFFT</a>",
       "filed": "2026-04-21",
       "cat": "JUD",
       "cat_label": "Affidavit",
@@ -234,7 +234,7 @@
     },
     {
       "doc_num": "RP-2026-151542",
-      "doc_type": "AFFT",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl103$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl103_lnkdetailtest\">AFFT</a>",
       "filed": "2026-04-21",
       "cat": "JUD",
       "cat_label": "Affidavit",
@@ -262,7 +262,7 @@
     },
     {
       "doc_num": "RP-2026-151532",
-      "doc_type": "AFFT",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl111$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl111_lnkdetailtest\">AFFT</a>",
       "filed": "2026-04-21",
       "cat": "JUD",
       "cat_label": "Affidavit",
@@ -290,7 +290,7 @@
     },
     {
       "doc_num": "RP-2026-151512",
-      "doc_type": "AFFT",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl129$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl129_lnkdetailtest\">AFFT</a>",
       "filed": "2026-04-21",
       "cat": "JUD",
       "cat_label": "Affidavit",
@@ -318,7 +318,7 @@
     },
     {
       "doc_num": "RP-2026-151495",
-      "doc_type": "AFFT",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl143$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl143_lnkdetailtest\">AFFT</a>",
       "filed": "2026-04-21",
       "cat": "JUD",
       "cat_label": "Affidavit",
@@ -346,7 +346,7 @@
     },
     {
       "doc_num": "RP-2026-151476",
-      "doc_type": "AFFT",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl154$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl154_lnkdetailtest\">AFFT</a>",
       "filed": "2026-04-21",
       "cat": "JUD",
       "cat_label": "Affidavit",
@@ -374,7 +374,7 @@
     },
     {
       "doc_num": "RP-2026-151470",
-      "doc_type": "AFFT",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl159$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl159_lnkdetailtest\">AFFT</a>",
       "filed": "2026-04-21",
       "cat": "JUD",
       "cat_label": "Affidavit",
@@ -402,7 +402,7 @@
     },
     {
       "doc_num": "RP-2026-151399",
-      "doc_type": "A/J",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl198$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl198_lnkdetailtest\">A/J</a>",
       "filed": "2026-04-21",
       "cat": "JUD",
       "cat_label": "Abstract of Judgment",
@@ -430,7 +430,7 @@
     },
     {
       "doc_num": "RP-2026-151282",
-      "doc_type": "L/P",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl99$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl99_lnkdetailtest\">L/P</a>",
       "filed": "2026-04-21",
       "cat": "LP",
       "cat_label": "Lis Pendens",
@@ -458,7 +458,7 @@
     },
     {
       "doc_num": "RP-2026-151281",
-      "doc_type": "L/P",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl100$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl100_lnkdetailtest\">L/P</a>",
       "filed": "2026-04-21",
       "cat": "LP",
       "cat_label": "Lis Pendens",
@@ -486,7 +486,7 @@
     },
     {
       "doc_num": "RP-2026-151271",
-      "doc_type": "A/J",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl110$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl110_lnkdetailtest\">A/J</a>",
       "filed": "2026-04-21",
       "cat": "JUD",
       "cat_label": "Abstract of Judgment",
@@ -514,7 +514,7 @@
     },
     {
       "doc_num": "RP-2026-151269",
-      "doc_type": "A/J",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl112$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl112_lnkdetailtest\">A/J</a>",
       "filed": "2026-04-21",
       "cat": "JUD",
       "cat_label": "Abstract of Judgment",
@@ -542,7 +542,7 @@
     },
     {
       "doc_num": "RP-2026-151240",
-      "doc_type": "A/J",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl117$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl117_lnkdetailtest\">A/J</a>",
       "filed": "2026-04-21",
       "cat": "JUD",
       "cat_label": "Abstract of Judgment",
@@ -570,7 +570,7 @@
     },
     {
       "doc_num": "RP-2026-151232",
-      "doc_type": "A/J",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl125$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl125_lnkdetailtest\">A/J</a>",
       "filed": "2026-04-21",
       "cat": "JUD",
       "cat_label": "Abstract of Judgment",
@@ -598,7 +598,7 @@
     },
     {
       "doc_num": "RP-2026-150815",
-      "doc_type": "A/J",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl129$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl129_lnkdetailtest\">A/J</a>",
       "filed": "2026-04-21",
       "cat": "JUD",
       "cat_label": "Abstract of Judgment",
@@ -626,7 +626,7 @@
     },
     {
       "doc_num": "RP-2026-151895",
-      "doc_type": "NOTICE",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl27$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl27_lnkdetailtest\">NOTICE</a>",
       "filed": "2026-04-21",
       "cat": "NOC",
       "cat_label": "Notice",
@@ -653,7 +653,7 @@
     },
     {
       "doc_num": "RP-2026-151894",
-      "doc_type": "NOTICE",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl28$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl28_lnkdetailtest\">NOTICE</a>",
       "filed": "2026-04-21",
       "cat": "NOC",
       "cat_label": "Notice",
@@ -680,7 +680,7 @@
     },
     {
       "doc_num": "RP-2026-151885",
-      "doc_type": "AFFT",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl37$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl37_lnkdetailtest\">AFFT</a>",
       "filed": "2026-04-21",
       "cat": "JUD",
       "cat_label": "Affidavit",
@@ -707,7 +707,7 @@
     },
     {
       "doc_num": "RP-2026-151866",
-      "doc_type": "AFFT",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl52$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl52_lnkdetailtest\">AFFT</a>",
       "filed": "2026-04-21",
       "cat": "JUD",
       "cat_label": "Affidavit",
@@ -734,7 +734,7 @@
     },
     {
       "doc_num": "RP-2026-151840",
-      "doc_type": "AFFT",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl74$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl74_lnkdetailtest\">AFFT</a>",
       "filed": "2026-04-21",
       "cat": "JUD",
       "cat_label": "Affidavit",
@@ -761,7 +761,7 @@
     },
     {
       "doc_num": "RP-2026-151816",
-      "doc_type": "ASSGN",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl96$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl96_lnkdetailtest\">ASSGN</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Assignment",
@@ -788,7 +788,7 @@
     },
     {
       "doc_num": "RP-2026-151814",
-      "doc_type": "AFFT",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl97$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl97_lnkdetailtest\">AFFT</a>",
       "filed": "2026-04-21",
       "cat": "JUD",
       "cat_label": "Affidavit",
@@ -815,7 +815,7 @@
     },
     {
       "doc_num": "RP-2026-151767",
-      "doc_type": "AFFT",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl137$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl137_lnkdetailtest\">AFFT</a>",
       "filed": "2026-04-21",
       "cat": "JUD",
       "cat_label": "Affidavit",
@@ -842,7 +842,7 @@
     },
     {
       "doc_num": "RP-2026-151765",
-      "doc_type": "ASSGN",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl139$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl139_lnkdetailtest\">ASSGN</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Assignment",
@@ -869,7 +869,7 @@
     },
     {
       "doc_num": "RP-2026-151764",
-      "doc_type": "ASSGN",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl140$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl140_lnkdetailtest\">ASSGN</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Assignment",
@@ -896,7 +896,7 @@
     },
     {
       "doc_num": "RP-2026-151752",
-      "doc_type": "AFFT",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl149$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl149_lnkdetailtest\">AFFT</a>",
       "filed": "2026-04-21",
       "cat": "JUD",
       "cat_label": "Affidavit",
@@ -923,7 +923,7 @@
     },
     {
       "doc_num": "RP-2026-151751",
-      "doc_type": "AFFT",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl150$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl150_lnkdetailtest\">AFFT</a>",
       "filed": "2026-04-21",
       "cat": "JUD",
       "cat_label": "Affidavit",
@@ -950,7 +950,7 @@
     },
     {
       "doc_num": "RP-2026-151731",
-      "doc_type": "NOTICE",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl168$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl168_lnkdetailtest\">NOTICE</a>",
       "filed": "2026-04-21",
       "cat": "NOC",
       "cat_label": "Notice",
@@ -977,7 +977,7 @@
     },
     {
       "doc_num": "RP-2026-151718",
-      "doc_type": "L/P",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl181$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl181_lnkdetailtest\">L/P</a>",
       "filed": "2026-04-21",
       "cat": "LP",
       "cat_label": "Lis Pendens",
@@ -1004,7 +1004,7 @@
     },
     {
       "doc_num": "RP-2026-151696",
-      "doc_type": "FI STM",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl0$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl0_lnkdetailtest\">FI STM</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Financing Statement",
@@ -1031,7 +1031,7 @@
     },
     {
       "doc_num": "RP-2026-151688",
-      "doc_type": "ASSGN",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl7$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl7_lnkdetailtest\">ASSGN</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Assignment",
@@ -1058,7 +1058,7 @@
     },
     {
       "doc_num": "RP-2026-151683",
-      "doc_type": "NOTICE",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl12$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl12_lnkdetailtest\">NOTICE</a>",
       "filed": "2026-04-21",
       "cat": "NOC",
       "cat_label": "Notice",
@@ -1085,7 +1085,7 @@
     },
     {
       "doc_num": "RP-2026-151674",
-      "doc_type": "FI STM",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl20$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl20_lnkdetailtest\">FI STM</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Financing Statement",
@@ -1112,7 +1112,7 @@
     },
     {
       "doc_num": "RP-2026-151673",
-      "doc_type": "AFFT",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl21$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl21_lnkdetailtest\">AFFT</a>",
       "filed": "2026-04-21",
       "cat": "JUD",
       "cat_label": "Affidavit",
@@ -1139,7 +1139,7 @@
     },
     {
       "doc_num": "RP-2026-151672",
-      "doc_type": "AFFT",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl22$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl22_lnkdetailtest\">AFFT</a>",
       "filed": "2026-04-21",
       "cat": "JUD",
       "cat_label": "Affidavit",
@@ -1166,7 +1166,7 @@
     },
     {
       "doc_num": "RP-2026-151660",
-      "doc_type": "FI STM",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl32$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl32_lnkdetailtest\">FI STM</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Financing Statement",
@@ -1193,7 +1193,7 @@
     },
     {
       "doc_num": "RP-2026-151658",
-      "doc_type": "FI STM",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl33$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl33_lnkdetailtest\">FI STM</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Financing Statement",
@@ -1220,7 +1220,7 @@
     },
     {
       "doc_num": "RP-2026-151656",
-      "doc_type": "AFFT",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl35$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl35_lnkdetailtest\">AFFT</a>",
       "filed": "2026-04-21",
       "cat": "JUD",
       "cat_label": "Affidavit",
@@ -1247,7 +1247,7 @@
     },
     {
       "doc_num": "RP-2026-151654",
-      "doc_type": "FI STM",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl37$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl37_lnkdetailtest\">FI STM</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Financing Statement",
@@ -1274,7 +1274,7 @@
     },
     {
       "doc_num": "RP-2026-151625",
-      "doc_type": "AFFT",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl61$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl61_lnkdetailtest\">AFFT</a>",
       "filed": "2026-04-21",
       "cat": "JUD",
       "cat_label": "Affidavit",
@@ -1301,7 +1301,7 @@
     },
     {
       "doc_num": "RP-2026-151622",
-      "doc_type": "AFFT",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl64$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl64_lnkdetailtest\">AFFT</a>",
       "filed": "2026-04-21",
       "cat": "JUD",
       "cat_label": "Affidavit",
@@ -1328,7 +1328,7 @@
     },
     {
       "doc_num": "RP-2026-151591",
-      "doc_type": "AFFT",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl67$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl67_lnkdetailtest\">AFFT</a>",
       "filed": "2026-04-21",
       "cat": "JUD",
       "cat_label": "Affidavit",
@@ -1355,7 +1355,7 @@
     },
     {
       "doc_num": "RP-2026-151556",
-      "doc_type": "A/J",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl98$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl98_lnkdetailtest\">A/J</a>",
       "filed": "2026-04-21",
       "cat": "JUD",
       "cat_label": "Abstract of Judgment",
@@ -1382,7 +1382,7 @@
     },
     {
       "doc_num": "RP-2026-151517",
-      "doc_type": "NOTICE",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl124$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl124_lnkdetailtest\">NOTICE</a>",
       "filed": "2026-04-21",
       "cat": "NOC",
       "cat_label": "Notice",
@@ -1409,7 +1409,7 @@
     },
     {
       "doc_num": "RP-2026-151483",
-      "doc_type": "AFFT",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl150$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl150_lnkdetailtest\">AFFT</a>",
       "filed": "2026-04-21",
       "cat": "JUD",
       "cat_label": "Affidavit",
@@ -1436,7 +1436,7 @@
     },
     {
       "doc_num": "RP-2026-151474",
-      "doc_type": "AFFT",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl155$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl155_lnkdetailtest\">AFFT</a>",
       "filed": "2026-04-21",
       "cat": "JUD",
       "cat_label": "Affidavit",
@@ -1463,7 +1463,7 @@
     },
     {
       "doc_num": "RP-2026-151471",
-      "doc_type": "AFFT",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl158$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl158_lnkdetailtest\">AFFT</a>",
       "filed": "2026-04-21",
       "cat": "JUD",
       "cat_label": "Affidavit",
@@ -1490,7 +1490,7 @@
     },
     {
       "doc_num": "RP-2026-151466",
-      "doc_type": "NOTICE",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl160$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl160_lnkdetailtest\">NOTICE</a>",
       "filed": "2026-04-21",
       "cat": "NOC",
       "cat_label": "Notice",
@@ -1517,7 +1517,7 @@
     },
     {
       "doc_num": "RP-2026-151463",
-      "doc_type": "AFFT",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl163$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl163_lnkdetailtest\">AFFT</a>",
       "filed": "2026-04-21",
       "cat": "JUD",
       "cat_label": "Affidavit",
@@ -1544,7 +1544,7 @@
     },
     {
       "doc_num": "RP-2026-151462",
-      "doc_type": "AFFT",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl164$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl164_lnkdetailtest\">AFFT</a>",
       "filed": "2026-04-21",
       "cat": "JUD",
       "cat_label": "Affidavit",
@@ -1571,7 +1571,7 @@
     },
     {
       "doc_num": "RP-2026-151428",
-      "doc_type": "AFFT",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl180$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl180_lnkdetailtest\">AFFT</a>",
       "filed": "2026-04-21",
       "cat": "JUD",
       "cat_label": "Affidavit",
@@ -1598,7 +1598,7 @@
     },
     {
       "doc_num": "RP-2026-151424",
-      "doc_type": "AFFT",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl184$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl184_lnkdetailtest\">AFFT</a>",
       "filed": "2026-04-21",
       "cat": "JUD",
       "cat_label": "Affidavit",
@@ -1625,7 +1625,7 @@
     },
     {
       "doc_num": "RP-2026-151411",
-      "doc_type": "FI STM",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl186$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl186_lnkdetailtest\">FI STM</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Financing Statement",
@@ -1652,7 +1652,7 @@
     },
     {
       "doc_num": "RP-2026-151410",
-      "doc_type": "A/J",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl187$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl187_lnkdetailtest\">A/J</a>",
       "filed": "2026-04-21",
       "cat": "JUD",
       "cat_label": "Abstract of Judgment",
@@ -1679,7 +1679,7 @@
     },
     {
       "doc_num": "RP-2026-151378",
-      "doc_type": "AFFT",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl14$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl14_lnkdetailtest\">AFFT</a>",
       "filed": "2026-04-21",
       "cat": "JUD",
       "cat_label": "Affidavit",
@@ -1706,7 +1706,7 @@
     },
     {
       "doc_num": "RP-2026-151369",
-      "doc_type": "AFFT",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl23$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl23_lnkdetailtest\">AFFT</a>",
       "filed": "2026-04-21",
       "cat": "JUD",
       "cat_label": "Affidavit",
@@ -1733,7 +1733,7 @@
     },
     {
       "doc_num": "RP-2026-151364",
-      "doc_type": "FI STM",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl27$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl27_lnkdetailtest\">FI STM</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Financing Statement",
@@ -1760,7 +1760,7 @@
     },
     {
       "doc_num": "RP-2026-151341",
-      "doc_type": "AFFT",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl49$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl49_lnkdetailtest\">AFFT</a>",
       "filed": "2026-04-21",
       "cat": "JUD",
       "cat_label": "Affidavit",
@@ -1787,7 +1787,7 @@
     },
     {
       "doc_num": "RP-2026-151340",
-      "doc_type": "AFFT",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl50$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl50_lnkdetailtest\">AFFT</a>",
       "filed": "2026-04-21",
       "cat": "JUD",
       "cat_label": "Affidavit",
@@ -1814,7 +1814,7 @@
     },
     {
       "doc_num": "RP-2026-151333",
-      "doc_type": "ASSGN",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl56$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl56_lnkdetailtest\">ASSGN</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Assignment",
@@ -1841,7 +1841,7 @@
     },
     {
       "doc_num": "RP-2026-151327",
-      "doc_type": "AFFT",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl59$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl59_lnkdetailtest\">AFFT</a>",
       "filed": "2026-04-21",
       "cat": "JUD",
       "cat_label": "Affidavit",
@@ -1868,7 +1868,7 @@
     },
     {
       "doc_num": "RP-2026-151319",
-      "doc_type": "AFFT",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl66$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl66_lnkdetailtest\">AFFT</a>",
       "filed": "2026-04-21",
       "cat": "JUD",
       "cat_label": "Affidavit",
@@ -1895,7 +1895,7 @@
     },
     {
       "doc_num": "RP-2026-151307",
-      "doc_type": "FI STM",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl77$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl77_lnkdetailtest\">FI STM</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Financing Statement",
@@ -1922,7 +1922,7 @@
     },
     {
       "doc_num": "RP-2026-151302",
-      "doc_type": "AFFT",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl81$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl81_lnkdetailtest\">AFFT</a>",
       "filed": "2026-04-21",
       "cat": "JUD",
       "cat_label": "Affidavit",
@@ -1949,7 +1949,7 @@
     },
     {
       "doc_num": "RP-2026-151212",
-      "doc_type": "NOTICE",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl141$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl141_lnkdetailtest\">NOTICE</a>",
       "filed": "2026-04-21",
       "cat": "NOC",
       "cat_label": "Notice",
@@ -1976,7 +1976,7 @@
     },
     {
       "doc_num": "RP-2026-151204",
-      "doc_type": "FI STM",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl147$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl147_lnkdetailtest\">FI STM</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Financing Statement",
@@ -2003,7 +2003,7 @@
     },
     {
       "doc_num": "RP-2026-151192",
-      "doc_type": "AFFT",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl158$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl158_lnkdetailtest\">AFFT</a>",
       "filed": "2026-04-21",
       "cat": "JUD",
       "cat_label": "Affidavit",
@@ -2030,7 +2030,7 @@
     },
     {
       "doc_num": "RP-2026-151188",
-      "doc_type": "FI STM",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl162$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl162_lnkdetailtest\">FI STM</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Financing Statement",
@@ -2057,7 +2057,7 @@
     },
     {
       "doc_num": "RP-2026-151177",
-      "doc_type": "FI STM",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl172$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl172_lnkdetailtest\">FI STM</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Financing Statement",
@@ -2084,7 +2084,7 @@
     },
     {
       "doc_num": "RP-2026-151165",
-      "doc_type": "NOTICE",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl183$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl183_lnkdetailtest\">NOTICE</a>",
       "filed": "2026-04-21",
       "cat": "NOC",
       "cat_label": "Notice",
@@ -2111,7 +2111,7 @@
     },
     {
       "doc_num": "RP-2026-151162",
-      "doc_type": "FI STM",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl186$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl186_lnkdetailtest\">FI STM</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Financing Statement",
@@ -2138,7 +2138,7 @@
     },
     {
       "doc_num": "RP-2026-151158",
-      "doc_type": "AFFT",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl190$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl190_lnkdetailtest\">AFFT</a>",
       "filed": "2026-04-21",
       "cat": "JUD",
       "cat_label": "Affidavit",
@@ -2165,7 +2165,7 @@
     },
     {
       "doc_num": "RP-2026-151156",
-      "doc_type": "AFFT",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl192$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl192_lnkdetailtest\">AFFT</a>",
       "filed": "2026-04-21",
       "cat": "JUD",
       "cat_label": "Affidavit",
@@ -2192,7 +2192,7 @@
     },
     {
       "doc_num": "RP-2026-151145",
-      "doc_type": "NOTICE",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl2$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl2_lnkdetailtest\">NOTICE</a>",
       "filed": "2026-04-21",
       "cat": "NOC",
       "cat_label": "Notice",
@@ -2219,7 +2219,7 @@
     },
     {
       "doc_num": "RP-2026-151125",
-      "doc_type": "AFFT",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl22$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl22_lnkdetailtest\">AFFT</a>",
       "filed": "2026-04-21",
       "cat": "JUD",
       "cat_label": "Affidavit",
@@ -2246,7 +2246,7 @@
     },
     {
       "doc_num": "RP-2026-151124",
-      "doc_type": "AFFT",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl23$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl23_lnkdetailtest\">AFFT</a>",
       "filed": "2026-04-21",
       "cat": "JUD",
       "cat_label": "Affidavit",
@@ -2273,7 +2273,7 @@
     },
     {
       "doc_num": "RP-2026-151122",
-      "doc_type": "AFFT",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl25$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl25_lnkdetailtest\">AFFT</a>",
       "filed": "2026-04-21",
       "cat": "JUD",
       "cat_label": "Affidavit",
@@ -2300,7 +2300,7 @@
     },
     {
       "doc_num": "RP-2026-151119",
-      "doc_type": "AFFT",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl28$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl28_lnkdetailtest\">AFFT</a>",
       "filed": "2026-04-21",
       "cat": "JUD",
       "cat_label": "Affidavit",
@@ -2327,7 +2327,7 @@
     },
     {
       "doc_num": "RP-2026-151118",
-      "doc_type": "AFFT",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl29$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl29_lnkdetailtest\">AFFT</a>",
       "filed": "2026-04-21",
       "cat": "JUD",
       "cat_label": "Affidavit",
@@ -2354,7 +2354,7 @@
     },
     {
       "doc_num": "RP-2026-151116",
-      "doc_type": "AFFT",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl31$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl31_lnkdetailtest\">AFFT</a>",
       "filed": "2026-04-21",
       "cat": "JUD",
       "cat_label": "Affidavit",
@@ -2381,7 +2381,7 @@
     },
     {
       "doc_num": "RP-2026-151112",
-      "doc_type": "NOTICE",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl35$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl35_lnkdetailtest\">NOTICE</a>",
       "filed": "2026-04-21",
       "cat": "NOC",
       "cat_label": "Notice",
@@ -2408,7 +2408,7 @@
     },
     {
       "doc_num": "RP-2026-151108",
-      "doc_type": "NOTICE",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl39$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl39_lnkdetailtest\">NOTICE</a>",
       "filed": "2026-04-21",
       "cat": "NOC",
       "cat_label": "Notice",
@@ -2435,7 +2435,7 @@
     },
     {
       "doc_num": "RP-2026-151104",
-      "doc_type": "AFFT",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl43$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl43_lnkdetailtest\">AFFT</a>",
       "filed": "2026-04-21",
       "cat": "JUD",
       "cat_label": "Affidavit",
@@ -2462,7 +2462,7 @@
     },
     {
       "doc_num": "RP-2026-151103",
-      "doc_type": "AFFT",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl44$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl44_lnkdetailtest\">AFFT</a>",
       "filed": "2026-04-21",
       "cat": "JUD",
       "cat_label": "Affidavit",
@@ -2489,7 +2489,7 @@
     },
     {
       "doc_num": "RP-2026-151100",
-      "doc_type": "NOTICE",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl47$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl47_lnkdetailtest\">NOTICE</a>",
       "filed": "2026-04-21",
       "cat": "NOC",
       "cat_label": "Notice",
@@ -2516,7 +2516,7 @@
     },
     {
       "doc_num": "RP-2026-151094",
-      "doc_type": "AFFT",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl53$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl53_lnkdetailtest\">AFFT</a>",
       "filed": "2026-04-21",
       "cat": "JUD",
       "cat_label": "Affidavit",
@@ -2543,7 +2543,7 @@
     },
     {
       "doc_num": "RP-2026-151090",
-      "doc_type": "AFFT",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl57$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl57_lnkdetailtest\">AFFT</a>",
       "filed": "2026-04-21",
       "cat": "JUD",
       "cat_label": "Affidavit",
@@ -2570,7 +2570,7 @@
     },
     {
       "doc_num": "RP-2026-151077",
-      "doc_type": "AFFT",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl70$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl70_lnkdetailtest\">AFFT</a>",
       "filed": "2026-04-21",
       "cat": "JUD",
       "cat_label": "Affidavit",
@@ -2597,7 +2597,7 @@
     },
     {
       "doc_num": "RP-2026-151069",
-      "doc_type": "AFFT",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl78$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl78_lnkdetailtest\">AFFT</a>",
       "filed": "2026-04-21",
       "cat": "JUD",
       "cat_label": "Affidavit",
@@ -2624,7 +2624,7 @@
     },
     {
       "doc_num": "RP-2026-151057",
-      "doc_type": "AFFT",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl90$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl90_lnkdetailtest\">AFFT</a>",
       "filed": "2026-04-21",
       "cat": "JUD",
       "cat_label": "Affidavit",
@@ -2651,7 +2651,7 @@
     },
     {
       "doc_num": "RP-2026-151045",
-      "doc_type": "A/J",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl102$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl102_lnkdetailtest\">A/J</a>",
       "filed": "2026-04-21",
       "cat": "JUD",
       "cat_label": "Abstract of Judgment",
@@ -2678,7 +2678,7 @@
     },
     {
       "doc_num": "RP-2026-151044",
-      "doc_type": "A/J",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl103$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl103_lnkdetailtest\">A/J</a>",
       "filed": "2026-04-21",
       "cat": "JUD",
       "cat_label": "Abstract of Judgment",
@@ -2705,7 +2705,7 @@
     },
     {
       "doc_num": "RP-2026-151043",
-      "doc_type": "A/J",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl104$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl104_lnkdetailtest\">A/J</a>",
       "filed": "2026-04-21",
       "cat": "JUD",
       "cat_label": "Abstract of Judgment",
@@ -2732,7 +2732,7 @@
     },
     {
       "doc_num": "RP-2026-151042",
-      "doc_type": "A/J",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl105$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl105_lnkdetailtest\">A/J</a>",
       "filed": "2026-04-21",
       "cat": "JUD",
       "cat_label": "Abstract of Judgment",
@@ -2759,7 +2759,7 @@
     },
     {
       "doc_num": "RP-2026-151041",
-      "doc_type": "A/J",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl106$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl106_lnkdetailtest\">A/J</a>",
       "filed": "2026-04-21",
       "cat": "JUD",
       "cat_label": "Abstract of Judgment",
@@ -2786,7 +2786,7 @@
     },
     {
       "doc_num": "RP-2026-151036",
-      "doc_type": "A/J",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl111$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl111_lnkdetailtest\">A/J</a>",
       "filed": "2026-04-21",
       "cat": "JUD",
       "cat_label": "Abstract of Judgment",
@@ -2813,7 +2813,7 @@
     },
     {
       "doc_num": "RP-2026-151034",
-      "doc_type": "A/J",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl113$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl113_lnkdetailtest\">A/J</a>",
       "filed": "2026-04-21",
       "cat": "JUD",
       "cat_label": "Abstract of Judgment",
@@ -2840,7 +2840,7 @@
     },
     {
       "doc_num": "RP-2026-151033",
-      "doc_type": "A/J",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl114$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl114_lnkdetailtest\">A/J</a>",
       "filed": "2026-04-21",
       "cat": "JUD",
       "cat_label": "Abstract of Judgment",
@@ -2867,7 +2867,7 @@
     },
     {
       "doc_num": "RP-2026-151028",
-      "doc_type": "AFFT",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl119$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl119_lnkdetailtest\">AFFT</a>",
       "filed": "2026-04-21",
       "cat": "JUD",
       "cat_label": "Affidavit",
@@ -2894,7 +2894,7 @@
     },
     {
       "doc_num": "RP-2026-151026",
-      "doc_type": "A/J",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl120$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl120_lnkdetailtest\">A/J</a>",
       "filed": "2026-04-21",
       "cat": "JUD",
       "cat_label": "Abstract of Judgment",
@@ -2921,7 +2921,7 @@
     },
     {
       "doc_num": "RP-2026-151025",
-      "doc_type": "A/J",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl121$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl121_lnkdetailtest\">A/J</a>",
       "filed": "2026-04-21",
       "cat": "JUD",
       "cat_label": "Abstract of Judgment",
@@ -2948,7 +2948,7 @@
     },
     {
       "doc_num": "RP-2026-151024",
-      "doc_type": "A/J",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl122$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl122_lnkdetailtest\">A/J</a>",
       "filed": "2026-04-21",
       "cat": "JUD",
       "cat_label": "Abstract of Judgment",
@@ -2975,7 +2975,7 @@
     },
     {
       "doc_num": "RP-2026-151020",
-      "doc_type": "A/J",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl126$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl126_lnkdetailtest\">A/J</a>",
       "filed": "2026-04-21",
       "cat": "JUD",
       "cat_label": "Abstract of Judgment",
@@ -3002,7 +3002,7 @@
     },
     {
       "doc_num": "RP-2026-151019",
-      "doc_type": "A/J",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl127$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl127_lnkdetailtest\">A/J</a>",
       "filed": "2026-04-21",
       "cat": "JUD",
       "cat_label": "Abstract of Judgment",
@@ -3029,7 +3029,7 @@
     },
     {
       "doc_num": "RP-2026-151018",
-      "doc_type": "A/J",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl128$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl128_lnkdetailtest\">A/J</a>",
       "filed": "2026-04-21",
       "cat": "JUD",
       "cat_label": "Abstract of Judgment",
@@ -3056,7 +3056,7 @@
     },
     {
       "doc_num": "RP-2026-151013",
-      "doc_type": "A/J",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl133$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl133_lnkdetailtest\">A/J</a>",
       "filed": "2026-04-21",
       "cat": "JUD",
       "cat_label": "Abstract of Judgment",
@@ -3083,7 +3083,7 @@
     },
     {
       "doc_num": "RP-2026-151012",
-      "doc_type": "A/J",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl134$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl134_lnkdetailtest\">A/J</a>",
       "filed": "2026-04-21",
       "cat": "JUD",
       "cat_label": "Abstract of Judgment",
@@ -3110,7 +3110,7 @@
     },
     {
       "doc_num": "RP-2026-151006",
-      "doc_type": "A/J",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl140$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl140_lnkdetailtest\">A/J</a>",
       "filed": "2026-04-21",
       "cat": "JUD",
       "cat_label": "Abstract of Judgment",
@@ -3137,7 +3137,7 @@
     },
     {
       "doc_num": "RP-2026-150986",
-      "doc_type": "ASSGN",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl160$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl160_lnkdetailtest\">ASSGN</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Assignment",
@@ -3164,7 +3164,7 @@
     },
     {
       "doc_num": "RP-2026-150979",
-      "doc_type": "ASSGN",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl167$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl167_lnkdetailtest\">ASSGN</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Assignment",
@@ -3191,7 +3191,7 @@
     },
     {
       "doc_num": "RP-2026-150978",
-      "doc_type": "NOTICE",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl168$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl168_lnkdetailtest\">NOTICE</a>",
       "filed": "2026-04-21",
       "cat": "NOC",
       "cat_label": "Notice",
@@ -3218,7 +3218,7 @@
     },
     {
       "doc_num": "RP-2026-150977",
-      "doc_type": "NOTICE",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl169$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl169_lnkdetailtest\">NOTICE</a>",
       "filed": "2026-04-21",
       "cat": "NOC",
       "cat_label": "Notice",
@@ -3245,7 +3245,7 @@
     },
     {
       "doc_num": "RP-2026-150976",
-      "doc_type": "NOTICE",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl170$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl170_lnkdetailtest\">NOTICE</a>",
       "filed": "2026-04-21",
       "cat": "NOC",
       "cat_label": "Notice",
@@ -3272,7 +3272,7 @@
     },
     {
       "doc_num": "RP-2026-150970",
-      "doc_type": "FI STM",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl176$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl176_lnkdetailtest\">FI STM</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Financing Statement",
@@ -3299,7 +3299,7 @@
     },
     {
       "doc_num": "RP-2026-150969",
-      "doc_type": "ASSGN",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl177$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl177_lnkdetailtest\">ASSGN</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Assignment",
@@ -3326,7 +3326,7 @@
     },
     {
       "doc_num": "RP-2026-150965",
-      "doc_type": "ASSGN",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl181$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl181_lnkdetailtest\">ASSGN</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Assignment",
@@ -3353,7 +3353,7 @@
     },
     {
       "doc_num": "RP-2026-150964",
-      "doc_type": "ASSGN",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl182$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl182_lnkdetailtest\">ASSGN</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Assignment",
@@ -3380,7 +3380,7 @@
     },
     {
       "doc_num": "RP-2026-150960",
-      "doc_type": "FI STM",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl186$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl186_lnkdetailtest\">FI STM</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Financing Statement",
@@ -3407,7 +3407,7 @@
     },
     {
       "doc_num": "RP-2026-150958",
-      "doc_type": "FI STM",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl188$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl188_lnkdetailtest\">FI STM</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Financing Statement",
@@ -3434,7 +3434,7 @@
     },
     {
       "doc_num": "RP-2026-150951",
-      "doc_type": "A/J",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl195$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl195_lnkdetailtest\">A/J</a>",
       "filed": "2026-04-21",
       "cat": "JUD",
       "cat_label": "Abstract of Judgment",
@@ -3461,7 +3461,7 @@
     },
     {
       "doc_num": "RP-2026-150935",
-      "doc_type": "L/P",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl10$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl10_lnkdetailtest\">L/P</a>",
       "filed": "2026-04-21",
       "cat": "LP",
       "cat_label": "Lis Pendens",
@@ -3488,7 +3488,7 @@
     },
     {
       "doc_num": "RP-2026-150934",
-      "doc_type": "L/P",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl11$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl11_lnkdetailtest\">L/P</a>",
       "filed": "2026-04-21",
       "cat": "LP",
       "cat_label": "Lis Pendens",
@@ -3515,7 +3515,7 @@
     },
     {
       "doc_num": "RP-2026-150933",
-      "doc_type": "L/P",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl12$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl12_lnkdetailtest\">L/P</a>",
       "filed": "2026-04-21",
       "cat": "LP",
       "cat_label": "Lis Pendens",
@@ -3542,7 +3542,7 @@
     },
     {
       "doc_num": "RP-2026-150932",
-      "doc_type": "L/P",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl13$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl13_lnkdetailtest\">L/P</a>",
       "filed": "2026-04-21",
       "cat": "LP",
       "cat_label": "Lis Pendens",
@@ -3569,7 +3569,7 @@
     },
     {
       "doc_num": "RP-2026-150917",
-      "doc_type": "AFFT",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl28$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl28_lnkdetailtest\">AFFT</a>",
       "filed": "2026-04-21",
       "cat": "JUD",
       "cat_label": "Affidavit",
@@ -3596,7 +3596,7 @@
     },
     {
       "doc_num": "RP-2026-150908",
-      "doc_type": "FI STM",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl37$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl37_lnkdetailtest\">FI STM</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Financing Statement",
@@ -3623,7 +3623,7 @@
     },
     {
       "doc_num": "RP-2026-150896",
-      "doc_type": "L/P",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl48$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl48_lnkdetailtest\">L/P</a>",
       "filed": "2026-04-21",
       "cat": "LP",
       "cat_label": "Lis Pendens",
@@ -3650,7 +3650,7 @@
     },
     {
       "doc_num": "RP-2026-150881",
-      "doc_type": "AFFT",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl63$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl63_lnkdetailtest\">AFFT</a>",
       "filed": "2026-04-21",
       "cat": "JUD",
       "cat_label": "Affidavit",
@@ -3677,7 +3677,7 @@
     },
     {
       "doc_num": "RP-2026-150880",
-      "doc_type": "AFFT",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl64$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl64_lnkdetailtest\">AFFT</a>",
       "filed": "2026-04-21",
       "cat": "JUD",
       "cat_label": "Affidavit",
@@ -3704,7 +3704,7 @@
     },
     {
       "doc_num": "RP-2026-150878",
-      "doc_type": "L AFFT",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl66$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl66_lnkdetailtest\">L AFFT</a>",
       "filed": "2026-04-21",
       "cat": "JUD",
       "cat_label": "Affidavit",
@@ -3731,7 +3731,7 @@
     },
     {
       "doc_num": "RP-2026-150875",
-      "doc_type": "FI STM",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl69$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl69_lnkdetailtest\">FI STM</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Financing Statement",
@@ -3758,7 +3758,7 @@
     },
     {
       "doc_num": "RP-2026-150868",
-      "doc_type": "A/J",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl76$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl76_lnkdetailtest\">A/J</a>",
       "filed": "2026-04-21",
       "cat": "JUD",
       "cat_label": "Abstract of Judgment",
@@ -3785,7 +3785,7 @@
     },
     {
       "doc_num": "RP-2026-150865",
-      "doc_type": "FI STM",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl79$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl79_lnkdetailtest\">FI STM</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Financing Statement",
@@ -3812,7 +3812,7 @@
     },
     {
       "doc_num": "RP-2026-150862",
-      "doc_type": "NOTICE",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl82$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl82_lnkdetailtest\">NOTICE</a>",
       "filed": "2026-04-21",
       "cat": "NOC",
       "cat_label": "Notice",
@@ -3839,7 +3839,7 @@
     },
     {
       "doc_num": "RP-2026-150859",
-      "doc_type": "ASSGN",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl85$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl85_lnkdetailtest\">ASSGN</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Assignment",
@@ -3866,7 +3866,7 @@
     },
     {
       "doc_num": "RP-2026-150856",
-      "doc_type": "ASSGN",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl88$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl88_lnkdetailtest\">ASSGN</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Assignment",
@@ -3893,7 +3893,7 @@
     },
     {
       "doc_num": "RP-2026-150854",
-      "doc_type": "ASSGN",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl90$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl90_lnkdetailtest\">ASSGN</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Assignment",
@@ -3920,7 +3920,7 @@
     },
     {
       "doc_num": "RP-2026-150851",
-      "doc_type": "AFFT",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl93$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl93_lnkdetailtest\">AFFT</a>",
       "filed": "2026-04-21",
       "cat": "JUD",
       "cat_label": "Affidavit",
@@ -3947,7 +3947,7 @@
     },
     {
       "doc_num": "RP-2026-150846",
-      "doc_type": "FI STM",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl98$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl98_lnkdetailtest\">FI STM</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Financing Statement",
@@ -3974,7 +3974,7 @@
     },
     {
       "doc_num": "RP-2026-150838",
-      "doc_type": "AFFT",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl106$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl106_lnkdetailtest\">AFFT</a>",
       "filed": "2026-04-21",
       "cat": "JUD",
       "cat_label": "Affidavit",
@@ -4001,7 +4001,7 @@
     },
     {
       "doc_num": "RP-2026-150837",
-      "doc_type": "AFFT",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl107$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl107_lnkdetailtest\">AFFT</a>",
       "filed": "2026-04-21",
       "cat": "JUD",
       "cat_label": "Affidavit",
@@ -4028,7 +4028,7 @@
     },
     {
       "doc_num": "RP-2026-150836",
-      "doc_type": "AFFT",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl108$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl108_lnkdetailtest\">AFFT</a>",
       "filed": "2026-04-21",
       "cat": "JUD",
       "cat_label": "Affidavit",
@@ -4055,7 +4055,7 @@
     },
     {
       "doc_num": "RP-2026-150834",
-      "doc_type": "AFFT",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl110$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl110_lnkdetailtest\">AFFT</a>",
       "filed": "2026-04-21",
       "cat": "JUD",
       "cat_label": "Affidavit",
@@ -4082,7 +4082,7 @@
     },
     {
       "doc_num": "RP-2026-150827",
-      "doc_type": "L AFFT",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl117$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl117_lnkdetailtest\">L AFFT</a>",
       "filed": "2026-04-21",
       "cat": "JUD",
       "cat_label": "Affidavit",
@@ -4109,7 +4109,7 @@
     },
     {
       "doc_num": "RP-2026-150819",
-      "doc_type": "AFFT",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl125$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl125_lnkdetailtest\">AFFT</a>",
       "filed": "2026-04-21",
       "cat": "JUD",
       "cat_label": "Affidavit",
@@ -4136,7 +4136,7 @@
     },
     {
       "doc_num": "RP-2026-150809",
-      "doc_type": "ASSGN",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl135$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl135_lnkdetailtest\">ASSGN</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Assignment",
@@ -4163,7 +4163,7 @@
     },
     {
       "doc_num": "RP-2026-150761",
-      "doc_type": "NOTICE",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl183$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl183_lnkdetailtest\">NOTICE</a>",
       "filed": "2026-04-21",
       "cat": "NOC",
       "cat_label": "Notice",
@@ -4190,7 +4190,7 @@
     },
     {
       "doc_num": "RP-2026-151930",
-      "doc_type": "FI STM",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl1$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl1_lnkdetailtest\">FI STM</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Financing Statement",
@@ -4216,7 +4216,7 @@
     },
     {
       "doc_num": "RP-2026-151876",
-      "doc_type": "NOTICE",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl43$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl43_lnkdetailtest\">NOTICE</a>",
       "filed": "2026-04-21",
       "cat": "NOC",
       "cat_label": "Notice",
@@ -4242,7 +4242,7 @@
     },
     {
       "doc_num": "RP-2026-151872",
-      "doc_type": "NOTICE",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl47$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl47_lnkdetailtest\">NOTICE</a>",
       "filed": "2026-04-21",
       "cat": "NOC",
       "cat_label": "Notice",
@@ -4268,7 +4268,7 @@
     },
     {
       "doc_num": "RP-2026-151871",
-      "doc_type": "NOTICE",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl48$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl48_lnkdetailtest\">NOTICE</a>",
       "filed": "2026-04-21",
       "cat": "NOC",
       "cat_label": "Notice",
@@ -4294,7 +4294,7 @@
     },
     {
       "doc_num": "RP-2026-151857",
-      "doc_type": "NOTICE",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl60$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl60_lnkdetailtest\">NOTICE</a>",
       "filed": "2026-04-21",
       "cat": "NOC",
       "cat_label": "Notice",
@@ -4320,7 +4320,7 @@
     },
     {
       "doc_num": "RP-2026-151853",
-      "doc_type": "PT REL",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl63$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl63_lnkdetailtest\">PT REL</a>",
       "filed": "2026-04-21",
       "cat": "RELLP",
       "cat_label": "Release Lis Pendens",
@@ -4346,7 +4346,7 @@
     },
     {
       "doc_num": "RP-2026-151849",
-      "doc_type": "NOTICE",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl67$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl67_lnkdetailtest\">NOTICE</a>",
       "filed": "2026-04-21",
       "cat": "NOC",
       "cat_label": "Notice",
@@ -4372,7 +4372,7 @@
     },
     {
       "doc_num": "RP-2026-151844",
-      "doc_type": "NOTICE",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl71$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl71_lnkdetailtest\">NOTICE</a>",
       "filed": "2026-04-21",
       "cat": "NOC",
       "cat_label": "Notice",
@@ -4398,7 +4398,7 @@
     },
     {
       "doc_num": "RP-2026-151801",
-      "doc_type": "ASSGN",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl109$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl109_lnkdetailtest\">ASSGN</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Assignment",
@@ -4424,7 +4424,7 @@
     },
     {
       "doc_num": "RP-2026-151788",
-      "doc_type": "ASSGN",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl120$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl120_lnkdetailtest\">ASSGN</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Assignment",
@@ -4450,7 +4450,7 @@
     },
     {
       "doc_num": "RP-2026-151779",
-      "doc_type": "NOTICE",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl127$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl127_lnkdetailtest\">NOTICE</a>",
       "filed": "2026-04-21",
       "cat": "NOC",
       "cat_label": "Notice",
@@ -4476,7 +4476,7 @@
     },
     {
       "doc_num": "RP-2026-151775",
-      "doc_type": "ASSGN",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl131$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl131_lnkdetailtest\">ASSGN</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Assignment",
@@ -4502,7 +4502,7 @@
     },
     {
       "doc_num": "RP-2026-151768",
-      "doc_type": "ASSGN",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl136$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl136_lnkdetailtest\">ASSGN</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Assignment",
@@ -4528,7 +4528,7 @@
     },
     {
       "doc_num": "RP-2026-151763",
-      "doc_type": "ASSGN",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl141$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl141_lnkdetailtest\">ASSGN</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Assignment",
@@ -4554,7 +4554,7 @@
     },
     {
       "doc_num": "RP-2026-151762",
-      "doc_type": "ASSGN",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl142$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl142_lnkdetailtest\">ASSGN</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Assignment",
@@ -4580,7 +4580,7 @@
     },
     {
       "doc_num": "RP-2026-151756",
-      "doc_type": "NOTICE",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl145$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl145_lnkdetailtest\">NOTICE</a>",
       "filed": "2026-04-21",
       "cat": "NOC",
       "cat_label": "Notice",
@@ -4606,7 +4606,7 @@
     },
     {
       "doc_num": "RP-2026-151755",
-      "doc_type": "NOTICE",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl146$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl146_lnkdetailtest\">NOTICE</a>",
       "filed": "2026-04-21",
       "cat": "NOC",
       "cat_label": "Notice",
@@ -4632,7 +4632,7 @@
     },
     {
       "doc_num": "RP-2026-151736",
-      "doc_type": "NOTICE",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl164$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl164_lnkdetailtest\">NOTICE</a>",
       "filed": "2026-04-21",
       "cat": "NOC",
       "cat_label": "Notice",
@@ -4658,7 +4658,7 @@
     },
     {
       "doc_num": "RP-2026-151734",
-      "doc_type": "ASSGN",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl166$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl166_lnkdetailtest\">ASSGN</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Assignment",
@@ -4684,7 +4684,7 @@
     },
     {
       "doc_num": "RP-2026-151732",
-      "doc_type": "ASSGN",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl167$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl167_lnkdetailtest\">ASSGN</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Assignment",
@@ -4710,7 +4710,7 @@
     },
     {
       "doc_num": "RP-2026-151727",
-      "doc_type": "NOTICE",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl172$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl172_lnkdetailtest\">NOTICE</a>",
       "filed": "2026-04-21",
       "cat": "NOC",
       "cat_label": "Notice",
@@ -4736,7 +4736,7 @@
     },
     {
       "doc_num": "RP-2026-151708",
-      "doc_type": "NOTICE",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl189$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl189_lnkdetailtest\">NOTICE</a>",
       "filed": "2026-04-21",
       "cat": "NOC",
       "cat_label": "Notice",
@@ -4762,7 +4762,7 @@
     },
     {
       "doc_num": "RP-2026-151703",
-      "doc_type": "ASSGN",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl194$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl194_lnkdetailtest\">ASSGN</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Assignment",
@@ -4788,7 +4788,7 @@
     },
     {
       "doc_num": "RP-2026-151702",
-      "doc_type": "ASSGN",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl195$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl195_lnkdetailtest\">ASSGN</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Assignment",
@@ -4814,7 +4814,7 @@
     },
     {
       "doc_num": "RP-2026-151698",
-      "doc_type": "NOTICE",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl198$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl198_lnkdetailtest\">NOTICE</a>",
       "filed": "2026-04-21",
       "cat": "NOC",
       "cat_label": "Notice",
@@ -4840,7 +4840,7 @@
     },
     {
       "doc_num": "RP-2026-151687",
-      "doc_type": "ASSGN",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl8$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl8_lnkdetailtest\">ASSGN</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Assignment",
@@ -4866,7 +4866,7 @@
     },
     {
       "doc_num": "RP-2026-151686",
-      "doc_type": "ASSGN",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl9$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl9_lnkdetailtest\">ASSGN</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Assignment",
@@ -4892,7 +4892,7 @@
     },
     {
       "doc_num": "RP-2026-151678",
-      "doc_type": "NOTICE",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl16$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl16_lnkdetailtest\">NOTICE</a>",
       "filed": "2026-04-21",
       "cat": "NOC",
       "cat_label": "Notice",
@@ -4918,7 +4918,7 @@
     },
     {
       "doc_num": "RP-2026-151670",
-      "doc_type": "NOTICE",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl24$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl24_lnkdetailtest\">NOTICE</a>",
       "filed": "2026-04-21",
       "cat": "NOC",
       "cat_label": "Notice",
@@ -4944,7 +4944,7 @@
     },
     {
       "doc_num": "RP-2026-151666",
-      "doc_type": "FI STM",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl27$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl27_lnkdetailtest\">FI STM</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Financing Statement",
@@ -4970,7 +4970,7 @@
     },
     {
       "doc_num": "RP-2026-151665",
-      "doc_type": "NOTICE",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl28$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl28_lnkdetailtest\">NOTICE</a>",
       "filed": "2026-04-21",
       "cat": "NOC",
       "cat_label": "Notice",
@@ -4996,7 +4996,7 @@
     },
     {
       "doc_num": "RP-2026-151653",
-      "doc_type": "ASSGN",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl38$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl38_lnkdetailtest\">ASSGN</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Assignment",
@@ -5022,7 +5022,7 @@
     },
     {
       "doc_num": "RP-2026-151651",
-      "doc_type": "ASSGN",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl39$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl39_lnkdetailtest\">ASSGN</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Assignment",
@@ -5048,7 +5048,7 @@
     },
     {
       "doc_num": "RP-2026-151650",
-      "doc_type": "ASSGN",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl40$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl40_lnkdetailtest\">ASSGN</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Assignment",
@@ -5074,7 +5074,7 @@
     },
     {
       "doc_num": "RP-2026-151649",
-      "doc_type": "FI STM",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl41$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl41_lnkdetailtest\">FI STM</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Financing Statement",
@@ -5100,7 +5100,7 @@
     },
     {
       "doc_num": "RP-2026-151645",
-      "doc_type": "NOTICE",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl45$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl45_lnkdetailtest\">NOTICE</a>",
       "filed": "2026-04-21",
       "cat": "NOC",
       "cat_label": "Notice",
@@ -5126,7 +5126,7 @@
     },
     {
       "doc_num": "RP-2026-151640",
-      "doc_type": "NOTICE",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl49$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl49_lnkdetailtest\">NOTICE</a>",
       "filed": "2026-04-21",
       "cat": "NOC",
       "cat_label": "Notice",
@@ -5152,7 +5152,7 @@
     },
     {
       "doc_num": "RP-2026-151623",
-      "doc_type": "FI STM",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl63$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl63_lnkdetailtest\">FI STM</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Financing Statement",
@@ -5178,7 +5178,7 @@
     },
     {
       "doc_num": "RP-2026-151582",
-      "doc_type": "NOTICE",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl76$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl76_lnkdetailtest\">NOTICE</a>",
       "filed": "2026-04-21",
       "cat": "NOC",
       "cat_label": "Notice",
@@ -5204,7 +5204,7 @@
     },
     {
       "doc_num": "RP-2026-151581",
-      "doc_type": "NOTICE",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl77$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl77_lnkdetailtest\">NOTICE</a>",
       "filed": "2026-04-21",
       "cat": "NOC",
       "cat_label": "Notice",
@@ -5230,7 +5230,7 @@
     },
     {
       "doc_num": "RP-2026-151573",
-      "doc_type": "NOTICE",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl84$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl84_lnkdetailtest\">NOTICE</a>",
       "filed": "2026-04-21",
       "cat": "NOC",
       "cat_label": "Notice",
@@ -5256,7 +5256,7 @@
     },
     {
       "doc_num": "RP-2026-151561",
-      "doc_type": "NOTICE",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl94$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl94_lnkdetailtest\">NOTICE</a>",
       "filed": "2026-04-21",
       "cat": "NOC",
       "cat_label": "Notice",
@@ -5282,7 +5282,7 @@
     },
     {
       "doc_num": "RP-2026-151541",
-      "doc_type": "PT REL",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl104$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl104_lnkdetailtest\">PT REL</a>",
       "filed": "2026-04-21",
       "cat": "RELLP",
       "cat_label": "Release Lis Pendens",
@@ -5308,7 +5308,7 @@
     },
     {
       "doc_num": "RP-2026-151539",
-      "doc_type": "ASSGN",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl105$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl105_lnkdetailtest\">ASSGN</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Assignment",
@@ -5334,7 +5334,7 @@
     },
     {
       "doc_num": "RP-2026-151528",
-      "doc_type": "ASSGN",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl114$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl114_lnkdetailtest\">ASSGN</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Assignment",
@@ -5360,7 +5360,7 @@
     },
     {
       "doc_num": "RP-2026-151525",
-      "doc_type": "NOTICE",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl116$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl116_lnkdetailtest\">NOTICE</a>",
       "filed": "2026-04-21",
       "cat": "NOC",
       "cat_label": "Notice",
@@ -5386,7 +5386,7 @@
     },
     {
       "doc_num": "RP-2026-151523",
-      "doc_type": "ASSGN",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl118$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl118_lnkdetailtest\">ASSGN</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Assignment",
@@ -5412,7 +5412,7 @@
     },
     {
       "doc_num": "RP-2026-151522",
-      "doc_type": "ASSGN",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl119$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl119_lnkdetailtest\">ASSGN</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Assignment",
@@ -5438,7 +5438,7 @@
     },
     {
       "doc_num": "RP-2026-151518",
-      "doc_type": "ASSGN",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl123$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl123_lnkdetailtest\">ASSGN</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Assignment",
@@ -5464,7 +5464,7 @@
     },
     {
       "doc_num": "RP-2026-151515",
-      "doc_type": "NOTICE",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl126$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl126_lnkdetailtest\">NOTICE</a>",
       "filed": "2026-04-21",
       "cat": "NOC",
       "cat_label": "Notice",
@@ -5490,7 +5490,7 @@
     },
     {
       "doc_num": "RP-2026-151508",
-      "doc_type": "ASSGN",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl131$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl131_lnkdetailtest\">ASSGN</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Assignment",
@@ -5516,7 +5516,7 @@
     },
     {
       "doc_num": "RP-2026-151506",
-      "doc_type": "ASSGN",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl133$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl133_lnkdetailtest\">ASSGN</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Assignment",
@@ -5542,7 +5542,7 @@
     },
     {
       "doc_num": "RP-2026-151504",
-      "doc_type": "ASSGN",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl135$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl135_lnkdetailtest\">ASSGN</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Assignment",
@@ -5568,7 +5568,7 @@
     },
     {
       "doc_num": "RP-2026-151502",
-      "doc_type": "NOTICE",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl136$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl136_lnkdetailtest\">NOTICE</a>",
       "filed": "2026-04-21",
       "cat": "NOC",
       "cat_label": "Notice",
@@ -5594,7 +5594,7 @@
     },
     {
       "doc_num": "RP-2026-151501",
-      "doc_type": "PT REL",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl137$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl137_lnkdetailtest\">PT REL</a>",
       "filed": "2026-04-21",
       "cat": "RELLP",
       "cat_label": "Release Lis Pendens",
@@ -5620,7 +5620,7 @@
     },
     {
       "doc_num": "RP-2026-151490",
-      "doc_type": "NOTICE",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl147$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl147_lnkdetailtest\">NOTICE</a>",
       "filed": "2026-04-21",
       "cat": "NOC",
       "cat_label": "Notice",
@@ -5646,7 +5646,7 @@
     },
     {
       "doc_num": "RP-2026-151447",
-      "doc_type": "ASSGN",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl170$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl170_lnkdetailtest\">ASSGN</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Assignment",
@@ -5672,7 +5672,7 @@
     },
     {
       "doc_num": "RP-2026-151446",
-      "doc_type": "ASSGN",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl171$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl171_lnkdetailtest\">ASSGN</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Assignment",
@@ -5698,7 +5698,7 @@
     },
     {
       "doc_num": "RP-2026-151445",
-      "doc_type": "ASSGN",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl172$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl172_lnkdetailtest\">ASSGN</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Assignment",
@@ -5724,7 +5724,7 @@
     },
     {
       "doc_num": "RP-2026-151444",
-      "doc_type": "ASSGN",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl173$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl173_lnkdetailtest\">ASSGN</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Assignment",
@@ -5750,7 +5750,7 @@
     },
     {
       "doc_num": "RP-2026-151443",
-      "doc_type": "ASSGN",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl174$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl174_lnkdetailtest\">ASSGN</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Assignment",
@@ -5776,7 +5776,7 @@
     },
     {
       "doc_num": "RP-2026-151442",
-      "doc_type": "ASSGN",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl175$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl175_lnkdetailtest\">ASSGN</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Assignment",
@@ -5802,7 +5802,7 @@
     },
     {
       "doc_num": "RP-2026-151431",
-      "doc_type": "ASSGN",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl178$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl178_lnkdetailtest\">ASSGN</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Assignment",
@@ -5828,7 +5828,7 @@
     },
     {
       "doc_num": "RP-2026-151426",
-      "doc_type": "NOTICE",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl182$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl182_lnkdetailtest\">NOTICE</a>",
       "filed": "2026-04-21",
       "cat": "NOC",
       "cat_label": "Notice",
@@ -5854,7 +5854,7 @@
     },
     {
       "doc_num": "RP-2026-151412",
-      "doc_type": "NOTICE",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl185$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl185_lnkdetailtest\">NOTICE</a>",
       "filed": "2026-04-21",
       "cat": "NOC",
       "cat_label": "Notice",
@@ -5880,7 +5880,7 @@
     },
     {
       "doc_num": "RP-2026-151409",
-      "doc_type": "NOTICE",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl188$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl188_lnkdetailtest\">NOTICE</a>",
       "filed": "2026-04-21",
       "cat": "NOC",
       "cat_label": "Notice",
@@ -5906,7 +5906,7 @@
     },
     {
       "doc_num": "RP-2026-151408",
-      "doc_type": "NOTICE",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl189$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl189_lnkdetailtest\">NOTICE</a>",
       "filed": "2026-04-21",
       "cat": "NOC",
       "cat_label": "Notice",
@@ -5932,7 +5932,7 @@
     },
     {
       "doc_num": "RP-2026-151407",
-      "doc_type": "NOTICE",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl190$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl190_lnkdetailtest\">NOTICE</a>",
       "filed": "2026-04-21",
       "cat": "NOC",
       "cat_label": "Notice",
@@ -5958,7 +5958,7 @@
     },
     {
       "doc_num": "RP-2026-151406",
-      "doc_type": "NOTICE",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl191$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl191_lnkdetailtest\">NOTICE</a>",
       "filed": "2026-04-21",
       "cat": "NOC",
       "cat_label": "Notice",
@@ -5984,7 +5984,7 @@
     },
     {
       "doc_num": "RP-2026-151405",
-      "doc_type": "NOTICE",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl192$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl192_lnkdetailtest\">NOTICE</a>",
       "filed": "2026-04-21",
       "cat": "NOC",
       "cat_label": "Notice",
@@ -6010,7 +6010,7 @@
     },
     {
       "doc_num": "RP-2026-151404",
-      "doc_type": "NOTICE",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl193$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl193_lnkdetailtest\">NOTICE</a>",
       "filed": "2026-04-21",
       "cat": "NOC",
       "cat_label": "Notice",
@@ -6036,7 +6036,7 @@
     },
     {
       "doc_num": "RP-2026-151403",
-      "doc_type": "NOTICE",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl194$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl194_lnkdetailtest\">NOTICE</a>",
       "filed": "2026-04-21",
       "cat": "NOC",
       "cat_label": "Notice",
@@ -6062,7 +6062,7 @@
     },
     {
       "doc_num": "RP-2026-151395",
-      "doc_type": "NOTICE",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl0$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl0_lnkdetailtest\">NOTICE</a>",
       "filed": "2026-04-21",
       "cat": "NOC",
       "cat_label": "Notice",
@@ -6088,7 +6088,7 @@
     },
     {
       "doc_num": "RP-2026-151394",
-      "doc_type": "NOTICE",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl1$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl1_lnkdetailtest\">NOTICE</a>",
       "filed": "2026-04-21",
       "cat": "NOC",
       "cat_label": "Notice",
@@ -6114,7 +6114,7 @@
     },
     {
       "doc_num": "RP-2026-151391",
-      "doc_type": "NOTICE",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl4$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl4_lnkdetailtest\">NOTICE</a>",
       "filed": "2026-04-21",
       "cat": "NOC",
       "cat_label": "Notice",
@@ -6140,7 +6140,7 @@
     },
     {
       "doc_num": "RP-2026-151388",
-      "doc_type": "ASSGN",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl7$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl7_lnkdetailtest\">ASSGN</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Assignment",
@@ -6166,7 +6166,7 @@
     },
     {
       "doc_num": "RP-2026-151383",
-      "doc_type": "NOTICE",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl10$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl10_lnkdetailtest\">NOTICE</a>",
       "filed": "2026-04-21",
       "cat": "NOC",
       "cat_label": "Notice",
@@ -6192,7 +6192,7 @@
     },
     {
       "doc_num": "RP-2026-151382",
-      "doc_type": "NOTICE",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl11$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl11_lnkdetailtest\">NOTICE</a>",
       "filed": "2026-04-21",
       "cat": "NOC",
       "cat_label": "Notice",
@@ -6218,7 +6218,7 @@
     },
     {
       "doc_num": "RP-2026-151375",
-      "doc_type": "NOTICE",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl17$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl17_lnkdetailtest\">NOTICE</a>",
       "filed": "2026-04-21",
       "cat": "NOC",
       "cat_label": "Notice",
@@ -6244,7 +6244,7 @@
     },
     {
       "doc_num": "RP-2026-151372",
-      "doc_type": "NOTICE",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl20$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl20_lnkdetailtest\">NOTICE</a>",
       "filed": "2026-04-21",
       "cat": "NOC",
       "cat_label": "Notice",
@@ -6270,7 +6270,7 @@
     },
     {
       "doc_num": "RP-2026-151362",
-      "doc_type": "ASSGN",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl29$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl29_lnkdetailtest\">ASSGN</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Assignment",
@@ -6296,7 +6296,7 @@
     },
     {
       "doc_num": "RP-2026-151361",
-      "doc_type": "NOTICE",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl30$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl30_lnkdetailtest\">NOTICE</a>",
       "filed": "2026-04-21",
       "cat": "NOC",
       "cat_label": "Notice",
@@ -6322,7 +6322,7 @@
     },
     {
       "doc_num": "RP-2026-151355",
-      "doc_type": "ASSGN",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl36$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl36_lnkdetailtest\">ASSGN</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Assignment",
@@ -6348,7 +6348,7 @@
     },
     {
       "doc_num": "RP-2026-151350",
-      "doc_type": "ASSGN",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl41$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl41_lnkdetailtest\">ASSGN</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Assignment",
@@ -6374,7 +6374,7 @@
     },
     {
       "doc_num": "RP-2026-151344",
-      "doc_type": "ASSGN",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl46$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl46_lnkdetailtest\">ASSGN</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Assignment",
@@ -6400,7 +6400,7 @@
     },
     {
       "doc_num": "RP-2026-151329",
-      "doc_type": "ASSGN",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl57$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl57_lnkdetailtest\">ASSGN</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Assignment",
@@ -6426,7 +6426,7 @@
     },
     {
       "doc_num": "RP-2026-151328",
-      "doc_type": "ASSGN",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl58$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl58_lnkdetailtest\">ASSGN</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Assignment",
@@ -6452,7 +6452,7 @@
     },
     {
       "doc_num": "RP-2026-151314",
-      "doc_type": "NOTICE",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl70$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl70_lnkdetailtest\">NOTICE</a>",
       "filed": "2026-04-21",
       "cat": "NOC",
       "cat_label": "Notice",
@@ -6478,7 +6478,7 @@
     },
     {
       "doc_num": "RP-2026-151310",
-      "doc_type": "LIEN",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl74$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl74_lnkdetailtest\">LIEN</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Lien",
@@ -6504,7 +6504,7 @@
     },
     {
       "doc_num": "RP-2026-151309",
-      "doc_type": "ASSGN",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl75$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl75_lnkdetailtest\">ASSGN</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Assignment",
@@ -6530,7 +6530,7 @@
     },
     {
       "doc_num": "RP-2026-151290",
-      "doc_type": "NOTICE",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl92$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl92_lnkdetailtest\">NOTICE</a>",
       "filed": "2026-04-21",
       "cat": "NOC",
       "cat_label": "Notice",
@@ -6556,7 +6556,7 @@
     },
     {
       "doc_num": "RP-2026-151286",
-      "doc_type": "NOTICE",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl95$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl95_lnkdetailtest\">NOTICE</a>",
       "filed": "2026-04-21",
       "cat": "NOC",
       "cat_label": "Notice",
@@ -6582,7 +6582,7 @@
     },
     {
       "doc_num": "RP-2026-151268",
-      "doc_type": "NOTICE",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl113$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl113_lnkdetailtest\">NOTICE</a>",
       "filed": "2026-04-21",
       "cat": "NOC",
       "cat_label": "Notice",
@@ -6608,7 +6608,7 @@
     },
     {
       "doc_num": "RP-2026-151239",
-      "doc_type": "PT REL",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl118$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl118_lnkdetailtest\">PT REL</a>",
       "filed": "2026-04-21",
       "cat": "RELLP",
       "cat_label": "Release Lis Pendens",
@@ -6634,7 +6634,7 @@
     },
     {
       "doc_num": "RP-2026-151235",
-      "doc_type": "NOTICE",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl122$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl122_lnkdetailtest\">NOTICE</a>",
       "filed": "2026-04-21",
       "cat": "NOC",
       "cat_label": "Notice",
@@ -6660,7 +6660,7 @@
     },
     {
       "doc_num": "RP-2026-151207",
-      "doc_type": "NOTICE",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl144$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl144_lnkdetailtest\">NOTICE</a>",
       "filed": "2026-04-21",
       "cat": "NOC",
       "cat_label": "Notice",
@@ -6686,7 +6686,7 @@
     },
     {
       "doc_num": "RP-2026-151203",
-      "doc_type": "NOTICE",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl148$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl148_lnkdetailtest\">NOTICE</a>",
       "filed": "2026-04-21",
       "cat": "NOC",
       "cat_label": "Notice",
@@ -6712,7 +6712,7 @@
     },
     {
       "doc_num": "RP-2026-151194",
-      "doc_type": "NOTICE",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl156$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl156_lnkdetailtest\">NOTICE</a>",
       "filed": "2026-04-21",
       "cat": "NOC",
       "cat_label": "Notice",
@@ -6738,7 +6738,7 @@
     },
     {
       "doc_num": "RP-2026-151187",
-      "doc_type": "NOTICE",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl163$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl163_lnkdetailtest\">NOTICE</a>",
       "filed": "2026-04-21",
       "cat": "NOC",
       "cat_label": "Notice",
@@ -6764,7 +6764,7 @@
     },
     {
       "doc_num": "RP-2026-151182",
-      "doc_type": "NOTICE",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl168$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl168_lnkdetailtest\">NOTICE</a>",
       "filed": "2026-04-21",
       "cat": "NOC",
       "cat_label": "Notice",
@@ -6790,7 +6790,7 @@
     },
     {
       "doc_num": "RP-2026-151181",
-      "doc_type": "NOTICE",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl169$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl169_lnkdetailtest\">NOTICE</a>",
       "filed": "2026-04-21",
       "cat": "NOC",
       "cat_label": "Notice",
@@ -6816,7 +6816,7 @@
     },
     {
       "doc_num": "RP-2026-151174",
-      "doc_type": "FI STM",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl175$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl175_lnkdetailtest\">FI STM</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Financing Statement",
@@ -6842,7 +6842,7 @@
     },
     {
       "doc_num": "RP-2026-151173",
-      "doc_type": "FI STM",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl176$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl176_lnkdetailtest\">FI STM</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Financing Statement",
@@ -6868,7 +6868,7 @@
     },
     {
       "doc_num": "RP-2026-151171",
-      "doc_type": "NOTICE",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl177$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl177_lnkdetailtest\">NOTICE</a>",
       "filed": "2026-04-21",
       "cat": "NOC",
       "cat_label": "Notice",
@@ -6894,7 +6894,7 @@
     },
     {
       "doc_num": "RP-2026-151167",
-      "doc_type": "FI STM",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl181$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl181_lnkdetailtest\">FI STM</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Financing Statement",
@@ -6920,7 +6920,7 @@
     },
     {
       "doc_num": "RP-2026-151161",
-      "doc_type": "NOTICE",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl187$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl187_lnkdetailtest\">NOTICE</a>",
       "filed": "2026-04-21",
       "cat": "NOC",
       "cat_label": "Notice",
@@ -6946,7 +6946,7 @@
     },
     {
       "doc_num": "RP-2026-151147",
-      "doc_type": "ASSGN",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl0$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl0_lnkdetailtest\">ASSGN</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Assignment",
@@ -6972,7 +6972,7 @@
     },
     {
       "doc_num": "RP-2026-151088",
-      "doc_type": "NOTICE",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl59$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl59_lnkdetailtest\">NOTICE</a>",
       "filed": "2026-04-21",
       "cat": "NOC",
       "cat_label": "Notice",
@@ -6998,7 +6998,7 @@
     },
     {
       "doc_num": "RP-2026-151087",
-      "doc_type": "ASSGN",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl60$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl60_lnkdetailtest\">ASSGN</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Assignment",
@@ -7024,7 +7024,7 @@
     },
     {
       "doc_num": "RP-2026-151083",
-      "doc_type": "FI STM",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl64$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl64_lnkdetailtest\">FI STM</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Financing Statement",
@@ -7050,7 +7050,7 @@
     },
     {
       "doc_num": "RP-2026-151081",
-      "doc_type": "ASSGN",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl66$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl66_lnkdetailtest\">ASSGN</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Assignment",
@@ -7076,7 +7076,7 @@
     },
     {
       "doc_num": "RP-2026-151080",
-      "doc_type": "ASSGN",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl67$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl67_lnkdetailtest\">ASSGN</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Assignment",
@@ -7102,7 +7102,7 @@
     },
     {
       "doc_num": "RP-2026-151075",
-      "doc_type": "NOTICE",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl72$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl72_lnkdetailtest\">NOTICE</a>",
       "filed": "2026-04-21",
       "cat": "NOC",
       "cat_label": "Notice",
@@ -7128,7 +7128,7 @@
     },
     {
       "doc_num": "RP-2026-151072",
-      "doc_type": "NOTICE",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl75$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl75_lnkdetailtest\">NOTICE</a>",
       "filed": "2026-04-21",
       "cat": "NOC",
       "cat_label": "Notice",
@@ -7154,7 +7154,7 @@
     },
     {
       "doc_num": "RP-2026-151067",
-      "doc_type": "NOTICE",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl80$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl80_lnkdetailtest\">NOTICE</a>",
       "filed": "2026-04-21",
       "cat": "NOC",
       "cat_label": "Notice",
@@ -7180,7 +7180,7 @@
     },
     {
       "doc_num": "RP-2026-151064",
-      "doc_type": "ASSGN",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl83$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl83_lnkdetailtest\">ASSGN</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Assignment",
@@ -7206,7 +7206,7 @@
     },
     {
       "doc_num": "RP-2026-151063",
-      "doc_type": "ASSGN",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl84$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl84_lnkdetailtest\">ASSGN</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Assignment",
@@ -7232,7 +7232,7 @@
     },
     {
       "doc_num": "RP-2026-151062",
-      "doc_type": "ASSGN",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl85$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl85_lnkdetailtest\">ASSGN</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Assignment",
@@ -7258,7 +7258,7 @@
     },
     {
       "doc_num": "RP-2026-151047",
-      "doc_type": "ASSGN",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl100$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl100_lnkdetailtest\">ASSGN</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Assignment",
@@ -7284,7 +7284,7 @@
     },
     {
       "doc_num": "RP-2026-151046",
-      "doc_type": "ASSGN",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl101$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl101_lnkdetailtest\">ASSGN</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Assignment",
@@ -7310,7 +7310,7 @@
     },
     {
       "doc_num": "RP-2026-151040",
-      "doc_type": "ASSGN",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl107$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl107_lnkdetailtest\">ASSGN</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Assignment",
@@ -7336,7 +7336,7 @@
     },
     {
       "doc_num": "RP-2026-151039",
-      "doc_type": "ASSGN",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl108$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl108_lnkdetailtest\">ASSGN</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Assignment",
@@ -7362,7 +7362,7 @@
     },
     {
       "doc_num": "RP-2026-151035",
-      "doc_type": "ASSGN",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl112$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl112_lnkdetailtest\">ASSGN</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Assignment",
@@ -7388,7 +7388,7 @@
     },
     {
       "doc_num": "RP-2026-151030",
-      "doc_type": "ASSGN",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl117$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl117_lnkdetailtest\">ASSGN</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Assignment",
@@ -7414,7 +7414,7 @@
     },
     {
       "doc_num": "RP-2026-151017",
-      "doc_type": "ASSGN",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl129$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl129_lnkdetailtest\">ASSGN</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Assignment",
@@ -7440,7 +7440,7 @@
     },
     {
       "doc_num": "RP-2026-151010",
-      "doc_type": "ASSGN",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl136$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl136_lnkdetailtest\">ASSGN</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Assignment",
@@ -7466,7 +7466,7 @@
     },
     {
       "doc_num": "RP-2026-150963",
-      "doc_type": "ASSGN",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl183$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl183_lnkdetailtest\">ASSGN</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Assignment",
@@ -7492,7 +7492,7 @@
     },
     {
       "doc_num": "RP-2026-150961",
-      "doc_type": "ASSGN",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl185$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl185_lnkdetailtest\">ASSGN</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Assignment",
@@ -7518,7 +7518,7 @@
     },
     {
       "doc_num": "RP-2026-150959",
-      "doc_type": "ASSGN",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl187$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl187_lnkdetailtest\">ASSGN</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Assignment",
@@ -7544,7 +7544,7 @@
     },
     {
       "doc_num": "RP-2026-150955",
-      "doc_type": "ASSGN",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl191$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl191_lnkdetailtest\">ASSGN</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Assignment",
@@ -7570,7 +7570,7 @@
     },
     {
       "doc_num": "RP-2026-150954",
-      "doc_type": "ASSGN",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl192$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl192_lnkdetailtest\">ASSGN</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Assignment",
@@ -7596,7 +7596,7 @@
     },
     {
       "doc_num": "RP-2026-150950",
-      "doc_type": "FI STM",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl196$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl196_lnkdetailtest\">FI STM</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Financing Statement",
@@ -7622,7 +7622,7 @@
     },
     {
       "doc_num": "RP-2026-150948",
-      "doc_type": "ASSGN",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl198$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl198_lnkdetailtest\">ASSGN</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Assignment",
@@ -7648,7 +7648,7 @@
     },
     {
       "doc_num": "RP-2026-150945",
-      "doc_type": "ASSGN",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl1$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl1_lnkdetailtest\">ASSGN</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Assignment",
@@ -7674,7 +7674,7 @@
     },
     {
       "doc_num": "RP-2026-150944",
-      "doc_type": "ASSGN",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl2$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl2_lnkdetailtest\">ASSGN</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Assignment",
@@ -7700,7 +7700,7 @@
     },
     {
       "doc_num": "RP-2026-150943",
-      "doc_type": "ASSGN",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl3$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl3_lnkdetailtest\">ASSGN</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Assignment",
@@ -7726,7 +7726,7 @@
     },
     {
       "doc_num": "RP-2026-150912",
-      "doc_type": "NOTICE",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl33$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl33_lnkdetailtest\">NOTICE</a>",
       "filed": "2026-04-21",
       "cat": "NOC",
       "cat_label": "Notice",
@@ -7752,7 +7752,7 @@
     },
     {
       "doc_num": "RP-2026-150903",
-      "doc_type": "FI STM",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl42$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl42_lnkdetailtest\">FI STM</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Financing Statement",
@@ -7778,7 +7778,7 @@
     },
     {
       "doc_num": "RP-2026-150888",
-      "doc_type": "ASSGN",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl56$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl56_lnkdetailtest\">ASSGN</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Assignment",
@@ -7804,7 +7804,7 @@
     },
     {
       "doc_num": "RP-2026-150885",
-      "doc_type": "FI STM",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl59$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl59_lnkdetailtest\">FI STM</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Financing Statement",
@@ -7830,7 +7830,7 @@
     },
     {
       "doc_num": "RP-2026-150872",
-      "doc_type": "ASSGN",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl72$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl72_lnkdetailtest\">ASSGN</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Assignment",
@@ -7856,7 +7856,7 @@
     },
     {
       "doc_num": "RP-2026-150871",
-      "doc_type": "ASSGN",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl73$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl73_lnkdetailtest\">ASSGN</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Assignment",
@@ -7882,7 +7882,7 @@
     },
     {
       "doc_num": "RP-2026-150867",
-      "doc_type": "ASSGN",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl77$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl77_lnkdetailtest\">ASSGN</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Assignment",
@@ -7908,7 +7908,7 @@
     },
     {
       "doc_num": "RP-2026-150866",
-      "doc_type": "ASSGN",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl78$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl78_lnkdetailtest\">ASSGN</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Assignment",
@@ -7934,7 +7934,7 @@
     },
     {
       "doc_num": "RP-2026-150850",
-      "doc_type": "NOTICE",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl94$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl94_lnkdetailtest\">NOTICE</a>",
       "filed": "2026-04-21",
       "cat": "NOC",
       "cat_label": "Notice",
@@ -7960,7 +7960,7 @@
     },
     {
       "doc_num": "RP-2026-150840",
-      "doc_type": "NOTICE",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl104$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl104_lnkdetailtest\">NOTICE</a>",
       "filed": "2026-04-21",
       "cat": "NOC",
       "cat_label": "Notice",
@@ -7986,7 +7986,7 @@
     },
     {
       "doc_num": "RP-2026-150833",
-      "doc_type": "NOTICE",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl111$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl111_lnkdetailtest\">NOTICE</a>",
       "filed": "2026-04-21",
       "cat": "NOC",
       "cat_label": "Notice",
@@ -8012,7 +8012,7 @@
     },
     {
       "doc_num": "RP-2026-150832",
-      "doc_type": "NOTICE",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl112$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl112_lnkdetailtest\">NOTICE</a>",
       "filed": "2026-04-21",
       "cat": "NOC",
       "cat_label": "Notice",
@@ -8038,7 +8038,7 @@
     },
     {
       "doc_num": "RP-2026-150825",
-      "doc_type": "ASSGN",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl119$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl119_lnkdetailtest\">ASSGN</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Assignment",
@@ -8064,7 +8064,7 @@
     },
     {
       "doc_num": "RP-2026-150823",
-      "doc_type": "NOTICE",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl121$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl121_lnkdetailtest\">NOTICE</a>",
       "filed": "2026-04-21",
       "cat": "NOC",
       "cat_label": "Notice",
@@ -8090,7 +8090,7 @@
     },
     {
       "doc_num": "RP-2026-150822",
-      "doc_type": "NOTICE",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl122$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl122_lnkdetailtest\">NOTICE</a>",
       "filed": "2026-04-21",
       "cat": "NOC",
       "cat_label": "Notice",
@@ -8116,7 +8116,7 @@
     },
     {
       "doc_num": "RP-2026-150818",
-      "doc_type": "NOTICE",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl126$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl126_lnkdetailtest\">NOTICE</a>",
       "filed": "2026-04-21",
       "cat": "NOC",
       "cat_label": "Notice",
@@ -8142,7 +8142,7 @@
     },
     {
       "doc_num": "RP-2026-150773",
-      "doc_type": "NOTICE",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl171$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl171_lnkdetailtest\">NOTICE</a>",
       "filed": "2026-04-21",
       "cat": "NOC",
       "cat_label": "Notice",
@@ -8168,7 +8168,7 @@
     },
     {
       "doc_num": "RP-2026-150758",
-      "doc_type": "NOTICE",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl186$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl186_lnkdetailtest\">NOTICE</a>",
       "filed": "2026-04-21",
       "cat": "NOC",
       "cat_label": "Notice",
@@ -8194,7 +8194,7 @@
     },
     {
       "doc_num": "RP-2026-150755",
-      "doc_type": "NOTICE",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl189$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl189_lnkdetailtest\">NOTICE</a>",
       "filed": "2026-04-21",
       "cat": "NOC",
       "cat_label": "Notice",
@@ -8220,7 +8220,7 @@
     },
     {
       "doc_num": "RP-2026-150754",
-      "doc_type": "NOTICE",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl190$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl190_lnkdetailtest\">NOTICE</a>",
       "filed": "2026-04-21",
       "cat": "NOC",
       "cat_label": "Notice",
@@ -8246,7 +8246,7 @@
     },
     {
       "doc_num": "RP-2026-150749",
-      "doc_type": "NOTICE",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl195$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl195_lnkdetailtest\">NOTICE</a>",
       "filed": "2026-04-21",
       "cat": "NOC",
       "cat_label": "Notice",
@@ -8272,7 +8272,7 @@
     },
     {
       "doc_num": "RP-2026-150745",
-      "doc_type": "ASSGN",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl199$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl199_lnkdetailtest\">ASSGN</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Assignment",
@@ -8298,7 +8298,7 @@
     },
     {
       "doc_num": "RP-2026-151526",
-      "doc_type": "ASSGN",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl115$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl115_lnkdetailtest\">ASSGN</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Assignment",
@@ -8324,7 +8324,7 @@
     },
     {
       "doc_num": "RP-2026-151184",
-      "doc_type": "FI STM",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl166$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl166_lnkdetailtest\">FI STM</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Financing Statement",
@@ -8350,7 +8350,7 @@
     },
     {
       "doc_num": "RP-2026-150957",
-      "doc_type": "ASSGN",
+      "doc_type": "<a href=\"javascript:__doPostBack('ctl00$ContentPlaceHolder1$ListView1$ctrl189$lnkdetailtest','')\" id=\"ctl00_ContentPlaceHolder1_ListView1_ctrl189_lnkdetailtest\">ASSGN</a>",
       "filed": "2026-04-21",
       "cat": "LIEN",
       "cat_label": "Assignment",
