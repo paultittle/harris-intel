@@ -192,32 +192,67 @@ def _cache_fresh(path: Path) -> bool:
 
 def download_gdrive_file(session: requests.Session, file_id: str,
                           dest: Path) -> bool:
-    """Download a file from Google Drive by file ID."""
+    """Download a large file from Google Drive, handling the virus scan page."""
     if not file_id:
         return False
-    url = f"https://drive.google.com/uc?export=download&id={file_id}"
-    log.info("Downloading from Google Drive: %s → %s", file_id, dest)
+    log.info("Downloading from Google Drive (id=%s) ...", file_id)
+    dest.parent.mkdir(parents=True, exist_ok=True)
+
     try:
-        r = session.get(url, timeout=300, stream=True, allow_redirects=True)
-        # Handle Google Drive virus scan warning page
-        if "virus scan warning" in r.text.lower() or "download_warning" in r.url:
-            # Get confirmation token
-            token = re.search(r'confirm=([^&"]+)', r.text)
+        # Step 1: Initial request
+        url = f"https://drive.google.com/uc?export=download&id={file_id}"
+        r = session.get(url, timeout=60, allow_redirects=True)
+        log.info("  GDrive initial response: HTTP %d, %d bytes",
+                 r.status_code, len(r.content))
+
+        # Step 2: Check if we got a confirmation page (large file warning)
+        if b"virus scan warning" in r.content.lower() or            b"download_warning" in r.content or            b"confirm" in r.content[:2000]:
+            log.info("  Got confirmation page — extracting token ...")
+            # Try to find confirm token
+            token = re.search(rb'confirm=([^&"]+)', r.content)
+            uuid  = re.search(rb'uuid=([^&"]+)', r.content)
             if token:
-                r = session.get(
-                    f"https://drive.google.com/uc?export=download&confirm={token.group(1)}&id={file_id}",
-                    timeout=300, stream=True
-                )
+                confirm = token.group(1).decode()
+                dl_url  = f"https://drive.google.com/uc?export=download&confirm={confirm}&id={file_id}"
+                log.info("  Downloading with confirm token ...")
+                r = session.get(dl_url, timeout=600, stream=True)
+            elif uuid:
+                uid    = uuid.group(1).decode()
+                dl_url = f"https://drive.usercontent.google.com/download?id={file_id}&export=download&authuser=0&confirm=t&uuid={uid}"
+                log.info("  Downloading with uuid ...")
+                r = session.get(dl_url, timeout=600, stream=True)
+            else:
+                # Try the usercontent endpoint directly
+                dl_url = f"https://drive.usercontent.google.com/download?id={file_id}&export=download&authuser=0&confirm=t"
+                log.info("  Trying usercontent endpoint ...")
+                r = session.get(dl_url, timeout=600, stream=True)
+
+        # Step 3: Check content type — must be text not HTML
+        content_type = r.headers.get("content-type","")
+        log.info("  Content-Type: %s", content_type)
+
+        if "text/html" in content_type:
+            # Still getting HTML — save first 500 chars for debugging
+            preview = r.content[:500].decode("utf-8", errors="replace")
+            log.error("  Got HTML instead of file: %s", preview[:200])
+            return False
+
+        # Step 4: Save file
         if r.status_code == 200:
-            dest.parent.mkdir(parents=True, exist_ok=True)
-            dest.write_bytes(r.content)
-            log.info("  Downloaded %s MB", round(dest.stat().st_size/1_000_000, 1))
-            return True
+            with dest.open("wb") as f:
+                for chunk in r.iter_content(chunk_size=1024*1024):
+                    if chunk:
+                        f.write(chunk)
+            size_mb = round(dest.stat().st_size / 1_000_000, 1)
+            log.info("  Saved %s MB → %s", size_mb, dest)
+            return size_mb > 1  # Must be at least 1MB to be valid
         else:
-            log.warning("  GDrive HTTP %d", r.status_code)
+            log.warning("  HTTP %d", r.status_code)
+            return False
+
     except Exception as e:
         log.error("  GDrive download error: %s", e)
-    return False
+        return False
 
 
 def load_parcel_db(session: requests.Session) -> ParcelDB:
