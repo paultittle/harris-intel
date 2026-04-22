@@ -1,7 +1,6 @@
 """
 Harris County Motivated Seller Lead Scraper
-- Playwright scraper for Harris County Clerk RP.aspx
-- HCAD address lookup from real_acct.txt + owners.txt loaded from Google Drive
+4-layer enrichment: Legal Description → Grantee → Name → Fallback
 """
 from __future__ import annotations
 import asyncio, csv, io, json, logging, os, re, sys, time
@@ -26,24 +25,19 @@ CLERK_BASE    = "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx"
 CLERK_FRCL    = "https://www.cclerk.hctx.net/Applications/WebSearch/FRCL_R.aspx"
 CLERK_HOME    = "https://www.cclerk.hctx.net/Applications/WebSearch/Home.aspx"
 
-# Google Drive direct download — real_acct.txt (public file)
-GDRIVE_REAL_ACCT_ID = os.getenv("GDRIVE_REAL_ACCT_ID",
-                                 "1CwLnPOw1HlzuKpG4iuBIcqBv6XU_g4hy")
-GDRIVE_OWNERS_ID    = os.getenv("GDRIVE_OWNERS_ID", "")
+GDRIVE_REAL_ACCT_ID = os.getenv("GDRIVE_REAL_ACCT_ID", "1CwLnPOw1HlzuKpG4iuBIcqBv6XU_g4hy")
+CACHE_DIR           = Path("data")
+REAL_ACCT_CACHE     = CACHE_DIR / "real_acct.txt"
+CACHE_MAX_DAYS      = 7
 
-# Local cache paths
-CACHE_DIR        = Path("data")
-REAL_ACCT_CACHE  = CACHE_DIR / "real_acct.txt"
-OWNERS_CACHE     = CACHE_DIR / "owners.txt"
-CACHE_MAX_DAYS   = 7
-
-OUTPUT_PATHS  = [Path("dashboard/records.json"), Path("data/records.json")]
-GHL_CSV_PATH  = Path("data/ghl_export.csv")
-GHL_COLUMNS   = [
+OUTPUT_PATHS = [Path("dashboard/records.json"), Path("data/records.json")]
+GHL_CSV_PATH = Path("data/ghl_export.csv")
+GHL_COLUMNS  = [
     "First Name","Last Name","Mailing Address","Mailing City","Mailing State","Mailing Zip",
     "Property Address","Property City","Property State","Property Zip",
     "Lead Type","Document Type","Date Filed","Document Number","Amount/Debt Owed",
     "Seller Score","Motivated Seller Flags","Source","Public Records URL",
+    "Match Confidence","HCAD Lookup URL",
 ]
 
 DOC_TYPE_MAP = {
@@ -65,11 +59,7 @@ DOC_TYPE_MAP = {
     "RELLP":    ("RELLP",   "Release Lis Pendens"),
 }
 
-# ── HCAD Parcel DB ────────────────────────────────────────────────────────────
-# real_acct.txt columns (tab-delimited):
-# 0:acct  2:mailto(owner name)  3:mail_addr_1  5:mail_city  6:mail_state
-# 7:mail_zip  10:str_pfx  11:str_num  13:str  14:str_sfx  16:str_unit
-# 17:site_addr_1
+# ── Name normalization ────────────────────────────────────────────────────────
 
 def _norm(s): return re.sub(r"\s+", " ", str(s).strip().upper())
 
@@ -79,203 +69,275 @@ def _variants(name):
         v += [f"{p[-1]} {' '.join(p[:-1])}", f"{p[-1]}, {' '.join(p[:-1])}"]
     if len(p) >= 3:
         v.append(f"{p[0]} {p[1]}")
-    # Without common suffixes
     clean = re.sub(r"\b(LLC|INC|CORP|LTD|LP|GP|TRUST|ESTATE|ET AL|JR|SR|II|III)\b","",n).strip()
-    if clean != n:
-        v += _variants(clean)
-    return list(dict.fromkeys(v for v in v if v))
+    if clean and clean != n:
+        cp = clean.split()
+        v.append(clean)
+        if len(cp) >= 2:
+            v += [f"{cp[-1]} {' '.join(cp[:-1])}", f"{cp[-1]}, {' '.join(cp[:-1])}"]
+    return list(dict.fromkeys(x for x in v if x))
 
+# ── Legal description parsing ─────────────────────────────────────────────────
+
+def _parse_legal(legal: str) -> dict:
+    """Extract lot, block, subdivision from a legal description string."""
+    if not legal:
+        return {}
+    s = legal.upper().strip()
+    result = {}
+    # Lot
+    m = re.search(r'\bLT?\s*(\d+[A-Z]?)', s)
+    if m: result['lot'] = m.group(1)
+    # Block
+    m = re.search(r'\bBLK?\s*(\d+[A-Z]?)', s)
+    if m: result['block'] = m.group(1)
+    # Section
+    m = re.search(r'\bSEC\s*(\d+)', s)
+    if m: result['sec'] = m.group(1)
+    # Subdivision — everything after block/lot info
+    sub = re.sub(r'\b(LT?|BLK?|SEC|TR|ABST|AB|UNIT|PHASE)\s*[\dA-Z]+', '', s)
+    sub = re.sub(r'\s+', ' ', sub).strip(' &,.-')
+    if len(sub) > 4:
+        result['sub'] = sub[:60]
+    return result
+
+def _legal_key(legal: str) -> str | None:
+    """Create a normalized lookup key from a legal description."""
+    p = _parse_legal(legal)
+    if p.get('lot') and p.get('block') and p.get('sub'):
+        return f"{p['sub'].strip()[:40]}|{p['block']}|{p['lot']}"
+    if p.get('lot') and p.get('sub'):
+        return f"{p['sub'].strip()[:40]}|{p['lot']}"
+    return None
+
+# ── Parcel DB ─────────────────────────────────────────────────────────────────
 
 class ParcelDB:
-    def __init__(self): self._by_name = {}; self._by_acct = {}; self.loaded = False
+    def __init__(self):
+        self._by_name  : dict[str, list[dict]] = {}
+        self._by_legal : dict[str, dict]       = {}
+        self._by_acct  : dict[str, dict]       = {}
+        self.loaded = False
 
     def load_real_acct(self, path: Path) -> None:
         if not path.exists():
-            log.warning("real_acct.txt not found at %s", path)
-            return
-        log.info("Loading real_acct.txt (%s MB) ...",
-                 round(path.stat().st_size / 1_000_000, 1))
-        count = 0
+            log.warning("real_acct.txt not found: %s", path); return
+        sz = round(path.stat().st_size / 1_000_000, 1)
+        log.info("Loading real_acct.txt (%s MB) ...", sz)
+        count = legal_count = 0
         try:
             with path.open(encoding="latin-1") as f:
-                # Skip header
-                header_line = f.readline()
-                cols = header_line.strip().split("\t")
-                # Map column names to indices
-                def ci(name): return cols.index(name) if name in cols else -1
-                i_acct  = ci("acct")
-                i_name  = ci("mailto")       # owner name
-                i_ma1   = ci("mail_addr_1")
-                i_mc    = ci("mail_city")
-                i_ms    = ci("mail_state")
-                i_mz    = ci("mail_zip")
-                i_spfx  = ci("str_pfx")
-                i_snum  = ci("str_num")
-                i_str   = ci("str")
-                i_ssfx  = ci("str_sfx")
-                i_sunit = ci("str_unit")
-                i_site1 = ci("site_addr_1")
-                log.info("Column indices — acct:%d name:%d mail:%d site:%d",
-                         i_acct, i_name, i_ma1, i_site1)
+                hdr  = f.readline().strip().split("\t")
+                ci   = lambda n: hdr.index(n) if n in hdr else -1
+                I = {
+                    'acct':  ci("acct"),  'name':  ci("mailto"),
+                    'ma1':   ci("mail_addr_1"), 'mc': ci("mail_city"),
+                    'ms':    ci("mail_state"),  'mz': ci("mail_zip"),
+                    'spfx':  ci("str_pfx"),  'snum': ci("str_num"),
+                    'str':   ci("str"),    'ssfx':  ci("str_sfx"),
+                    'sunit': ci("str_unit"), 'site': ci("site_addr_1"),
+                    'lgl1':  ci("lgl_1"),  'lgl2':  ci("lgl_2"),
+                    'lgl3':  ci("lgl_3"),  'lgl4':  ci("lgl_4"),
+                }
+                log.info("Key col indices: %s", {k:v for k,v in I.items() if v>=0})
 
                 for line in f:
                     if not line.strip(): continue
                     p = line.split("\t")
-                    def g(i): return p[i].strip() if i >= 0 and i < len(p) else ""
+                    g = lambda k: p[I[k]].strip() if I.get(k,-1) >= 0 and I[k] < len(p) else ""
 
-                    acct  = g(i_acct)
-                    owner = g(i_name)
+                    acct  = g('acct')
+                    owner = g('name')
 
-                    # Build site address from components
-                    site_addr = g(i_site1)
-                    if not site_addr:
-                        parts = [g(i_snum), g(i_spfx), g(i_str), g(i_ssfx), g(i_sunit)]
-                        site_addr = " ".join(x for x in parts if x).strip()
+                    # Build site address
+                    site  = g('site')
+                    if not site:
+                        parts = [g('snum'), g('spfx'), g('str'), g('ssfx'), g('sunit')]
+                        site  = " ".join(x for x in parts if x).strip()
+
+                    # Build full legal description
+                    legal_full = " ".join(x for x in [g('lgl1'),g('lgl2'),g('lgl3'),g('lgl4')] if x).strip()
 
                     entry = {
-                        "prop_address": site_addr,
+                        "prop_address": site,
                         "prop_city":    "Houston",
                         "prop_state":   "TX",
                         "prop_zip":     "",
-                        "mail_address": g(i_ma1),
-                        "mail_city":    g(i_mc),
-                        "mail_state":   g(i_ms) or "TX",
-                        "mail_zip":     g(i_mz),
+                        "mail_address": g('ma1'),
+                        "mail_city":    g('mc'),
+                        "mail_state":   g('ms') or "TX",
+                        "mail_zip":     g('mz'),
+                        "hcad_acct":    acct,
                     }
 
                     if acct:
                         self._by_acct[acct] = entry
+
+                    # Index by owner name
                     if owner:
                         for v in _variants(owner):
                             self._by_name.setdefault(v, []).append(entry)
+
+                    # Index by legal description key
+                    if legal_full:
+                        lk = _legal_key(legal_full)
+                        if lk and lk not in self._by_legal:
+                            self._by_legal[lk] = entry
+                            legal_count += 1
+
                     count += 1
 
             self.loaded = True
-            log.info("ParcelDB loaded: %d records, %d name keys, %d acct keys",
-                     count, len(self._by_name), len(self._by_acct))
+            log.info("ParcelDB: %d records | %d name keys | %d legal keys",
+                     count, len(self._by_name), legal_count)
         except Exception as e:
-            log.error("real_acct.txt load error: %s", e)
+            log.error("real_acct load error: %s", e)
 
-    def load_owners(self, path: Path) -> None:
-        """Load owners.txt to supplement name->acct mapping."""
-        if not path.exists(): return
-        try:
-            with path.open(encoding="latin-1") as f:
-                cols = f.readline().strip().split("\t")
-                ia = cols.index("acct") if "acct" in cols else 0
-                iname = cols.index("name") if "name" in cols else 2
-                for line in f:
-                    p = line.split("\t")
-                    if len(p) <= max(ia, iname): continue
-                    acct  = p[ia].strip()
-                    owner = p[iname].strip()
-                    if owner and acct and acct in self._by_acct:
-                        for v in _variants(owner):
-                            if v not in self._by_name:
-                                self._by_name[v] = [self._by_acct[acct]]
-            log.info("Owners supplement loaded. Name keys now: %d", len(self._by_name))
-        except Exception as e:
-            log.warning("owners.txt load error: %s", e)
+    # ── Lookup methods ────────────────────────────────────────────────────────
 
-    def lookup(self, name: str) -> dict | None:
-        if not name: return None
+    def lookup_legal(self, legal: str) -> tuple[dict, str] | tuple[None, None]:
+        """Layer 1: Match by legal description. Returns (entry, confidence)."""
+        if not legal:
+            return None, None
+        lk = _legal_key(legal)
+        if lk:
+            hit = self._by_legal.get(lk)
+            if hit:
+                return hit, "high"
+        # Looser match — just subdivision + lot
+        p = _parse_legal(legal)
+        if p.get('sub') and p.get('lot'):
+            loose_key = f"{p['sub'][:40]}|{p['lot']}"
+            hit = self._by_legal.get(loose_key)
+            if hit:
+                return hit, "medium"
+        return None, None
+
+    def lookup_name(self, name: str) -> tuple[dict, str] | tuple[None, None]:
+        """Layer 3: Match by owner name."""
+        if not name:
+            return None, None
         for v in _variants(name):
-            h = self._by_name.get(v)
-            if h: return h[0]
-        return None
+            hits = self._by_name.get(v)
+            if hits:
+                return hits[0], "medium"
+        return None, None
 
+    def lookup(self, name: str, legal: str, grantee: str,
+               cat: str) -> tuple[dict | None, str]:
+        """
+        Full 4-layer enrichment:
+        1. Legal description match (high confidence)
+        2. Grantee match for LP/NOFC (the actual homeowner)
+        3. Name (grantor) match
+        4. None
+        """
+        # Layer 1: Legal description
+        hit, conf = self.lookup_legal(legal)
+        if hit:
+            return hit, conf
+
+        # Layer 2: For LP/foreclosure, grantee is often the homeowner
+        if cat in ("LP", "NOFC") and grantee:
+            hit, conf = self.lookup_name(grantee)
+            if hit:
+                return hit, conf
+
+        # Layer 3: Grantor/owner name
+        if name:
+            hit, conf = self.lookup_name(name)
+            if hit:
+                return hit, conf
+
+        return None, "none"
+
+
+def hcad_url(name: str, acct: str = "") -> str:
+    """Build a direct HCAD property search URL."""
+    if acct:
+        return f"https://public.hcad.org/records/details.asp?crypt=&acct={acct}&taxyear=2025&type=real"
+    if name:
+        encoded = re.sub(r'\s+', '+', name.strip()[:40])
+        return f"https://public.hcad.org/records/Real.asp?taxyear=2025&ownername={encoded}&county=harris"
+    return ""
+
+
+# ── Google Drive download ─────────────────────────────────────────────────────
 
 def _cache_fresh(path: Path) -> bool:
-    if not path.exists(): return False
-    return (time.time() - path.stat().st_mtime) < (CACHE_MAX_DAYS * 86400)
+    return path.exists() and (time.time() - path.stat().st_mtime) < (CACHE_MAX_DAYS * 86400)
 
 
-def download_gdrive_file(session: requests.Session, file_id: str,
-                          dest: Path) -> bool:
-    """Download a large file from Google Drive, handling the virus scan page."""
-    if not file_id:
-        return False
-    log.info("Downloading from Google Drive (id=%s) ...", file_id)
+def download_gdrive(session: requests.Session, file_id: str, dest: Path) -> bool:
+    if not file_id: return False
+    log.info("Downloading Google Drive file %s ...", file_id)
     dest.parent.mkdir(parents=True, exist_ok=True)
-
     try:
-        # Step 1: Initial request
-        url = f"https://drive.google.com/uc?export=download&id={file_id}"
-        r = session.get(url, timeout=60, allow_redirects=True)
-        log.info("  GDrive initial response: HTTP %d, %d bytes",
-                 r.status_code, len(r.content))
+        # Initial request
+        r = session.get(
+            f"https://drive.google.com/uc?export=download&id={file_id}",
+            timeout=60, allow_redirects=True
+        )
+        log.info("  Initial: HTTP %d, content-type: %s",
+                 r.status_code, r.headers.get("content-type","?")[:50])
 
-        # Step 2: Check if we got a confirmation page (large file warning)
-        if b"virus scan warning" in r.content.lower() or            b"download_warning" in r.content or            b"confirm" in r.content[:2000]:
+        # Large file confirmation
+        if b"confirm" in r.content[:3000] or "text/html" in r.headers.get("content-type",""):
             log.info("  Got confirmation page — extracting token ...")
-            # Try to find confirm token
-            token = re.search(rb'confirm=([^&"]+)', r.content)
-            uuid  = re.search(rb'uuid=([^&"]+)', r.content)
+            token = re.search(rb'confirm=([^&"\']+)', r.content)
+            uuid  = re.search(rb'uuid=([^&"\']+)', r.content)
             if token:
-                confirm = token.group(1).decode()
-                dl_url  = f"https://drive.google.com/uc?export=download&confirm={confirm}&id={file_id}"
-                log.info("  Downloading with confirm token ...")
-                r = session.get(dl_url, timeout=600, stream=True)
+                r = session.get(
+                    f"https://drive.google.com/uc?export=download&confirm={token.group(1).decode()}&id={file_id}",
+                    timeout=600, stream=True
+                )
             elif uuid:
-                uid    = uuid.group(1).decode()
-                dl_url = f"https://drive.usercontent.google.com/download?id={file_id}&export=download&authuser=0&confirm=t&uuid={uid}"
-                log.info("  Downloading with uuid ...")
-                r = session.get(dl_url, timeout=600, stream=True)
+                r = session.get(
+                    f"https://drive.usercontent.google.com/download?id={file_id}&export=download&authuser=0&confirm=t&uuid={uuid.group(1).decode()}",
+                    timeout=600, stream=True
+                )
             else:
-                # Try the usercontent endpoint directly
-                dl_url = f"https://drive.usercontent.google.com/download?id={file_id}&export=download&authuser=0&confirm=t"
-                log.info("  Trying usercontent endpoint ...")
-                r = session.get(dl_url, timeout=600, stream=True)
+                r = session.get(
+                    f"https://drive.usercontent.google.com/download?id={file_id}&export=download&authuser=0&confirm=t",
+                    timeout=600, stream=True
+                )
 
-        # Step 3: Check content type — must be text not HTML
-        content_type = r.headers.get("content-type","")
-        log.info("  Content-Type: %s", content_type)
-
-        if "text/html" in content_type:
-            # Still getting HTML — save first 500 chars for debugging
-            preview = r.content[:500].decode("utf-8", errors="replace")
-            log.error("  Got HTML instead of file: %s", preview[:200])
+        ct = r.headers.get("content-type", "")
+        log.info("  Download content-type: %s", ct[:60])
+        if "text/html" in ct:
+            log.error("  Still getting HTML — GDrive blocked download")
+            log.error("  Response preview: %s", r.content[:300].decode("utf-8","replace"))
             return False
 
-        # Step 4: Save file
         if r.status_code == 200:
+            written = 0
             with dest.open("wb") as f:
-                for chunk in r.iter_content(chunk_size=1024*1024):
-                    if chunk:
-                        f.write(chunk)
-            size_mb = round(dest.stat().st_size / 1_000_000, 1)
-            log.info("  Saved %s MB → %s", size_mb, dest)
-            return size_mb > 1  # Must be at least 1MB to be valid
+                for chunk in r.iter_content(1024*1024):
+                    if chunk: f.write(chunk); written += len(chunk)
+            mb = round(written/1_000_000, 1)
+            log.info("  Saved %s MB → %s", mb, dest)
+            return mb > 0.5
         else:
             log.warning("  HTTP %d", r.status_code)
             return False
-
     except Exception as e:
-        log.error("  GDrive download error: %s", e)
+        log.error("  Download error: %s", e)
         return False
 
 
 def load_parcel_db(session: requests.Session) -> ParcelDB:
     db = ParcelDB()
-
-    # Try to get real_acct.txt
     if _cache_fresh(REAL_ACCT_CACHE):
         log.info("Using cached real_acct.txt")
     elif GDRIVE_REAL_ACCT_ID:
-        download_gdrive_file(session, GDRIVE_REAL_ACCT_ID, REAL_ACCT_CACHE)
+        ok = download_gdrive(session, GDRIVE_REAL_ACCT_ID, REAL_ACCT_CACHE)
+        if not ok:
+            log.warning("Download failed — addresses will be empty this run.")
+            return db
     else:
-        log.warning("No GDRIVE_REAL_ACCT_ID set — skipping real_acct.txt download.")
-        log.warning("Set this in GitHub Actions secrets to enable address enrichment.")
-
+        log.warning("No GDRIVE_REAL_ACCT_ID — skipping address enrichment.")
+        return db
     db.load_real_acct(REAL_ACCT_CACHE)
-
-    # Supplement with owners.txt
-    if _cache_fresh(OWNERS_CACHE):
-        db.load_owners(OWNERS_CACHE)
-    elif GDRIVE_OWNERS_ID:
-        download_gdrive_file(session, GDRIVE_OWNERS_ID, OWNERS_CACHE)
-        db.load_owners(OWNERS_CACHE)
-
     return db
 
 
@@ -388,7 +450,8 @@ def parse_row(cells, headers, doc_type, cat, cat_label):
             "amount":parse_amt(amt_s),"legal":legal,
             "prop_address":"","prop_city":"","prop_state":"TX","prop_zip":"",
             "mail_address":"","mail_city":"","mail_state":"","mail_zip":"",
-            "clerk_url":clerk_url,"flags":[],"score":0}
+            "clerk_url":clerk_url,"match_confidence":"none",
+            "hcad_url":"","flags":[],"score":0}
 
 # ── Playwright ────────────────────────────────────────────────────────────────
 
@@ -420,119 +483,97 @@ async def scrape_type(page, doc_type, start_date, end_date):
     records=[]
     log.info("  %s ...", doc_type)
     try:
-        await page.goto(CLERK_BASE, wait_until="domcontentloaded", timeout=45_000)
-        await page.wait_for_load_state("networkidle", timeout=20_000)
+        await page.goto(CLERK_BASE,wait_until="domcontentloaded",timeout=45_000)
+        await page.wait_for_load_state("networkidle",timeout=20_000)
         await asyncio.sleep(1)
     except Exception as e:
-        log.warning("  Nav error %s: %s", doc_type, e); return records
+        log.warning("  Nav %s: %s",doc_type,e); return records
 
-    # Dump form elements on first type for debugging
-    if doc_type == "LP":
+    # Debug form on first type
+    if doc_type=="LP":
         try:
-            inputs = await page.evaluate("""() => {
-                return Array.from(document.querySelectorAll('input,select,button'))
-                .filter(e => e.offsetParent !== null)
-                .map(e => ({tag:e.tagName,id:e.id,name:e.name,
-                            type:e.type||'',placeholder:e.placeholder||''}))
-                .filter(e => e.id || e.name);
-            }""")
-            log.info("  FORM_FIELDS: %s", json.dumps(inputs))
-            body = await page.evaluate("() => document.body.innerText.substring(0,300)")
-            log.info("  PAGE_BODY: %s", body.replace('\n',' '))
-        except Exception as e:
-            log.warning("  Debug dump error: %s", e)
+            inputs=await page.evaluate("""() => Array.from(
+                document.querySelectorAll('input,select,button'))
+                .filter(e=>e.offsetParent!==null)
+                .map(e=>({tag:e.tagName,id:e.id,name:e.name,type:e.type||'',
+                          placeholder:e.placeholder||''}))
+                .filter(e=>e.id||e.name)""")
+            log.info("  FORM: %s", json.dumps(inputs))
+        except: pass
 
-    # Fill date fields — try every known pattern
-    date_filled = False
-    for df_sel, dt_sel in [
-        ("input[id*='DateFrom']",   "input[id*='DateTo']"),
-        ("input[id*='dateFrom']",   "input[id*='dateTo']"),
-        ("input[name*='DateFrom']", "input[name*='DateTo']"),
-        ("input[id*='StartDate']",  "input[id*='EndDate']"),
-        ("input[id*='dFrom']",      "input[id*='dTo']"),
-        ("input[id*='txtFrom']",    "input[id*='txtTo']"),
-        ("input[id*='BeginDate']",  "input[id*='EndDate']"),
+    # Fill dates
+    date_filled=False
+    for df,dt in [
+        ("input[id*='DateFrom']","input[id*='DateTo']"),
+        ("input[id*='dateFrom']","input[id*='dateTo']"),
+        ("input[name*='DateFrom']","input[name*='DateTo']"),
+        ("input[id*='StartDate']","input[id*='EndDate']"),
+        ("input[id*='dFrom']","input[id*='dTo']"),
+        ("input[id*='txtFrom']","input[id*='txtTo']"),
+        ("input[id*='BeginDate']","input[id*='EndDate']"),
     ]:
         try:
-            df = page.locator(df_sel).first
-            dt = page.locator(dt_sel).first
-            if await df.count() > 0 and await dt.count() > 0:
-                await df.fill(start_date, timeout=3000)
-                await dt.fill(end_date, timeout=3000)
-                date_filled = True
-                log.info("  Dates filled: %s / %s", df_sel, dt_sel)
-                break
+            dfe=page.locator(df).first; dte=page.locator(dt).first
+            if await dfe.count()>0 and await dte.count()>0:
+                await dfe.fill(start_date,timeout=3000)
+                await dte.fill(end_date,timeout=3000)
+                date_filled=True; break
         except: pass
 
-    # Fallback: fill first two visible text inputs
     if not date_filled:
         try:
-            vis = []
-            for inp in await page.query_selector_all("input[type='text'],input:not([type])"):
-                if await inp.is_visible():
-                    vis.append(inp)
-            if len(vis) >= 2:
-                await vis[0].fill(start_date)
-                await vis[1].fill(end_date)
-                date_filled = True
-                log.info("  Dates filled via positional fallback")
+            vis=[i for i in await page.query_selector_all("input[type='text'],input:not([type])")
+                 if await i.is_visible()]
+            if len(vis)>=2:
+                await vis[0].fill(start_date); await vis[1].fill(end_date)
+                date_filled=True
         except: pass
 
-    if not date_filled:
-        log.warning("  Could not fill dates for %s", doc_type)
-
-    # Set instrument type via JavaScript — most reliable
+    # Set instrument type via JS
     try:
-        result = await page.evaluate(f"""() => {{
-            const selects = document.querySelectorAll('select');
-            for (const s of selects) {{
-                for (const o of s.options) {{
-                    if (o.value==='{doc_type}' || o.text.trim()==='{doc_type}') {{
-                        s.value = o.value;
+        result=await page.evaluate(f"""() => {{
+            for(const s of document.querySelectorAll('select')){{
+                for(const o of s.options){{
+                    if(o.value==='{doc_type}'||o.text.trim()==='{doc_type}'){{
+                        s.value=o.value;
                         s.dispatchEvent(new Event('change',{{bubbles:true}}));
                         return 'OK:'+s.id+'='+o.value;
                     }}
                 }}
             }}
-            // Log all options for debugging
-            const opts = [];
-            document.querySelectorAll('select option').forEach(o=>opts.push(o.value+'|'+o.text));
-            return 'NOT_FOUND. Options: '+opts.slice(0,20).join(', ');
+            const opts=[];
+            document.querySelectorAll('select option').forEach(o=>opts.push(o.value));
+            return 'NOT_FOUND. opts:'+opts.slice(0,15).join(',');
         }}""")
-        log.info("  InstrumentType JS: %s", result)
-    except Exception as e:
-        log.warning("  JS select error: %s", e)
+        log.info("  IT: %s", result)
+    except: pass
 
     # Submit
     for sel in ["input[type='submit']","button[type='submit']",
                 "input[value='Search']","button:has-text('Search')",
                 "input[id*='earch']","button[id*='earch']"]:
         try:
-            el = page.locator(sel).first
-            if await el.count() > 0:
-                await el.click(timeout=5000)
-                log.info("  Submitted via: %s", sel)
-                break
+            el=page.locator(sel).first
+            if await el.count()>0:
+                await el.click(timeout=5000); break
         except: pass
 
-    try:
-        await page.wait_for_load_state("networkidle", timeout=25_000)
+    try: await page.wait_for_load_state("networkidle",timeout=25_000)
     except: pass
     await asyncio.sleep(2)
 
-    for pg in range(1, 51):
-        recs = await get_page_records(page, doc_type, cat, cat_label)
+    for pg in range(1,51):
+        recs=await get_page_records(page,doc_type,cat,cat_label)
         if not recs: break
         records.extend(recs)
-        log.info("  Page %d: %d rows", pg, len(recs))
+        log.info("  Page %d: %d rows",pg,len(recs))
         try:
-            await page.click("a:has-text('Next'),input[value='Next'],a[id*='Next']",
-                             timeout=4000)
-            await page.wait_for_load_state("networkidle", timeout=20_000)
+            await page.click("a:has-text('Next'),input[value='Next'],a[id*='Next']",timeout=4000)
+            await page.wait_for_load_state("networkidle",timeout=20_000)
             await asyncio.sleep(1)
         except: break
 
-    log.info("  → %d for %s", len(records), doc_type)
+    log.info("  → %d for %s",len(records),doc_type)
     return records
 
 
@@ -544,7 +585,7 @@ async def scrape_foreclosures(page):
         await page.wait_for_load_state("networkidle",timeout=20_000)
         await asyncio.sleep(2)
     except Exception as e:
-        log.warning("  FRCL error: %s",e); return records
+        log.warning("  FRCL: %s",e); return records
     content=await page.content()
     soup=BeautifulSoup(content,"lxml")
     table=best_table(soup)
@@ -566,72 +607,71 @@ async def scrape_foreclosures(page):
 
 
 async def scrape_all(start_date, end_date):
-    if not HAS_PLAYWRIGHT:
-        log.error("Playwright unavailable"); return []
+    if not HAS_PLAYWRIGHT: log.error("No Playwright"); return []
     all_records=[]
     async with async_playwright() as pw:
-        browser=await pw.chromium.launch(
-            headless=True,
+        browser=await pw.chromium.launch(headless=True,
             args=["--no-sandbox","--disable-dev-shm-usage",
-                  "--disable-blink-features=AutomationControlled"],
-        )
+                  "--disable-blink-features=AutomationControlled"])
         ctx=await browser.new_context(
             user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
-            viewport={"width":1280,"height":800},
-        )
-        ctx.on("dialog", lambda d: asyncio.ensure_future(d.dismiss()))
+            viewport={"width":1280,"height":800})
+        ctx.on("dialog",lambda d: asyncio.ensure_future(d.dismiss()))
         page=await ctx.new_page()
-
         log.info("Warming up session ...")
         try:
             await page.goto(CLERK_HOME,wait_until="domcontentloaded",timeout=30_000)
             await page.wait_for_load_state("networkidle",timeout=15_000)
             await asyncio.sleep(3)
-            log.info("Session: %s", await page.title())
+            log.info("Session: %s",await page.title())
         except Exception as e:
             log.warning("Warmup: %s",e)
-
         for doc_type in DOC_TYPE_MAP:
             if doc_type=="NOFC": continue
             for attempt in range(1,4):
                 try:
                     recs=await scrape_type(page,doc_type,start_date,end_date)
-                    all_records.extend(recs)
-                    await asyncio.sleep(1)
-                    break
+                    all_records.extend(recs); await asyncio.sleep(1); break
                 except Exception as e:
-                    log.warning("Attempt %d for %s: %s",attempt,doc_type,e)
+                    log.warning("Attempt %d %s: %s",attempt,doc_type,e)
                     await asyncio.sleep(3*attempt)
-
-        try:
-            all_records.extend(await scrape_foreclosures(page))
-        except Exception as e:
-            log.warning("Foreclosure: %s",e)
-
+        try: all_records.extend(await scrape_foreclosures(page))
+        except Exception as e: log.warning("FRCL: %s",e)
         await browser.close()
     return all_records
 
-# ── Pipeline ─────────────────────────────────────────────────────────────────
+# ── 4-layer enrichment ────────────────────────────────────────────────────────
 
 def enrich(records, db: ParcelDB):
-    n=0
+    counts={"high":0,"medium":0,"low":0,"none":0}
     for r in records:
-        owner=r.get("owner","").strip()
-        if not owner: continue
-        hit=db.lookup(owner)
+        hit, conf = db.lookup(
+            name   = r.get("owner",""),
+            legal  = r.get("legal",""),
+            grantee= r.get("grantee",""),
+            cat    = r.get("cat",""),
+        )
         if hit:
             for k,v in hit.items():
-                if v: r[k]=v
-            n+=1
-    log.info("Enriched %d/%d records with addresses", n, len(records))
+                if v and k != "hcad_acct": r[k]=v
+            r["match_confidence"] = conf
+            r["hcad_url"] = hcad_url(r.get("owner",""), hit.get("hcad_acct",""))
+        else:
+            r["match_confidence"] = "none"
+            r["hcad_url"] = hcad_url(r.get("owner",""))
+        counts[conf] += 1
+
+    log.info("Enrichment: high=%d medium=%d none=%d",
+             counts["high"], counts["medium"], counts["none"])
     return records
+
+# ── Pipeline ─────────────────────────────────────────────────────────────────
 
 def dedupe(records):
     seen,out=set(),[]
     for r in records:
         k=r.get("doc_num") or f"{r.get('owner')}|{r.get('filed')}"
-        if k and k not in seen:
-            seen.add(k); out.append(r)
+        if k and k not in seen: seen.add(k); out.append(r)
     return out
 
 def apply_scores(records):
@@ -648,7 +688,7 @@ def save_json(records, s, e):
     for p in OUTPUT_PATHS:
         p.parent.mkdir(parents=True,exist_ok=True)
         p.write_text(json.dumps(payload,indent=2,ensure_ascii=False))
-        log.info("Saved → %s", p)
+        log.info("Saved → %s",p)
 
 def save_csv(records):
     GHL_CSV_PATH.parent.mkdir(parents=True,exist_ok=True)
@@ -666,8 +706,10 @@ def save_csv(records):
                 "Date Filed":r.get("filed",""),"Document Number":r.get("doc_num",""),
                 "Amount/Debt Owed":r.get("amount",""),"Seller Score":r.get("score",0),
                 "Motivated Seller Flags":"; ".join(r.get("flags",[])),"Source":"Harris County Clerk",
-                "Public Records URL":r.get("clerk_url","")})
-    log.info("GHL CSV → %s", GHL_CSV_PATH)
+                "Public Records URL":r.get("clerk_url",""),
+                "Match Confidence":r.get("match_confidence",""),
+                "HCAD Lookup URL":r.get("hcad_url","")})
+    log.info("GHL CSV → %s",GHL_CSV_PATH)
 
 # ── Main ─────────────────────────────────────────────────────────────────────
 
@@ -676,26 +718,21 @@ async def main():
     start=start_dt.strftime("%m/%d/%Y"); end=end_dt.strftime("%m/%d/%Y")
     iso_s=start_dt.strftime("%Y-%m-%d"); iso_e=end_dt.strftime("%Y-%m-%d")
     log.info("="*60)
-    log.info("Harris County Lead Scraper — %s to %s", start, end)
+    log.info("Harris County Lead Scraper — %s to %s",start,end)
     log.info("="*60)
-
     session=requests.Session()
     session.headers["User-Agent"]="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/122.0.0.0 Safari/537.36"
-
-    # Load parcel data
-    parcel_db = load_parcel_db(session)
-
-    # Scrape clerk records
-    records=await scrape_all(start, end)
-    log.info("Raw: %d", len(records))
+    parcel_db=load_parcel_db(session)
+    records=await scrape_all(start,end)
+    log.info("Raw: %d",len(records))
     records=dedupe(records)
-    records=enrich(records, parcel_db)
+    records=enrich(records,parcel_db)
     records=apply_scores(records)
-    records.sort(key=lambda r: r.get("score",0), reverse=True)
-    save_json(records, iso_s, iso_e)
+    records.sort(key=lambda r: r.get("score",0),reverse=True)
+    save_json(records,iso_s,iso_e)
     save_csv(records)
     log.info("="*60)
-    log.info("Done. %d leads.", len(records))
+    log.info("Done. %d leads.",len(records))
     log.info("="*60)
 
 if __name__=="__main__":
