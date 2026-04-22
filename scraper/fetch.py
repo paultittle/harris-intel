@@ -467,14 +467,44 @@ async def search_date_range(page, start_date, end_date):
 
     # Fill ONLY date fields — leave instrument type blank to get all results
     try:
+        # Use JavaScript to set date values directly — most reliable method
+        result = await page.evaluate(f"""() => {{
+            function setVal(id, val) {{
+                const el = document.getElementById(id);
+                if (!el) return 'NOT_FOUND:' + id;
+                // Clear existing value
+                el.value = '';
+                // Set new value
+                el.value = val;
+                // Fire all necessary events for ASP.NET WebForms
+                ['input','change','blur'].forEach(ev =>
+                    el.dispatchEvent(new Event(ev, {{bubbles:true}})));
+                return 'OK:' + id + '=' + el.value;
+            }}
+            return [
+                setVal('ctl00_ContentPlaceHolder1_txtFrom', '{start_date}'),
+                setVal('ctl00_ContentPlaceHolder1_txtTo',   '{end_date}'),
+            ].join(' | ');
+        }}""")
+        log.info("  Date fill result: %s", result)
+
+        # Also use Playwright fill as backup
         df = page.locator("#ctl00_ContentPlaceHolder1_txtFrom")
         dt = page.locator("#ctl00_ContentPlaceHolder1_txtTo")
         if await df.count() > 0:
-            await df.triple_click(); await df.type(start_date, delay=30); await df.press("Tab")
+            await df.click()
+            await df.fill(start_date)
+            await page.keyboard.press("Tab")
         if await dt.count() > 0:
-            await dt.triple_click(); await dt.type(end_date, delay=30); await dt.press("Tab")
+            await dt.click()
+            await dt.fill(end_date)
+            await page.keyboard.press("Tab")
         await asyncio.sleep(0.5)
-        log.info("  Dates filled: %s → %s", start_date, end_date)
+
+        # Verify values were set
+        df_val = await page.locator("#ctl00_ContentPlaceHolder1_txtFrom").input_value()
+        dt_val = await page.locator("#ctl00_ContentPlaceHolder1_txtTo").input_value()
+        log.info("  Dates verified: from=%s to=%s", df_val, dt_val)
     except Exception as e:
         log.warning("  Date fill error: %s", e)
 
@@ -489,9 +519,16 @@ async def search_date_range(page, start_date, end_date):
                 break
         except: pass
 
-    try: await page.wait_for_load_state("networkidle", timeout=30_000)
+    try:
+        await page.wait_for_load_state("networkidle", timeout=30_000)
     except: pass
     await asyncio.sleep(2)
+
+    # Log where we landed
+    current_url = page.url
+    log.info("  After search URL: %s", current_url[:80])
+    title = await page.title()
+    log.info("  Page title: %s", title[:60])
 
     # Paginate through all results
     page_num = 0
