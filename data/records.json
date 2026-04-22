@@ -1,11 +1,39 @@
 {
-  "fetched_at": "2026-04-22T02:32:28.127825+00:00",
+  "fetched_at": "2026-04-22T02:43:09.101188+00:00",
   "source": "Harris County Clerk – Real Property Records",
   "date_range": {
     "from": "2026-04-15",
     "to": "2026-04-22"
   },
-  "total": 0,
-  "with_address": 0,
-  "records": []
+  "total": 1,
+  "with_address": 1,
+  "records": [
+    {
+      "doc_num": "RP-2026-151310",
+      "doc_type": "LIEN",
+      "filed": "2026-04-21",
+      "cat": "LIEN",
+      "cat_label": "Lien",
+      "owner": "Grantor : ARCHER NOW LLC Grantor : COMMUNITY OF SPRING TERRACE HOMEOWNERS ASSOCIATION Grantor : HAYS CLINT Grantor : SBB Grantee : SPEARS QUIANA",
+      "grantee": "",
+      "amount": 0.0,
+      "legal": "Grantor :",
+      "prop_address": "734 PRATTSFORD LN",
+      "prop_city": "Houston",
+      "prop_state": "TX",
+      "prop_zip": "",
+      "mail_address": "734 PRATTSFORD LN",
+      "mail_city": "HOUSTON",
+      "mail_state": "TX",
+      "mail_zip": "77090-3820",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-151310",
+      "match_confidence": "high",
+      "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1268660010013&taxyear=2025&type=real",
+      "flags": [
+        "LLC / corp owner",
+        "New this week"
+      ],
+      "score": 50
+    }
+  ]
 }
