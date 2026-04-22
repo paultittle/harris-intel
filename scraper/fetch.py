@@ -130,6 +130,17 @@ def categorize(doc_type: str) -> tuple[str,str] | None:
         # Lis pendens variants
         ("LIS P",    ("LP","Lis Pendens")),
         ("LP",       ("LP","Lis Pendens")),
+        ("L/P",      ("LP","Lis Pendens")),
+        # Abstract of judgment
+        ("A/J",      ("JUD","Abstract of Judgment")),
+        ("ABST JUD", ("JUD","Abstract of Judgment")),
+        # Financing statement = UCC/commercial lien
+        ("FI STM",   ("LIEN","Financing Statement")),
+        ("FIN STM",  ("LIEN","Financing Statement")),
+        # Notice types
+        ("NOTICE OF FORECL", ("NOFC","Notice of Foreclosure")),
+        ("NOTICE OF COMMENCE",("NOC","Notice of Commencement")),
+        ("NOTICE OF LIS",    ("LP","Lis Pendens")),
     ]
     for key, val in kw:
         if key in dt:
@@ -436,32 +447,69 @@ def parse_row(cells, headers):
                     if v: return v
         return ""
 
-    # File number — scan for RP pattern first
+    # CONFIRMED TABLE HEADERS:
+    # ['', 'FILE NUMBER', 'FILE DATE', 'TYPEVOL PAGE', 'NAMES', 'LEGAL DESCRIPTION', 'PGS', 'FILM CODE']
+    # Indices:  0     1              2             3              4       5                   6    7
+
+    # Use positional access since we know exact column order
+    def pos(i):
+        return cells[i].get_text(" ", strip=True) if i < len(cells) else ""
+
+    # Col 1: FILE NUMBER
+    raw_file = pos(1)
+    # Col 2: FILE DATE
+    filed    = pos(2)
+    # Col 3: TYPEVOL PAGE — contains "LP 1000 300" or just "LP" — extract type only
+    raw_typecol = pos(3)
+    # Type is the first token before any digits
+    raw_type = re.match(r'^([A-Z/][A-Z0-9/ ]*?)(?:\s+\d|\s*$)', raw_typecol)
+    raw_type = raw_type.group(1).strip() if raw_type else raw_typecol.split()[0] if raw_typecol.split() else ""
+    # Col 4: NAMES
+    raw_names = pos(4)
+    # Col 5: LEGAL DESCRIPTION
+    raw_legal = pos(5)
+    # Col 7: FILM CODE (has the document link)
+    film_col  = pos(7)
+
+    # Get doc number and URL
     doc_num = ""; clerk_url = ""
-    for i,cell in enumerate(cells):
-        txt=cell.get_text(strip=True)
-        if re.match(r'^RP-\d{4}-\d+$',txt) or re.match(r'^\d{4}-RP-\d+$',txt):
-            doc_num=txt
-            a=cell.find("a",href=True)
+
+    # Check FILE NUMBER column first
+    if re.match(r'^RP-\d{4}-\d+$', raw_file) or re.match(r'^\d{4}-RP-\d+$', raw_file):
+        doc_num = raw_file
+
+    # Check FILM CODE column for link
+    film_cell = cells[7] if len(cells) > 7 else None
+    if film_cell:
+        a = film_cell.find("a", href=True)
+        if a:
+            h = a["href"]
+            clerk_url = h if h.startswith("http") else "https://www.cclerk.hctx.net" + h
+            # Extract doc num from URL if not found yet
+            if not doc_num:
+                m = re.search(r'FileID=(RP-[\d-]+|\d{4}-RP-[\d]+)', h)
+                if m: doc_num = m.group(1)
+
+    # Also check FILE NUMBER cell for link
+    if not clerk_url:
+        file_cell = cells[1] if len(cells) > 1 else None
+        if file_cell:
+            a = file_cell.find("a", href=True)
             if a:
-                h=a["href"]
-                clerk_url=h if h.startswith("http") else "https://www.cclerk.hctx.net"+h
-            break
+                h = a["href"]
+                clerk_url = h if h.startswith("http") else "https://www.cclerk.hctx.net" + h
+
     if not doc_num:
-        doc_num=col_exact("FILE NUMBER","FILE NO") or col("FILE NO","FILE NUM","FILE")
+        # Scan all cells for RP pattern
+        for cell in cells:
+            txt = cell.get_text(strip=True)
+            if re.match(r'^RP-\d{4}-\d+$', txt):
+                doc_num = txt; break
+
     if not clerk_url and doc_num:
-        clerk_url=f"{CLERK_BASE}?FileID={doc_num}"
+        clerk_url = f"{CLERK_BASE}?FileID={doc_num}"
 
-    # Film code (last column — often has the clickable doc link)
-    film = col_exact("FILM CODE","FILM") or col("FILM")
-    if film and not clerk_url:
-        clerk_url=f"{CLERK_BASE}?FileID={film}"
-
-    filed   = col_exact("FILE DATE","FILED DATE","DATE FILED") or col("DATE","FILED")
-    raw_type= col_exact("TYPE","DOC TYPE","INSTRUMENT TYPE") or col("TYPE","INSTR")
-    raw_names=col_exact("NAMES","GRANTOR/GRANTEE") or col("NAME","GRANTOR")
-    raw_legal=col_exact("LEGAL DESCRIPTION","LEGAL DESC") or col("LEGAL","DESCRIPTION")
-    amt_s   = col("AMOUNT","AMT","VALUE","CONSIDER")
+    amt_s = ""  # Amount not in standard results table
 
     # Parse names
     grantor, grantee = _parse_names_cell(raw_names)
