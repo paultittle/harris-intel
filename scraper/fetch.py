@@ -114,26 +114,34 @@ def _is_person(n):
 
 def _extract_names(raw):
     if not raw: return "",""
-    # Normalize spacing around colons
-    norm = re.sub(r'Grantor\s*:\s*', 'Grantor:', raw)
-    norm = re.sub(r'Grantee\s*:\s*', 'Grantee:', norm)
-    norm = re.sub(r'Trustee\s*:\s*', 'Grantee:', norm)  # treat Trustee as Grantee
 
-    if "Grantor:" not in norm and "Grantee:" not in norm:
-        parts=[p.strip() for p in raw.split("\n") if p.strip()]
-        return parts[0] if parts else "",parts[1] if len(parts)>1 else ""
+    # Normalize "Grantor : NAME" -> "Grantor:NAME" (handle spaces around colon)
+    norm = re.sub(r'(Grantor|Grantee|Trustee)\s*:\s*', r':', raw, flags=re.I)
 
-    # Extract ALL grantors and grantees
-    grantors=re.findall(r"Grantor:([^G]+?)(?=Grantor:|Grantee:|$)",norm)
-    grantees=re.findall(r"Grantee:([^G]+?)(?=Grantor:|Grantee:|$)",norm)
-    grantors=[n.strip() for n in grantors if n.strip()]
-    grantees=[n.strip() for n in grantees if n.strip()]
+    # Check if we have labeled fields
+    has_labels = bool(re.search(r'(Grantor|Grantee|Trustee):', norm, re.I))
+    if not has_labels:
+        parts = [p.strip() for p in raw.split("\n") if p.strip()]
+        return parts[0] if parts else "", parts[1] if len(parts) > 1 else ""
 
-    # Join ALL grantors with semicolon — show complete picture
-    all_grantors = "; ".join(g for g in grantors if g)
-    all_grantees = "; ".join(g for g in grantees if g)
+    # Split on label boundaries using lookahead — handles names with any letters
+    tokens = re.split(r'(?i)(?=Grantor:|Grantee:|Trustee:)', norm)
+    grantors = []
+    grantees = []
+    for token in tokens:
+        token = token.strip()
+        if not token: continue
+        m = re.match(r'(?i)(Grantor|Grantee|Trustee):\s*(.*)', token, re.DOTALL)
+        if m:
+            label = m.group(1).upper()
+            name  = m.group(2).strip()
+            if not name or name.upper() in ("SEE INSTRUMENT","", "N/A"): continue
+            if label == "GRANTOR":
+                grantors.append(name)
+            else:  # GRANTEE or TRUSTEE
+                grantees.append(name)
 
-    return all_grantors, all_grantees
+    return "; ".join(grantors), "; ".join(grantees)
 
 def _parse_legal(legal):
     if not legal: return {}
@@ -302,16 +310,7 @@ def parse_row_8cell(cells):
             if tok and not tok.isdigit(): raw_type=tok; break
     raw_names=ct(4)
     raw_legal=ct(5)
-    # Debug first few rows
-    if not hasattr(parse_row_8cell, '_debug_count'):
-        parse_row_8cell._debug_count = 0
-    if parse_row_8cell._debug_count < 3:
-        parse_row_8cell._debug_count += 1
-        import logging as _log
-        _log.getLogger(__name__).info(
-            "DEBUG row %d: file=%s type=%s names=%r legal=%r",
-            parse_row_8cell._debug_count, raw_file, raw_type,
-            raw_names[:80], raw_legal[:60])
+
     cat_result=categorize(raw_type)
     if not cat_result: return None
     cat,cat_label=cat_result
