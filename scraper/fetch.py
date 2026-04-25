@@ -457,13 +457,27 @@ def http_search(session, start_date, end_date):
                 "ctl00$ContentPlaceHolder1$btnSearch": "Search",
             }
 
+            # Get the form action URL (may differ from CLERK_BASE)
+            form = soup.find("form")
+            form_action = CLERK_BASE
+            if form and form.get("action"):
+                action = form["action"]
+                if action.startswith("http"):
+                    form_action = action
+                elif action.startswith("/"):
+                    form_action = "https://www.cclerk.hctx.net" + action
+                else:
+                    form_action = "https://www.cclerk.hctx.net/Applications/WebSearch/" + action
+            log.info("  Form action: %s", form_action)
+
             log.info("  POSTing form with dates %s → %s ...", start_date, end_date)
-            r2=session.post(CLERK_BASE, data=payload, timeout=60,
+            r2=session.post(form_action, data=payload, timeout=60,
                            allow_redirects=True,
                            headers={
                                "Content-Type": "application/x-www-form-urlencoded",
                                "Referer": CLERK_BASE,
                                "Origin": "https://www.cclerk.hctx.net",
+                               "Cache-Control": "no-cache",
                            })
             log.info("  POST: HTTP %d, %d bytes, url=%s",
                      r2.status_code, len(r2.content), r2.url[:80])
