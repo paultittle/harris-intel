@@ -322,23 +322,49 @@ def parse_row_8cell(cells):
 def parse_html(html, source_url=""):
     records=[]
     soup=BeautifulSoup(html,"lxml")
-    # Find all tables, pick the one with most 8-cell rows
+    all_tables=soup.find_all("table")
+    log.info("  Total tables: %d", len(all_tables))
+
+    # Strategy: find all <tr> elements anywhere that have exactly 8 <td> children
     best_table=None; best_count=0
-    for t in soup.find_all("table"):
-        c=sum(1 for tr in t.find_all("tr",recursive=False)
+    for t in all_tables:
+        # Count rows with exactly 8 direct-child tds
+        c=sum(1 for tr in t.find_all("tr")
               if len(tr.find_all("td",recursive=False))==8)
-        if c>best_count: best_count,best_table=c,t
+        if c>best_count:
+            best_count,best_table=c,t
+            log.info("  Candidate table: id=%s class=%s, 8-cell rows=%d",
+                     t.get("id","?"), str(t.get("class","?"))[:30], c)
+
     if not best_table or best_count==0:
-        log.warning("  No 8-cell table found (tables=%d)",len(soup.find_all("table")))
+        # Last resort: find any tr with 8 tds
+        all_trs=[tr for tr in soup.find_all("tr")
+                 if len(tr.find_all("td",recursive=False))==8]
+        log.warning("  No table with 8-cell rows. Direct 8-cell TRs anywhere: %d",
+                    len(all_trs))
+        # Log first few TRs for debugging
+        for i,tr in enumerate(all_trs[:3]):
+            texts=[td.get_text(" ",strip=True)[:20] for td in tr.find_all("td",recursive=False)]
+            log.info("  TR %d: %s", i, " | ".join(texts))
+        # Try parsing them directly
+        for tr in all_trs:
+            cells=tr.find_all("td",recursive=False)
+            try:
+                rec=parse_row_8cell(cells)
+                if rec: records.append(rec)
+            except: pass
+        log.info("  Direct TR parse: %d records", len(records))
         return records
-    log.info("  Found table with %d data rows",best_count)
-    for tr in best_table.find_all("tr",recursive=False):
+
+    log.info("  Best table: %d 8-cell rows", best_count)
+    for tr in best_table.find_all("tr"):
         cells=tr.find_all("td",recursive=False)
         try:
             rec=parse_row_8cell(cells)
             if rec: records.append(rec)
         except Exception as e:
             log.debug("Row error: %s",e)
+
     if _UNKNOWN_TYPES:
         top=sorted(_UNKNOWN_TYPES.items(),key=lambda x:-x[1])[:10]
         log.info("Unknown types: %s",", ".join(f"{k}:{v}" for k,v in top))
