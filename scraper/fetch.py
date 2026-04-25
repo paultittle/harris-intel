@@ -1,10 +1,10 @@
 """
 Harris County Motivated Seller Lead Scraper
-Uses requests + BeautifulSoup to POST the clerk search form directly.
-Playwright is used only for session cookie establishment.
+Uses Playwright to render the clerk portal and extracts results via
+JavaScript evaluation (innerHTML) rather than page.content().
 """
 from __future__ import annotations
-import asyncio, csv, io, json, logging, os, re, sys, time
+import asyncio, csv, json, logging, os, re, sys, time
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 import requests
@@ -21,11 +21,10 @@ logging.basicConfig(level=logging.INFO,
     handlers=[logging.StreamHandler(sys.stdout)])
 log = logging.getLogger(__name__)
 
-LOOKBACK_DAYS = int(os.getenv("LOOKBACK_DAYS", "7"))
-CLERK_BASE    = "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx"
-CLERK_FRCL    = "https://www.cclerk.hctx.net/Applications/WebSearch/FRCL_R.aspx"
-CLERK_HOME    = "https://www.cclerk.hctx.net/Applications/WebSearch/Home.aspx"
-
+LOOKBACK_DAYS       = int(os.getenv("LOOKBACK_DAYS", "7"))
+CLERK_BASE          = "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx"
+CLERK_FRCL          = "https://www.cclerk.hctx.net/Applications/WebSearch/FRCL_R.aspx"
+CLERK_HOME          = "https://www.cclerk.hctx.net/Applications/WebSearch/Home.aspx"
 GDRIVE_REAL_ACCT_ID = os.getenv("GDRIVE_REAL_ACCT_ID", "1CwLnPOw1HlzuKpG4iuBIcqBv6XU_g4hy")
 GDRIVE_DEEDS_ID     = os.getenv("GDRIVE_DEEDS_ID",     "1EsmdzaeRb95UB6Ti9m5ANrV3prSzvU5V")
 CACHE_DIR           = Path("data")
@@ -56,10 +55,10 @@ DOC_TYPE_MAP = {
 
 _UNKNOWN_TYPES: dict[str,int] = {}
 
-def categorize(dt: str):
-    dt = dt.upper().strip()
+def categorize(dt):
+    dt=dt.upper().strip()
     if dt in DOC_TYPE_MAP: return DOC_TYPE_MAP[dt]
-    kw = [
+    kw=[
         ("L/P",("LP","Lis Pendens")),("LIS P",("LP","Lis Pendens")),
         ("LP",("LP","Lis Pendens")),
         ("FORECLOS",("NOFC","Notice of Foreclosure")),
@@ -69,52 +68,35 @@ def categorize(dt: str):
         ("AFFT",("JUD","Affidavit")),("L AFFT",("JUD","Affidavit of Lien")),
         ("JUDGMENT",("JUD","Judgment")),("JUD",("JUD","Judgment")),
         ("IRS",("LIEN","IRS Lien")),("FED TAX",("LIEN","Federal Tax Lien")),
-        ("FED LN",("LIEN","Federal Lien")),("LNFED",("LIEN","Federal Lien")),
-        ("CORP TAX",("LIEN","Corp Tax Lien")),
-        ("MECH",("LIEN","Mechanic Lien")),
-        ("HOA",("LIEN","HOA Lien")),
-        ("MEDICAID",("LIEN","Medicaid Lien")),
-        ("FI STM",("LIEN","Financing Statement")),
-        ("ASSGN",("LIEN","Assignment")),
-        ("TAX LN",("LIEN","Tax Lien")),
-        ("ST TAX",("LIEN","State Tax Lien")),
+        ("FED LN",("LIEN","Federal Lien")),("CORP TAX",("LIEN","Corp Tax Lien")),
+        ("MECH",("LIEN","Mechanic Lien")),("HOA",("LIEN","HOA Lien")),
+        ("MEDICAID",("LIEN","Medicaid Lien")),("FI STM",("LIEN","Financing Statement")),
+        ("ASSGN",("LIEN","Assignment")),("TAX LN",("LIEN","Tax Lien")),
         ("LIEN",("LIEN","Lien")),(" LN",("LIEN","Lien")),
-        ("COMMENCE",("NOC","Notice of Commencement")),
-        ("NOC",("NOC","Notice of Commencement")),
-        ("NOTICE OF F",("NOFC","Notice of Foreclosure")),
-        ("NOTICE",("NOC","Notice")),
-        ("REL LP",("RELLP","Release Lis Pendens")),
-        ("RELLP",("RELLP","Release Lis Pendens")),
-        ("PT REL",("RELLP","Release Lis Pendens")),
-        ("RELEASE",("RELLP","Release Lis Pendens")),
-        ("PROBATE",("PRO","Probate Document")),
-        ("PRO",("PRO","Probate Document")),
+        ("COMMENCE",("NOC","Notice of Commencement")),("NOC",("NOC","Notice of Commencement")),
+        ("NOTICE OF F",("NOFC","Notice of Foreclosure")),("NOTICE",("NOC","Notice")),
+        ("REL LP",("RELLP","Release Lis Pendens")),("RELLP",("RELLP","Release Lis Pendens")),
+        ("PT REL",("RELLP","Release Lis Pendens")),("RELEASE",("RELLP","Release Lis Pendens")),
+        ("PROBATE",("PRO","Probate Document")),("PRO",("PRO","Probate Document")),
     ]
     for key,val in kw:
         if key in dt: return val
-    _UNKNOWN_TYPES[dt] = _UNKNOWN_TYPES.get(dt,0)+1
+    _UNKNOWN_TYPES[dt]=_UNKNOWN_TYPES.get(dt,0)+1
     return None
 
-# ── Clerk ID normalization ────────────────────────────────────────────────────
 def _clerk_variants(raw):
-    s = raw.strip().upper().replace(" ","")
-    v = {s}
-    m = re.match(r'^RP-(\d{4})-(\d+)$', s)
-    if m:
-        v.add(f"{m.group(1)}-RP-{m.group(2)}")
-        v.add(m.group(2).lstrip('0') or '0')
-    m2 = re.match(r'^(\d{4})-RP-(\d+)$', s)
-    if m2:
-        v.add(f"RP-{m2.group(1)}-{m2.group(2)}")
-        v.add(m2.group(2).lstrip('0') or '0')
+    s=raw.strip().upper().replace(" ",""); v={s}
+    m=re.match(r'^RP-(\d{4})-(\d+)$',s)
+    if m: v.add(f"{m.group(1)}-RP-{m.group(2)}"); v.add(m.group(2).lstrip('0') or '0')
+    m2=re.match(r'^(\d{4})-RP-(\d+)$',s)
+    if m2: v.add(f"RP-{m2.group(1)}-{m2.group(2)}"); v.add(m2.group(2).lstrip('0') or '0')
     if s.isdigit(): v.add(s.lstrip('0') or '0')
     return list(v)
 
-# ── Name helpers ──────────────────────────────────────────────────────────────
-def _norm(s): return re.sub(r"\s+", " ", str(s).strip().upper())
+def _norm(s): return re.sub(r"\s+"," ",str(s).strip().upper())
 def _variants(name):
     n=_norm(name); p=n.split(); v=[n]
-    if len(p)>=2: v+=[f"{p[-1]} {' '.join(p[:-1])}", f"{p[-1]}, {' '.join(p[:-1])}"]
+    if len(p)>=2: v+=[f"{p[-1]} {' '.join(p[:-1])}",f"{p[-1]}, {' '.join(p[:-1])}"]
     if len(p)>=3: v.append(f"{p[0]} {p[1]}")
     clean=re.sub(r"\b(LLC|INC|CORP|LTD|LP|GP|TRUST|ESTATE|ET AL|JR|SR|II|III)\b","",n).strip()
     if clean and clean!=n:
@@ -144,7 +126,6 @@ def _extract_names(raw):
     be=next((n for n in grantees if _is_person(n)),grantees[0] if grantees else "")
     return bg,be
 
-# ── Legal description ─────────────────────────────────────────────────────────
 def _parse_legal(legal):
     if not legal: return {}
     s=legal.upper(); r={}
@@ -193,8 +174,8 @@ class ParcelDB:
                     p=line.split("\t")
                     g=lambda k: p[I[k]].strip() if I.get(k,-1)>=0 and I[k]<len(p) else ""
                     acct=g('acct'); owner=g('mailto')
-                    site=g('site_addr_1') or " ".join(x for x in [g('str_num'),
-                          g('str_pfx'),g('str'),g('str_sfx'),g('str_unit')] if x)
+                    site=g('site_addr_1') or " ".join(x for x in
+                         [g('str_num'),g('str_pfx'),g('str'),g('str_sfx'),g('str_unit')] if x)
                     lgl=" ".join(x for x in [g('lgl_1'),g('lgl_2'),g('lgl_3'),g('lgl_4')] if x)
                     entry={"prop_address":site,"prop_city":"Houston","prop_state":"TX",
                            "prop_zip":"","mail_address":g('mail_addr_1'),
@@ -208,9 +189,8 @@ class ParcelDB:
                         if lk and lk not in self._by_legal:
                             self._by_legal[lk]=entry; lcount+=1
                     count+=1
-            log.info("real_acct: %d records | %d name | %d legal keys",
-                     count,len(self._by_name),lcount)
-        except Exception as e: log.error("real_acct error: %s",e)
+            log.info("real_acct: %d records | %d name | %d legal",count,len(self._by_name),lcount)
+        except Exception as e: log.error("real_acct: %s",e)
 
     def load_deeds(self,path):
         if not path.exists(): return
@@ -230,26 +210,22 @@ class ParcelDB:
                         for v in _clerk_variants(cid): self._by_clerk[v]=acct
                         count+=1
             log.info("deeds: %d records | %d clerk_id keys",count,len(self._by_clerk))
-        except Exception as e: log.error("deeds error: %s",e)
+        except Exception as e: log.error("deeds: %s",e)
 
     def lookup(self,doc_num,legal,owner,grantee,cat):
-        # Layer 0: deed lookup
         for v in _clerk_variants(doc_num or ""):
             acct=self._by_clerk.get(v)
             if acct:
                 entry=self._by_acct.get(acct)
                 if entry: return entry,"high"
-        # Layer 1: legal description
         lk=_legal_key(legal or "")
         if lk:
             entry=self._by_legal.get(lk)
             if entry: return entry,"high"
-        # Layer 2: grantee (actual homeowner for distress docs)
         if cat in ("LP","NOFC","JUD","LIEN") and grantee and _is_person(grantee):
             for v in _variants(grantee):
                 hits=self._by_name.get(v)
                 if hits: return hits[0],"low"
-        # Layer 3: grantor (only if person)
         if owner and _is_person(owner):
             for v in _variants(owner):
                 hits=self._by_name.get(v)
@@ -268,12 +244,12 @@ class ParcelDB:
 def flags_for(r):
     f=[]; cat=r.get("cat",""); dt=r.get("doc_type","").upper()
     owner=r.get("owner",""); filed=r.get("filed","")
-    if cat=="LP":    f.append("Lis pendens")
-    if cat=="NOFC":  f.append("Pre-foreclosure")
-    if cat=="JUD":   f.append("Judgment lien")
+    if cat=="LP": f.append("Lis pendens")
+    if cat=="NOFC": f.append("Pre-foreclosure")
+    if cat=="JUD": f.append("Judgment lien")
     if dt in ("LNCORPTX","LNIRS","LNFED","TAXDEED") or "TAX" in dt: f.append("Tax lien")
     if "MECH" in dt: f.append("Mechanic lien")
-    if cat=="PRO":   f.append("Probate / estate")
+    if cat=="PRO": f.append("Probate / estate")
     if re.search(r"\b(LLC|CORP|INC|LTD|LP|GP|TRUST|ASSOC)\b",owner.upper()): f.append("LLC / corp owner")
     try:
         if datetime.strptime(filed[:10],"%Y-%m-%d")>=datetime.now()-timedelta(days=LOOKBACK_DAYS):
@@ -293,7 +269,6 @@ def score_for(r,flags):
     if r.get("prop_address") or r.get("mail_address"): s+=5
     return min(s,100)
 
-# ── Helpers ───────────────────────────────────────────────────────────────────
 def parse_amt(t):
     try: return float(re.sub(r"[^\d.]","",str(t).replace(",","")))
     except: return 0.0
@@ -304,86 +279,29 @@ def parse_date(t):
         except: pass
     return str(t)[:10]
 
-def best_table(soup):
-    # Find the largest table with actual data
-    best,bn=None,0
-    for t in soup.find_all("table"):
-        rows=t.find_all("tr",recursive=False)
-        if not rows:
-            rows=t.find_all("tr")
-        n=len(rows)
-        if n>bn: bn,best=n,t
-    return best if bn>2 else None
-
-def parse_rows_from_soup(soup, source_url=""):
-    """Parse all target records from a results page."""
-    records=[]
-    table=best_table(soup)
-    if not table:
-        log.warning("No table found in page")
-        return records
-
-    # Get direct child rows only
-    rows=table.find_all("tr",recursive=False)
-    if len(rows)<2:
-        tbody=table.find("tbody")
-        if tbody: rows=tbody.find_all("tr",recursive=False)
-        if len(rows)<2: rows=table.find_all("tr")
-
-    log.info("  Rows found: %d", len(rows)-1)
-    if len(rows)>1:
-        # Log first data row for debugging
-        tds=rows[1].find_all("td",recursive=False)
-        log.info("  First row: %d cells | %s",len(tds),
-                 " | ".join(td.get_text(" ",strip=True)[:20] for td in tds[:6]))
-
-    for tr in rows[1:]:
-        cells=tr.find_all("td",recursive=False)
-        if len(cells)!=8: continue
-        try:
-            rec=parse_row_8cell(cells, source_url)
-            if rec: records.append(rec)
-        except Exception as e:
-            log.debug("Row error: %s",e)
-
-    if _UNKNOWN_TYPES:
-        top=sorted(_UNKNOWN_TYPES.items(),key=lambda x:-x[1])[:15]
-        log.info("Unknown types: %s",", ".join(f"{k}:{v}" for k,v in top))
-
-    return records
-
-def parse_row_8cell(cells, source_url=""):
-    """Parse an 8-cell data row from the results table."""
+# ── Row parser ────────────────────────────────────────────────────────────────
+def parse_row_8cell(cells):
+    if len(cells)!=8: return None
     def ct(i): return cells[i].get_text(" ",strip=True) if i<len(cells) else ""
-
     raw_file=ct(1).strip()
-    filed   =ct(2).strip()
-
-    # Type from anchor in col 3
+    filed=ct(2).strip()
     raw_type=""
     a=cells[3].find("a") if len(cells)>3 else None
     if a: raw_type=a.get_text(strip=True)
     if not raw_type:
         for tok in ct(3).split():
             if tok and not tok.isdigit(): raw_type=tok; break
-
     raw_names=ct(4)
     raw_legal=ct(5)
-
-    # Categorize
     cat_result=categorize(raw_type)
     if not cat_result: return None
     cat,cat_label=cat_result
-
-    # Doc number
     doc_num=""
     if re.match(r'^RP-\d{4}-\d+$',raw_file): doc_num=raw_file
     if not doc_num:
         for cell in cells:
             txt=cell.get_text(strip=True)
             if re.match(r'^RP-\d{4}-\d+$',txt): doc_num=txt; break
-
-    # Clerk URL from col 7 anchor
     clerk_url=""
     if len(cells)>7:
         a=cells[7].find("a",href=True)
@@ -392,9 +310,7 @@ def parse_row_8cell(cells, source_url=""):
             clerk_url=h if h.startswith("http") else "https://www.cclerk.hctx.net"+h
     if not clerk_url and doc_num:
         clerk_url=f"{CLERK_BASE}?FileID={doc_num}"
-
     grantor,grantee=_extract_names(raw_names)
-
     return {"doc_num":doc_num,"doc_type":raw_type,"filed":parse_date(filed),
             "cat":cat,"cat_label":cat_label,"owner":grantor,"grantee":grantee,
             "amount":0.0,"legal":raw_legal,
@@ -403,184 +319,167 @@ def parse_row_8cell(cells, source_url=""):
             "clerk_url":clerk_url,"match_confidence":"none","hcad_url":"",
             "flags":[],"score":0}
 
-# ── HTTP scraper (primary) ────────────────────────────────────────────────────
-def http_search(session, start_date, end_date):
-    """Use requests to POST the clerk search form directly."""
+def parse_html(html, source_url=""):
     records=[]
-
-    for attempt in range(1,4):
+    soup=BeautifulSoup(html,"lxml")
+    # Find all tables, pick the one with most 8-cell rows
+    best_table=None; best_count=0
+    for t in soup.find_all("table"):
+        c=sum(1 for tr in t.find_all("tr",recursive=False)
+              if len(tr.find_all("td",recursive=False))==8)
+        if c>best_count: best_count,best_table=c,t
+    if not best_table or best_count==0:
+        log.warning("  No 8-cell table found (tables=%d)",len(soup.find_all("table")))
+        return records
+    log.info("  Found table with %d data rows",best_count)
+    for tr in best_table.find_all("tr",recursive=False):
+        cells=tr.find_all("td",recursive=False)
         try:
-            # Get VIEWSTATE from the form page
-            log.info("  GET %s (attempt %d)...", CLERK_BASE, attempt)
-            r=session.get(CLERK_BASE, timeout=30)
-            r.raise_for_status()
-            soup=BeautifulSoup(r.text,"lxml")
-
-            def vs(name):
-                el=soup.find("input",{"name":name}) or soup.find("input",{"id":name.replace("$","_")})
-                return el.get("value","") if el else ""
-
-            viewstate=vs("__VIEWSTATE")
-            log.info("  VIEWSTATE length: %d", len(viewstate))
-
-            if not viewstate:
-                log.warning("  No VIEWSTATE found — page may require JavaScript")
-                # Log what inputs we found
-                inputs=soup.find_all("input",{"type":"hidden"})
-                log.info("  Hidden inputs: %s",
-                         [(i.get("name",""),len(i.get("value",""))) for i in inputs[:5]])
-                break
-
-            ev  = vs("__EVENTVALIDATION")
-            vsg = vs("__VIEWSTATEGENERATOR")
-            log.info("  VIEWSTATE=%d EV=%d VSG=%d",
-                     len(viewstate), len(ev), len(vsg))
-
-            # Log all hidden inputs for debugging
-            hidden = soup.find_all("input", {"type":"hidden"})
-            log.info("  Hidden fields: %s",
-                     [(h.get("name",""), len(h.get("value",""))) for h in hidden])
-
-            # Log all visible inputs
-            visible = soup.find_all("input", {"type":["text","submit"]})
-            log.info("  Visible inputs: %s",
-                     [(v.get("name",""), v.get("id",""), v.get("value","")) for v in visible])
-
-            payload={
-                "__VIEWSTATE":          viewstate,
-                "__VIEWSTATEGENERATOR": vsg,
-                "__EVENTVALIDATION":    ev,
-                "__EVENTTARGET":        "",
-                "__EVENTARGUMENT":      "",
-                "ctl00$ContentPlaceHolder1$txtFrom":   start_date,
-                "ctl00$ContentPlaceHolder1$txtTo":     end_date,
-                "ctl00$ContentPlaceHolder1$btnSearch": "Search",
-            }
-
-            # Get the form action URL (may differ from CLERK_BASE)
-            form = soup.find("form")
-            form_action = CLERK_BASE
-            if form and form.get("action"):
-                action = form["action"]
-                if action.startswith("http"):
-                    form_action = action
-                elif action.startswith("/"):
-                    form_action = "https://www.cclerk.hctx.net" + action
-                else:
-                    form_action = "https://www.cclerk.hctx.net/Applications/WebSearch/" + action
-            log.info("  Form action: %s", form_action)
-
-            log.info("  POSTing form with dates %s → %s ...", start_date, end_date)
-            r2=session.post(form_action, data=payload, timeout=60,
-                           allow_redirects=True,
-                           headers={
-                               "Content-Type": "application/x-www-form-urlencoded",
-                               "Referer": CLERK_BASE,
-                               "Origin": "https://www.cclerk.hctx.net",
-                               "Cache-Control": "no-cache",
-                           })
-            log.info("  POST: HTTP %d, %d bytes, url=%s",
-                     r2.status_code, len(r2.content), r2.url[:80])
-
-            soup2=BeautifulSoup(r2.text,"lxml")
-            body_preview=soup2.get_text()[:150].replace('\n',' ')
-            log.info("  Response preview: %s", body_preview)
-
-            recs=parse_rows_from_soup(soup2, r2.url)
-            if recs:
-                records.extend(recs)
-                log.info("  Page 1: %d records", len(recs))
-
-                # Handle pagination
-                page_num=1
-                while page_num < 200:
-                    page_num+=1
-                    # Find next page link
-                    next_link=None
-                    for a in soup2.find_all("a"):
-                        txt=a.get_text(strip=True)
-                        if txt in (">","Next","»"):
-                            next_link=a; break
-
-                    if not next_link: break
-
-                    href=next_link.get("href","")
-                    if "javascript" in href.lower():
-                        # __doPostBack pagination
-                        target=re.search(r"__doPostBack\('([^']+)'",href)
-                        if not target: break
-                        payload2={
-                            "__VIEWSTATE":vs("__VIEWSTATE"),
-                            "__VIEWSTATEGENERATOR":vs("__VIEWSTATEGENERATOR"),
-                            "__EVENTVALIDATION":vs("__EVENTVALIDATION"),
-                            "__EVENTTARGET":target.group(1),
-                            "__EVENTARGUMENT":"",
-                        }
-                        r3=session.post(r2.url,data=payload2,timeout=60)
-                        soup2=BeautifulSoup(r3.text,"lxml")
-                    else:
-                        url=href if href.startswith("http") else "https://www.cclerk.hctx.net"+href
-                        r3=session.get(url,timeout=60)
-                        soup2=BeautifulSoup(r3.text,"lxml")
-
-                    page_recs=parse_rows_from_soup(soup2)
-                    if not page_recs: break
-                    records.extend(page_recs)
-                    log.info("  Page %d: %d records", page_num, len(page_recs))
-                    time.sleep(0.5)
-
-            return records
-
+            rec=parse_row_8cell(cells)
+            if rec: records.append(rec)
         except Exception as e:
-            log.warning("  HTTP search attempt %d error: %s", attempt, e)
-            time.sleep(2**attempt)
-
+            log.debug("Row error: %s",e)
+    if _UNKNOWN_TYPES:
+        top=sorted(_UNKNOWN_TYPES.items(),key=lambda x:-x[1])[:10]
+        log.info("Unknown types: %s",", ".join(f"{k}:{v}" for k,v in top))
     return records
 
-# ── Foreclosure scraper ───────────────────────────────────────────────────────
-def scrape_foreclosures(session, cutoff):
+# ── Playwright scraper ────────────────────────────────────────────────────────
+async def scrape_with_playwright(start_date, end_date):
+    if not HAS_PLAYWRIGHT: return []
     records=[]
-    log.info("Scraping foreclosure page ...")
+    async with async_playwright() as pw:
+        browser=await pw.chromium.launch(
+            headless=True,
+            args=["--no-sandbox","--disable-dev-shm-usage"])
+        ctx=await browser.new_context(
+            user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
+            viewport={"width":1280,"height":900})
+        ctx.on("dialog",lambda d: asyncio.ensure_future(d.dismiss()))
+        page=await ctx.new_page()
+
+        # Warm up
+        log.info("Loading clerk portal ...")
+        await page.goto(CLERK_HOME,wait_until="domcontentloaded",timeout=30_000)
+        await asyncio.sleep(2)
+        await page.goto(CLERK_BASE,wait_until="domcontentloaded",timeout=30_000)
+        await page.wait_for_load_state("networkidle",timeout=15_000)
+        await asyncio.sleep(2)
+
+        # Fill dates using JavaScript (most reliable)
+        filled=await page.evaluate(
+            f"() => {{"
+            f"  function s(id,v){{"
+            f"    var e=document.getElementById(id);"
+            f"    if(!e) return false;"
+            f"    e.value=v;"
+            f"    ['input','change','blur'].forEach(function(ev){{"
+            f"      e.dispatchEvent(new Event(ev,{{bubbles:true}}));}});"
+            f"    return true;}}"
+            f"  return [s('ctl00_ContentPlaceHolder1_txtFrom','{start_date}'),"
+            f"          s('ctl00_ContentPlaceHolder1_txtTo','{end_date}')];"
+            f"}}"
+        )
+        log.info("Fill result: %s", filled)
+
+        # Also fill via Playwright locator as backup
+        try:
+            await page.locator("#ctl00_ContentPlaceHolder1_txtFrom").fill(start_date)
+            await page.locator("#ctl00_ContentPlaceHolder1_txtTo").fill(end_date)
+        except: pass
+
+        # Verify
+        try:
+            df=await page.locator("#ctl00_ContentPlaceHolder1_txtFrom").input_value()
+            dt=await page.locator("#ctl00_ContentPlaceHolder1_txtTo").input_value()
+            log.info("Dates set: from=%s to=%s", df, dt)
+        except: pass
+
+        # Submit
+        await page.locator("#ctl00_ContentPlaceHolder1_btnSearch").click()
+        log.info("Search submitted")
+
+        # Wait for results — poll for table rows
+        for wait_s in [3,5,8,10]:
+            await asyncio.sleep(wait_s)
+            row_count=await page.evaluate(
+                "() => document.querySelectorAll('table tr').length")
+            log.info("  After %ds: %d table rows in DOM", wait_s, row_count)
+            if row_count>10:
+                break
+
+        # Extract HTML via JavaScript (bypasses Playwright's content() issues)
+        html=await page.evaluate("() => document.documentElement.outerHTML")
+        log.info("  HTML length: %d chars", len(html))
+
+        # Parse page 1
+        page_records=parse_html(html, page.url)
+        records.extend(page_records)
+        log.info("Page 1: %d records", len(page_records))
+
+        # Paginate
+        page_num=1
+        while page_num<200 and page_records:
+            page_num+=1
+            # Click Next
+            clicked=False
+            for sel in ["a:has-text('Next')","a:has-text('>')",
+                        "input[value='Next']","a[id*='Next']"]:
+                try:
+                    el=page.locator(sel).first
+                    if await el.count()>0:
+                        await el.click(timeout=3000)
+                        clicked=True; break
+                except: pass
+            if not clicked: break
+            await asyncio.sleep(2)
+            html=await page.evaluate("() => document.documentElement.outerHTML")
+            page_records=parse_html(html)
+            if not page_records: break
+            records.extend(page_records)
+            log.info("Page %d: %d records (total: %d)",page_num,len(page_records),len(records))
+
+        await browser.close()
+
+    log.info("Playwright scrape complete: %d records",len(records))
+    return records
+
+# ── Foreclosure page ──────────────────────────────────────────────────────────
+def scrape_foreclosures(session,cutoff):
+    records=[]
     try:
-        r=session.get(CLERK_FRCL, timeout=30)
+        r=session.get(CLERK_FRCL,timeout=30)
         soup=BeautifulSoup(r.text,"lxml")
-        table=best_table(soup)
+        tables=soup.find_all("table")
+        table=max(tables,key=lambda t:len(t.find_all("tr"))) if tables else None
         if not table: return records
         rows=table.find_all("tr")
-        if len(rows)<2: return records
-        headers=[c.get_text(strip=True).upper() for c in rows[0].find_all(["th","td"])]
         for tr in rows[1:]:
             cells=tr.find_all("td")
             if not cells: continue
-            try:
-                # Simple extraction for foreclosure page
-                texts=[c.get_text(strip=True) for c in cells]
-                doc_num=next((t for t in texts if re.match(r'^RP-\d{4}-\d+$',t)),"")
-                filed=next((t for t in texts if re.match(r'^\d{2}/\d{2}/\d{4}$',t)),"")
-                if filed and parse_date(filed)<cutoff: continue
-                grantor=texts[3] if len(texts)>3 else ""
-                records.append({
-                    "doc_num":doc_num,"doc_type":"NOFC","filed":parse_date(filed),
-                    "cat":"NOFC","cat_label":"Notice of Foreclosure",
-                    "owner":grantor,"grantee":"","amount":0.0,"legal":"",
-                    "prop_address":"","prop_city":"","prop_state":"TX","prop_zip":"",
-                    "mail_address":"","mail_city":"","mail_state":"","mail_zip":"",
-                    "clerk_url":f"{CLERK_BASE}?FileID={doc_num}" if doc_num else CLERK_FRCL,
-                    "match_confidence":"none","hcad_url":"","flags":[],"score":0,
-                })
-            except: pass
-        log.info("  → %d foreclosures", len(records))
-    except Exception as e:
-        log.warning("Foreclosure error: %s", e)
+            texts=[c.get_text(strip=True) for c in cells]
+            doc_num=next((t for t in texts if re.match(r'^RP-\d{4}-\d+$',t)),"")
+            filed=next((t for t in texts if re.match(r'^\d{2}/\d{2}/\d{4}$',t)),"")
+            if filed and parse_date(filed)<cutoff: continue
+            grantor=texts[3] if len(texts)>3 else ""
+            records.append({"doc_num":doc_num,"doc_type":"NOFC","filed":parse_date(filed),
+                "cat":"NOFC","cat_label":"Notice of Foreclosure","owner":grantor,
+                "grantee":"","amount":0.0,"legal":"",
+                "prop_address":"","prop_city":"","prop_state":"TX","prop_zip":"",
+                "mail_address":"","mail_city":"","mail_state":"","mail_zip":"",
+                "clerk_url":f"{CLERK_BASE}?FileID={doc_num}" if doc_num else CLERK_FRCL,
+                "match_confidence":"none","hcad_url":"","flags":[],"score":0})
+        log.info("Foreclosures: %d",len(records))
+    except Exception as e: log.warning("FRCL: %s",e)
     return records
 
-# ── Google Drive download ─────────────────────────────────────────────────────
+# ── Google Drive ──────────────────────────────────────────────────────────────
 def _cache_fresh(path):
     return path.exists() and (time.time()-path.stat().st_mtime)<(CACHE_MAX_DAYS*86400)
 
-def download_gdrive(session, file_id, dest):
+def download_gdrive(session,file_id,dest):
     if not file_id: return False
-    log.info("Downloading GDrive %s ...", file_id)
+    log.info("Downloading GDrive %s ...",file_id)
     dest.parent.mkdir(parents=True,exist_ok=True)
     try:
         r=session.get(f"https://drive.google.com/uc?export=download&id={file_id}",
@@ -589,19 +488,12 @@ def download_gdrive(session, file_id, dest):
             token=re.search(rb'confirm=([^&"\']+)',r.content)
             uuid =re.search(rb'uuid=([^&"\']+)',r.content)
             if token:
-                r=session.get(
-                    f"https://drive.google.com/uc?export=download&confirm={token.group(1).decode()}&id={file_id}",
-                    timeout=600,stream=True)
+                r=session.get(f"https://drive.google.com/uc?export=download&confirm={token.group(1).decode()}&id={file_id}",timeout=600,stream=True)
             elif uuid:
-                r=session.get(
-                    f"https://drive.usercontent.google.com/download?id={file_id}&export=download&authuser=0&confirm=t&uuid={uuid.group(1).decode()}",
-                    timeout=600,stream=True)
+                r=session.get(f"https://drive.usercontent.google.com/download?id={file_id}&export=download&authuser=0&confirm=t&uuid={uuid.group(1).decode()}",timeout=600,stream=True)
             else:
-                r=session.get(
-                    f"https://drive.usercontent.google.com/download?id={file_id}&export=download&authuser=0&confirm=t",
-                    timeout=600,stream=True)
-        if "text/html" in r.headers.get("content-type",""):
-            log.error("  GDrive returned HTML — file not public?"); return False
+                r=session.get(f"https://drive.usercontent.google.com/download?id={file_id}&export=download&authuser=0&confirm=t",timeout=600,stream=True)
+        if "text/html" in r.headers.get("content-type",""): return False
         if r.status_code==200:
             written=0
             with dest.open("wb") as f:
@@ -610,7 +502,7 @@ def download_gdrive(session, file_id, dest):
             mb=round(written/1e6,1)
             log.info("  Saved %s MB → %s",mb,dest)
             return mb>0.5
-    except Exception as e: log.error("  Download error: %s",e)
+    except Exception as e: log.error("GDrive: %s",e)
     return False
 
 def load_parcel_db(session):
@@ -620,9 +512,7 @@ def load_parcel_db(session):
         (GDRIVE_DEEDS_ID,DEEDS_CACHE,db.load_deeds),
     ]:
         if _cache_fresh(cache): log.info("Using cached %s",cache.name)
-        elif uid:
-            ok=download_gdrive(session,uid,cache)
-            if not ok: log.warning("Download failed: %s",cache.name)
+        elif uid: download_gdrive(session,uid,cache)
         if cache.exists(): loader(cache)
     return db
 
@@ -696,28 +586,13 @@ async def main():
     log.info("="*60)
     log.info("Harris County Lead Scraper — %s to %s",start,end)
     log.info("="*60)
-
     session=requests.Session()
-    session.headers.update({
-        "User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/122.0.0.0 Safari/537.36",
-        "Accept":"text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-        "Accept-Language":"en-US,en;q=0.5",
-    })
-
-    # Load parcel data
+    session.headers["User-Agent"]="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/122.0.0.0 Safari/537.36"
     parcel_db=load_parcel_db(session)
-
-    # Scrape records via HTTP POST
-    log.info("Starting HTTP search ...")
-    records=http_search(session,start,end)
-    log.info("HTTP search returned: %d records",len(records))
-
-    # Supplement with foreclosure page
-    cutoff=(start_dt).strftime("%Y-%m-%d")
-    frcl=scrape_foreclosures(session,cutoff)
-    records.extend(frcl)
-
-    log.info("Raw total: %d",len(records))
+    records=await scrape_with_playwright(start,end)
+    cutoff=iso_s
+    records.extend(scrape_foreclosures(session,cutoff))
+    log.info("Raw: %d",len(records))
     records=dedupe(records)
     records=enrich(records,parcel_db)
     records=apply_scores(records)
