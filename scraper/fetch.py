@@ -302,6 +302,16 @@ def parse_row_8cell(cells):
             if tok and not tok.isdigit(): raw_type=tok; break
     raw_names=ct(4)
     raw_legal=ct(5)
+    # Debug first few rows
+    if not hasattr(parse_row_8cell, '_debug_count'):
+        parse_row_8cell._debug_count = 0
+    if parse_row_8cell._debug_count < 3:
+        parse_row_8cell._debug_count += 1
+        import logging as _log
+        _log.getLogger(__name__).info(
+            "DEBUG row %d: file=%s type=%s names=%r legal=%r",
+            parse_row_8cell._debug_count, raw_file, raw_type,
+            raw_names[:80], raw_legal[:60])
     cat_result=categorize(raw_type)
     if not cat_result: return None
     cat,cat_label=cat_result
