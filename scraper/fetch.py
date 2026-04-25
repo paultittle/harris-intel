@@ -59,6 +59,7 @@ def categorize(dt):
     dt=dt.upper().strip()
     if dt in DOC_TYPE_MAP: return DOC_TYPE_MAP[dt]
     kw=[
+        ("T/L",("LIEN","Tax Lien")),
         ("L/P",("LP","Lis Pendens")),("LIS P",("LP","Lis Pendens")),
         ("LP",("LP","Lis Pendens")),
         ("FORECLOS",("NOFC","Notice of Foreclosure")),
@@ -303,13 +304,19 @@ def parse_row_8cell(cells):
             txt=cell.get_text(strip=True)
             if re.match(r'^RP-\d{4}-\d+$',txt): doc_num=txt; break
     clerk_url=""
-    if len(cells)>7:
-        a=cells[7].find("a",href=True)
-        if a:
-            h=a["href"]
-            clerk_url=h if h.startswith("http") else "https://www.cclerk.hctx.net"+h
-    if not clerk_url and doc_num:
+    # Build proper clerk URL from doc_num — don't use javascript: links
+    if doc_num:
         clerk_url=f"{CLERK_BASE}?FileID={doc_num}"
+    else:
+        # Try to get URL from any anchor that isn't javascript
+        for cell in cells:
+            a=cell.find("a",href=True)
+            if a:
+                h=a["href"]
+                if h.startswith("http"):
+                    clerk_url=h; break
+                elif h.startswith("/") and "javascript" not in h.lower():
+                    clerk_url="https://www.cclerk.hctx.net"+h; break
     grantor,grantee=_extract_names(raw_names)
     return {"doc_num":doc_num,"doc_type":raw_type,"filed":parse_date(filed),
             "cat":cat,"cat_label":cat_label,"owner":grantor,"grantee":grantee,
