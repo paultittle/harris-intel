@@ -742,7 +742,7 @@
   </div>
   <div class="drawer-body" id="drawerBody"></div>
   <div class="drawer-footer">
-    <a class="btn btn-accent" id="drawerViewLink" href="#" target="_blank">View Document ↗</a>
+    <a class="btn btn-accent" id="drawerViewLink" href="#" target="_blank" onclick="openDoc(event)">View Document ↗</a>
     <button class="btn" onclick="copyRecord()">Copy Record</button>
   </div>
 </div>
@@ -1127,6 +1127,22 @@ function showToast(msg) {
   el.classList.add("show");
   clearTimeout(toastTimer);
   toastTimer = setTimeout(() => el.classList.remove("show"), 2500);
+}
+
+// ─── DOCUMENT VIEWER ──────────────────────────────────────────────────────────
+function openDoc(e) {
+  if (!CURRENT_REC) return;
+  const url = CURRENT_REC.clerk_url;
+  if (!url) return;
+  // If it's a Film Code search URL, open and note user needs to click Search
+  if (url.includes('ST=FM')) {
+    e.preventDefault();
+    // Open in new tab
+    const w = window.open(url, '_blank');
+    showToast('Page opens → click Search → click Film Code to view document');
+    return false;
+  }
+  // Otherwise open normally
 }
 
 // ─── BOOT ─────────────────────────────────────────────────────────────────────
