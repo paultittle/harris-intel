@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-04-25T01:20:28.023017+00:00",
+  "fetched_at": "2026-04-25T01:32:10.053380+00:00",
   "source": "Harris County Clerk – Real Property Records",
   "date_range": {
     "from": "2026-04-18",
@@ -26,7 +26,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77024-6115",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-154106",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-154106",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=0993080000010&taxyear=2025&type=real",
       "flags": [
@@ -54,7 +54,7 @@
       "mail_city": "KATY",
       "mail_state": "TX",
       "mail_zip": "77494-3520",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-154071",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-154071",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1178890040032&taxyear=2025&type=real",
       "flags": [
@@ -82,7 +82,7 @@
       "mail_city": "SPRING",
       "mail_state": "TX",
       "mail_zip": "77373-6587",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153758",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153758",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1258830030025&taxyear=2025&type=real",
       "flags": [
@@ -110,7 +110,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77071-",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153740",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153740",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1010260000033&taxyear=2025&type=real",
       "flags": [
@@ -138,7 +138,7 @@
       "mail_city": "HUMBLE",
       "mail_state": "TX",
       "mail_zip": "77346-4339",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153682",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153682",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1400620010007&taxyear=2025&type=real",
       "flags": [
@@ -166,7 +166,7 @@
       "mail_city": "BAYTOWN",
       "mail_state": "TX",
       "mail_zip": "77520-4915",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153608",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153608",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1154700020063&taxyear=2025&type=real",
       "flags": [
@@ -194,7 +194,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77014-1531",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153602",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153602",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1141040140033&taxyear=2025&type=real",
       "flags": [
@@ -222,7 +222,7 @@
       "mail_city": "TOMBALL",
       "mail_state": "TX",
       "mail_zip": "77377-4117",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153478",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153478",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1345530010001&taxyear=2025&type=real",
       "flags": [
@@ -250,7 +250,7 @@
       "mail_city": "LA PORTE",
       "mail_state": "TX",
       "mail_zip": "77571-4005",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-154183",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-154183",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=0962350000010&taxyear=2025&type=real",
       "flags": [
@@ -277,7 +277,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77047-7534",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-154170",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-154170",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1296470010010&taxyear=2025&type=real",
       "flags": [
@@ -304,7 +304,7 @@
       "mail_city": "STUDIO CITY",
       "mail_state": "CA",
       "mail_zip": "91604-4156",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-154168",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-154168",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1146710120002&taxyear=2025&type=real",
       "flags": [
@@ -331,7 +331,7 @@
       "mail_city": "KATY",
       "mail_state": "TX",
       "mail_zip": "77494-2659",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-154166",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-154166",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1165560020009&taxyear=2025&type=real",
       "flags": [
@@ -358,7 +358,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77077-3844",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-154165",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-154165",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1130810000088&taxyear=2025&type=real",
       "flags": [
@@ -385,7 +385,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77020-6913",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-154164",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-154164",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1149300060052&taxyear=2025&type=real",
       "flags": [
@@ -412,7 +412,7 @@
       "mail_city": "KATY",
       "mail_state": "TX",
       "mail_zip": "77493-1128",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-154148",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-154148",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1123290000007&taxyear=2025&type=real",
       "flags": [
@@ -439,7 +439,7 @@
       "mail_city": "HUMBLE",
       "mail_state": "TX",
       "mail_zip": "77396-6071",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-154146",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-154146",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1244910020002&taxyear=2025&type=real",
       "flags": [
@@ -466,7 +466,7 @@
       "mail_city": "KINGWOOD",
       "mail_state": "TX",
       "mail_zip": "77339-1975",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-154136",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-154136",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1149560240004&taxyear=2025&type=real",
       "flags": [
@@ -493,7 +493,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77044-1451",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-154135",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-154135",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1342100020059&taxyear=2025&type=real",
       "flags": [
@@ -520,7 +520,7 @@
       "mail_city": "HUMBLE",
       "mail_state": "TX",
       "mail_zip": "77396-4322",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-154129",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-154129",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1296660020004&taxyear=2025&type=real",
       "flags": [
@@ -547,7 +547,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77019-6401",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-154126",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-154126",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=0560210000125&taxyear=2025&type=real",
       "flags": [
@@ -574,7 +574,7 @@
       "mail_city": "CYPRESS",
       "mail_state": "TX",
       "mail_zip": "77433-7633",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-154103",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-154103",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1288170020008&taxyear=2025&type=real",
       "flags": [
@@ -601,7 +601,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77039-1418",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-154083",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-154083",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1340830020025&taxyear=2025&type=real",
       "flags": [
@@ -628,7 +628,7 @@
       "mail_city": "MAGNOLIA",
       "mail_state": "TX",
       "mail_zip": "77354-5672",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-154082",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-154082",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1177540050834&taxyear=2025&type=real",
       "flags": [
@@ -655,7 +655,7 @@
       "mail_city": "KINGWOOD",
       "mail_state": "TX",
       "mail_zip": "77339-4627",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-154078",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-154078",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1177540230907&taxyear=2025&type=real",
       "flags": [
@@ -682,7 +682,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77057-2136",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-154072",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-154072",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1152780170002&taxyear=2025&type=real",
       "flags": [
@@ -709,7 +709,7 @@
       "mail_city": "BELLAIRE",
       "mail_state": "TX",
       "mail_zip": "77401-3311",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-154059",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-154059",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1411120020064&taxyear=2025&type=real",
       "flags": [
@@ -736,7 +736,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77009-2945",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-154058",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-154058",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1293890010001&taxyear=2025&type=real",
       "flags": [
@@ -763,7 +763,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77021-4426",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-154057",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-154057",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=0771020090035&taxyear=2025&type=real",
       "flags": [
@@ -790,7 +790,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77086-4505",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-154039",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-154039",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1392900010018&taxyear=2025&type=real",
       "flags": [
@@ -817,7 +817,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77094-3511",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-154035",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-154035",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=0471390000004&taxyear=2025&type=real",
       "flags": [
@@ -844,7 +844,7 @@
       "mail_city": "CYPRESS",
       "mail_state": "TX",
       "mail_zip": "77433-7894",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-154012",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-154012",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1397720020013&taxyear=2025&type=real",
       "flags": [
@@ -871,7 +871,7 @@
       "mail_city": "HUMBLE",
       "mail_state": "TX",
       "mail_zip": "77346-4160",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-154000",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-154000",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1378540040004&taxyear=2025&type=real",
       "flags": [
@@ -898,7 +898,7 @@
       "mail_city": "CYPRESS",
       "mail_state": "TX",
       "mail_zip": "77433-1744",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153998",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153998",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1245220020008&taxyear=2025&type=real",
       "flags": [
@@ -925,7 +925,7 @@
       "mail_city": "HUMBLE",
       "mail_state": "TX",
       "mail_zip": "77346-4168",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153995",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153995",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1378530020009&taxyear=2025&type=real",
       "flags": [
@@ -952,7 +952,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77075-2733",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153986",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153986",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1265460020024&taxyear=2025&type=real",
       "flags": [
@@ -979,7 +979,7 @@
       "mail_city": "BAYTOWN",
       "mail_state": "TX",
       "mail_zip": "77521-7818",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153972",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153972",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1224770000156&taxyear=2025&type=real",
       "flags": [
@@ -1006,7 +1006,7 @@
       "mail_city": "KATY",
       "mail_state": "TX",
       "mail_zip": "77493-4629",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153968",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153968",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1413180020065&taxyear=2025&type=real",
       "flags": [
@@ -1033,7 +1033,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77003-2234",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153967",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153967",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1216420040006&taxyear=2025&type=real",
       "flags": [
@@ -1060,7 +1060,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77079-3222",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153960",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153960",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1372290010002&taxyear=2025&type=real",
       "flags": [
@@ -1087,7 +1087,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77047-3363",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153958",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153958",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1276100010007&taxyear=2025&type=real",
       "flags": [
@@ -1114,7 +1114,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77044-4498",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153933",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153933",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1287650040047&taxyear=2025&type=real",
       "flags": [
@@ -1141,7 +1141,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77004-1465",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153927",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153927",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1417270010002&taxyear=2025&type=real",
       "flags": [
@@ -1168,7 +1168,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77089-1026",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153926",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153926",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1096010000035&taxyear=2025&type=real",
       "flags": [
@@ -1195,7 +1195,7 @@
       "mail_city": "KATY",
       "mail_state": "TX",
       "mail_zip": "77493-4776",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153924",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153924",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1454440010010&taxyear=2025&type=real",
       "flags": [
@@ -1222,7 +1222,7 @@
       "mail_city": "CHANNELVIEW",
       "mail_state": "TX",
       "mail_zip": "77530-2136",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153923",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153923",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1145570070014&taxyear=2025&type=real",
       "flags": [
@@ -1249,7 +1249,7 @@
       "mail_city": "KATY",
       "mail_state": "TX",
       "mail_zip": "77493-3910",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153922",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153922",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1405620010004&taxyear=2025&type=real",
       "flags": [
@@ -1276,7 +1276,7 @@
       "mail_city": "KATY",
       "mail_state": "TX",
       "mail_zip": "77493-3910",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153921",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153921",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1405620010004&taxyear=2025&type=real",
       "flags": [
@@ -1303,7 +1303,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77070-2211",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153903",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153903",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1137230000014&taxyear=2025&type=real",
       "flags": [
@@ -1330,7 +1330,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77067-3425",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153867",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153867",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1469420020020&taxyear=2025&type=real",
       "flags": [
@@ -1357,7 +1357,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77054-2607",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153865",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153865",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1141530160002&taxyear=2025&type=real",
       "flags": [
@@ -1384,7 +1384,7 @@
       "mail_city": "CYPRESS",
       "mail_state": "TX",
       "mail_zip": "77433-5913",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153864",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153864",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1460640010035&taxyear=2025&type=real",
       "flags": [
@@ -1411,7 +1411,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77008-1816",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153855",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153855",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1331270010007&taxyear=2025&type=real",
       "flags": [
@@ -1438,7 +1438,7 @@
       "mail_city": "HOCKLEY",
       "mail_state": "TX",
       "mail_zip": "77447-2392",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153844",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153844",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1458610030019&taxyear=2025&type=real",
       "flags": [
@@ -1465,7 +1465,7 @@
       "mail_city": "CYPRESS",
       "mail_state": "TX",
       "mail_zip": "77433-0345",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153843",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153843",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1460750010004&taxyear=2025&type=real",
       "flags": [
@@ -1492,7 +1492,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77008",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153842",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153842",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=0200660000032&taxyear=2025&type=real",
       "flags": [
@@ -1519,7 +1519,7 @@
       "mail_city": "SPRING",
       "mail_state": "TX",
       "mail_zip": "77379-3746",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153835",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153835",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1260170030005&taxyear=2025&type=real",
       "flags": [
@@ -1546,7 +1546,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77044-1402",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153828",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153828",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1328030010042&taxyear=2025&type=real",
       "flags": [
@@ -1573,7 +1573,7 @@
       "mail_city": "CYPRESS",
       "mail_state": "TX",
       "mail_zip": "77433-7752",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153827",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153827",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1402510020026&taxyear=2025&type=real",
       "flags": [
@@ -1600,7 +1600,7 @@
       "mail_city": "CYPRESS",
       "mail_state": "TX",
       "mail_zip": "77433-6583",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153823",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153823",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1423100010012&taxyear=2025&type=real",
       "flags": [
@@ -1627,7 +1627,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77072-2241",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153809",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153809",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1067840000016&taxyear=2025&type=real",
       "flags": [
@@ -1654,7 +1654,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77098-1981",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153801",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153801",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1410010060001&taxyear=2025&type=real",
       "flags": [
@@ -1681,7 +1681,7 @@
       "mail_city": "KATY",
       "mail_state": "TX",
       "mail_zip": "77449-5442",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153800",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153800",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1343030030014&taxyear=2025&type=real",
       "flags": [
@@ -1708,7 +1708,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77049-1687",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153799",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153799",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1312130020025&taxyear=2025&type=real",
       "flags": [
@@ -1735,7 +1735,7 @@
       "mail_city": "CYPRESS",
       "mail_state": "TX",
       "mail_zip": "77433-8133",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153798",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153798",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1404010010001&taxyear=2025&type=real",
       "flags": [
@@ -1762,7 +1762,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77006-1307",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153797",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153797",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1331710010001&taxyear=2025&type=real",
       "flags": [
@@ -1789,7 +1789,7 @@
       "mail_city": "SPRING",
       "mail_state": "TX",
       "mail_zip": "77379-4184",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153796",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153796",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1115490000031&taxyear=2025&type=real",
       "flags": [
@@ -1816,7 +1816,7 @@
       "mail_city": "MODESTO",
       "mail_state": "CA",
       "mail_zip": "95356-9365",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153795",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153795",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1352750020002&taxyear=2025&type=real",
       "flags": [
@@ -1843,7 +1843,7 @@
       "mail_city": "CROSBY",
       "mail_state": "TX",
       "mail_zip": "77532-3205",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153784",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153784",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=0993190000109&taxyear=2025&type=real",
       "flags": [
@@ -1870,7 +1870,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77015-4761",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153780",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153780",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=0650680710022&taxyear=2025&type=real",
       "flags": [
@@ -1897,7 +1897,7 @@
       "mail_city": "FULSHEAR",
       "mail_state": "TX",
       "mail_zip": "77441-2706",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153776",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153776",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1348260010027&taxyear=2025&type=real",
       "flags": [
@@ -1924,7 +1924,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77036-8338",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153775",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153775",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1150020140007&taxyear=2025&type=real",
       "flags": [
@@ -1951,7 +1951,7 @@
       "mail_city": "HUMBLE",
       "mail_state": "TX",
       "mail_zip": "77396-4096",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153773",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153773",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1239800020019&taxyear=2025&type=real",
       "flags": [
@@ -1978,7 +1978,7 @@
       "mail_city": "CYPRESS",
       "mail_state": "TX",
       "mail_zip": "77433-4158",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153772",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153772",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1335880010029&taxyear=2025&type=real",
       "flags": [
@@ -2005,7 +2005,7 @@
       "mail_city": "CYPRESS",
       "mail_state": "TX",
       "mail_zip": "77433-4158",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153771",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153771",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1335880010029&taxyear=2025&type=real",
       "flags": [
@@ -2032,7 +2032,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77014-2210",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153770",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153770",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1379640040020&taxyear=2025&type=real",
       "flags": [
@@ -2059,7 +2059,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77087-",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153769",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153769",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=0914180000013&taxyear=2025&type=real",
       "flags": [
@@ -2086,7 +2086,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77003-3912",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153768",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153768",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1338010010005&taxyear=2025&type=real",
       "flags": [
@@ -2113,7 +2113,7 @@
       "mail_city": "LUBBOCK",
       "mail_state": "TX",
       "mail_zip": "79423-1984",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153767",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153767",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1292500000052&taxyear=2025&type=real",
       "flags": [
@@ -2140,7 +2140,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77018-2316",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153750",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153750",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1300850010001&taxyear=2025&type=real",
       "flags": [
@@ -2167,7 +2167,7 @@
       "mail_city": "CYPRESS",
       "mail_state": "TX",
       "mail_zip": "77433-4158",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153749",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153749",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1335880010032&taxyear=2025&type=real",
       "flags": [
@@ -2194,7 +2194,7 @@
       "mail_city": "BOSTON",
       "mail_state": "MA",
       "mail_zip": "02110-2704",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153748",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153748",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1368080010001&taxyear=2025&type=real",
       "flags": [
@@ -2221,7 +2221,7 @@
       "mail_city": "SPRING",
       "mail_state": "TX",
       "mail_zip": "77373-3209",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153747",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153747",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1235710010011&taxyear=2025&type=real",
       "flags": [
@@ -2248,7 +2248,7 @@
       "mail_city": "SUGAR LAND",
       "mail_state": "TX",
       "mail_zip": "77479-6035",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153746",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153746",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1072290010006&taxyear=2025&type=real",
       "flags": [
@@ -2275,7 +2275,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77067-1145",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153745",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153745",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1225660030007&taxyear=2025&type=real",
       "flags": [
@@ -2302,7 +2302,7 @@
       "mail_city": "SPRING",
       "mail_state": "TX",
       "mail_zip": "77388-4170",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153744",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153744",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1201170030004&taxyear=2025&type=real",
       "flags": [
@@ -2329,7 +2329,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77005-1726",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153743",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153743",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1369430010002&taxyear=2025&type=real",
       "flags": [
@@ -2356,7 +2356,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77089-1682",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153742",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153742",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1409400000001&taxyear=2025&type=real",
       "flags": [
@@ -2383,7 +2383,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77056-1787",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153741",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153741",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1089110000003&taxyear=2025&type=real",
       "flags": [
@@ -2410,7 +2410,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77038-2711",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153701",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153701",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1288140030006&taxyear=2025&type=real",
       "flags": [
@@ -2437,7 +2437,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77095-4314",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153692",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153692",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1171990030023&taxyear=2025&type=real",
       "flags": [
@@ -2464,7 +2464,7 @@
       "mail_city": "BAYTOWN",
       "mail_state": "TX",
       "mail_zip": "77521-1365",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153685",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153685",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1422040020001&taxyear=2025&type=real",
       "flags": [
@@ -2491,7 +2491,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77082-2794",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153678",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153678",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1175130010002&taxyear=2025&type=real",
       "flags": [
@@ -2518,7 +2518,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77091-4508",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153670",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153670",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1014300000004&taxyear=2025&type=real",
       "flags": [
@@ -2545,7 +2545,7 @@
       "mail_city": "CROSBY",
       "mail_state": "TX",
       "mail_zip": "77532-2636",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153667",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153667",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=0710880390011&taxyear=2025&type=real",
       "flags": [
@@ -2572,7 +2572,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77024-5040",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153666",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153666",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=0971460000014&taxyear=2025&type=real",
       "flags": [
@@ -2599,7 +2599,7 @@
       "mail_city": "CROSBY",
       "mail_state": "TX",
       "mail_zip": "77532-1720",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153665",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153665",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1414370040008&taxyear=2025&type=real",
       "flags": [
@@ -2626,7 +2626,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77055-3303",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153663",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153663",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1150650230002&taxyear=2025&type=real",
       "flags": [
@@ -2653,7 +2653,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77044-7148",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153652",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153652",
       "match_confidence": "low",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1111120000044&taxyear=2025&type=real",
       "flags": [
@@ -2680,7 +2680,7 @@
       "mail_city": "SPRING",
       "mail_state": "TX",
       "mail_zip": "77379-2481",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153629",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153629",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1281430080003&taxyear=2025&type=real",
       "flags": [
@@ -2707,7 +2707,7 @@
       "mail_city": "HOCKLEY",
       "mail_state": "TX",
       "mail_zip": "77447-1526",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153627",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153627",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1471360050031&taxyear=2025&type=real",
       "flags": [
@@ -2734,7 +2734,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77084-2085",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153617",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153617",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1166400030027&taxyear=2025&type=real",
       "flags": [
@@ -2761,7 +2761,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77044-1589",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153616",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153616",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1278490010009&taxyear=2025&type=real",
       "flags": [
@@ -2788,7 +2788,7 @@
       "mail_city": "",
       "mail_state": "TX",
       "mail_zip": "",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153615",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153615",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1060500000011&taxyear=2025&type=real",
       "flags": [
@@ -2815,7 +2815,7 @@
       "mail_city": "BAYTOWN",
       "mail_state": "TX",
       "mail_zip": "77521-4581",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153611",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153611",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1504050030014&taxyear=2025&type=real",
       "flags": [
@@ -2842,7 +2842,7 @@
       "mail_city": "HUMBLE",
       "mail_state": "TX",
       "mail_zip": "77346-4938",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153599",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153599",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1501210020021&taxyear=2025&type=real",
       "flags": [
@@ -2869,7 +2869,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77007-5092",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153594",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153594",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=0680230010017&taxyear=2025&type=real",
       "flags": [
@@ -2896,7 +2896,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77055-4812",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153587",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153587",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=0854700030044&taxyear=2025&type=real",
       "flags": [
@@ -2923,7 +2923,7 @@
       "mail_city": "KINGWOOD",
       "mail_state": "TX",
       "mail_zip": "77345-2903",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153586",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153586",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1298570010002&taxyear=2025&type=real",
       "flags": [
@@ -2950,7 +2950,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77035-2233",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153585",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153585",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=0912290000019&taxyear=2025&type=real",
       "flags": [
@@ -2977,7 +2977,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77082-2731",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153584",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153584",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1364830010036&taxyear=2025&type=real",
       "flags": [
@@ -3004,7 +3004,7 @@
       "mail_city": "HOCKLEY",
       "mail_state": "TX",
       "mail_zip": "77447-2570",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153571",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153571",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1468460030001&taxyear=2025&type=real",
       "flags": [
@@ -3031,7 +3031,7 @@
       "mail_city": "CYPRESS",
       "mail_state": "TX",
       "mail_zip": "77433-2167",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153570",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153570",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1266360030008&taxyear=2025&type=real",
       "flags": [
@@ -3058,7 +3058,7 @@
       "mail_city": "KATY",
       "mail_state": "TX",
       "mail_zip": "77450-1701",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153564",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153564",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1034100000007&taxyear=2025&type=real",
       "flags": [
@@ -3085,7 +3085,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77095-2250",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153555",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153555",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1206090010029&taxyear=2025&type=real",
       "flags": [
@@ -3112,7 +3112,7 @@
       "mail_city": "MAGNOLIA",
       "mail_state": "TX",
       "mail_zip": "77354-6847",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153553",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153553",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1129080000006&taxyear=2025&type=real",
       "flags": [
@@ -3139,7 +3139,7 @@
       "mail_city": "CYPRESS",
       "mail_state": "TX",
       "mail_zip": "77429-6509",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153551",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153551",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1357980020025&taxyear=2025&type=real",
       "flags": [
@@ -3166,7 +3166,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77091-4020",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153549",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153549",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1447090010004&taxyear=2025&type=real",
       "flags": [
@@ -3193,7 +3193,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77057-5730",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153544",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153544",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1240970010001&taxyear=2025&type=real",
       "flags": [
@@ -3220,7 +3220,7 @@
       "mail_city": "BAYTOWN",
       "mail_state": "TX",
       "mail_zip": "77521-1385",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153537",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153537",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1471980010054&taxyear=2025&type=real",
       "flags": [
@@ -3247,7 +3247,7 @@
       "mail_city": "KATY",
       "mail_state": "TX",
       "mail_zip": "77493-5585",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153520",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153520",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1464570020015&taxyear=2025&type=real",
       "flags": [
@@ -3274,7 +3274,7 @@
       "mail_city": "SPRING",
       "mail_state": "TX",
       "mail_zip": "77388-3011",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153518",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153518",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1356540010001&taxyear=2025&type=real",
       "flags": [
@@ -3301,7 +3301,7 @@
       "mail_city": "BOISE",
       "mail_state": "ID",
       "mail_zip": "83702-7675",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153500",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153500",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=0660490020001&taxyear=2025&type=real",
       "flags": [
@@ -3328,7 +3328,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77073-2756",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153499",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153499",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1275890060014&taxyear=2025&type=real",
       "flags": [
@@ -3355,7 +3355,7 @@
       "mail_city": "SPRING",
       "mail_state": "TX",
       "mail_zip": "77379-5213",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153498",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153498",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=0862210000002&taxyear=2025&type=real",
       "flags": [
@@ -3382,7 +3382,7 @@
       "mail_city": "SPRING",
       "mail_state": "TX",
       "mail_zip": "77379-1534",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153497",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153497",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1380050030005&taxyear=2025&type=real",
       "flags": [
@@ -3409,7 +3409,7 @@
       "mail_city": "NEW YORK",
       "mail_state": "NY",
       "mail_zip": "10281-1065",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153494",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153494",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1152240030004&taxyear=2025&type=real",
       "flags": [
@@ -3436,7 +3436,7 @@
       "mail_city": "KATY",
       "mail_state": "TX",
       "mail_zip": "77449-4306",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153488",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153488",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1140010000020&taxyear=2025&type=real",
       "flags": [
@@ -3463,7 +3463,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77084-6525",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153486",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153486",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1226220050029&taxyear=2025&type=real",
       "flags": [
@@ -3490,7 +3490,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77045-4860",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153484",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153484",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1343770010002&taxyear=2025&type=real",
       "flags": [
@@ -3517,7 +3517,7 @@
       "mail_city": "PASADENA",
       "mail_state": "TX",
       "mail_zip": "77505-3025",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153477",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153477",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1227870030025&taxyear=2025&type=real",
       "flags": [
@@ -3544,7 +3544,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77015-2821",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153475",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153475",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=0650680690026&taxyear=2025&type=real",
       "flags": [
@@ -3571,7 +3571,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77055-7104",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153468",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153468",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1277100020023&taxyear=2025&type=real",
       "flags": [
@@ -3598,7 +3598,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77008-2532",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153428",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153428",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=0562770000011&taxyear=2025&type=real",
       "flags": [
@@ -3625,7 +3625,7 @@
       "mail_city": "CYPRESS",
       "mail_state": "TX",
       "mail_zip": "77433-7999",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153424",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153424",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1404000010001&taxyear=2025&type=real",
       "flags": [
@@ -3652,7 +3652,7 @@
       "mail_city": "CYPRESS",
       "mail_state": "TX",
       "mail_zip": "77433-3387",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153419",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153419",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1306230020058&taxyear=2025&type=real",
       "flags": [
@@ -3679,7 +3679,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77084-3356",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153416",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153416",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1352420020017&taxyear=2025&type=real",
       "flags": [
@@ -3706,7 +3706,7 @@
       "mail_city": "HOCKLEY",
       "mail_state": "TX",
       "mail_zip": "77447-2014",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153415",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153415",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1163480010047&taxyear=2025&type=real",
       "flags": [
@@ -3733,7 +3733,7 @@
       "mail_city": "CYPRESS",
       "mail_state": "TX",
       "mail_zip": "77429-5822",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153408",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153408",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1321640020064&taxyear=2025&type=real",
       "flags": [
@@ -3760,7 +3760,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77007-1843",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153388",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153388",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1397330010003&taxyear=2025&type=real",
       "flags": [
@@ -3787,7 +3787,7 @@
       "mail_city": "RICHMOND",
       "mail_state": "TX",
       "mail_zip": "77407-1950",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153377",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153377",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1301660020003&taxyear=2025&type=real",
       "flags": [
@@ -3814,7 +3814,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77044-5460",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153374",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153374",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1255330030001&taxyear=2025&type=real",
       "flags": [
@@ -3841,7 +3841,7 @@
       "mail_city": "SPRING",
       "mail_state": "TX",
       "mail_zip": "77379-8038",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153373",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153373",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1109200000380&taxyear=2025&type=real",
       "flags": [
@@ -3868,7 +3868,7 @@
       "mail_city": "HUMBLE",
       "mail_state": "TX",
       "mail_zip": "77338-2746",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153372",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153372",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1150490030006&taxyear=2025&type=real",
       "flags": [
@@ -3895,7 +3895,7 @@
       "mail_city": "SPRING",
       "mail_state": "TX",
       "mail_zip": "77373-8757",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153367",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153367",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1441620040026&taxyear=2025&type=real",
       "flags": [
@@ -3922,7 +3922,7 @@
       "mail_city": "SPRING",
       "mail_state": "TX",
       "mail_zip": "77389-8595",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153366",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153366",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1286730010020&taxyear=2025&type=real",
       "flags": [
@@ -3949,7 +3949,7 @@
       "mail_city": "CYPRESS",
       "mail_state": "TX",
       "mail_zip": "77429-6453",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153364",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153364",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1280550010006&taxyear=2025&type=real",
       "flags": [
@@ -3976,7 +3976,7 @@
       "mail_city": "CYPRESS",
       "mail_state": "TX",
       "mail_zip": "77429-6931",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153363",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153363",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1223960030005&taxyear=2025&type=real",
       "flags": [
@@ -4003,7 +4003,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77072-2008",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153358",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153358",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1125070000023&taxyear=2025&type=real",
       "flags": [
@@ -4030,7 +4030,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77027-3729",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153356",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153356",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1323530000069&taxyear=2025&type=real",
       "flags": [
@@ -4057,7 +4057,7 @@
       "mail_city": "SPRING",
       "mail_state": "TX",
       "mail_zip": "77379-1971",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153355",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153355",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1283860040024&taxyear=2025&type=real",
       "flags": [
@@ -4084,7 +4084,7 @@
       "mail_city": "CYPRESS",
       "mail_state": "TX",
       "mail_zip": "77433-2760",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153352",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153352",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1283000010031&taxyear=2025&type=real",
       "flags": [
@@ -4111,7 +4111,7 @@
       "mail_city": "CYPRESS",
       "mail_state": "TX",
       "mail_zip": "77433-4011",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153351",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153351",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1324300010016&taxyear=2025&type=real",
       "flags": [
@@ -4138,7 +4138,7 @@
       "mail_city": "CYPRESS",
       "mail_state": "TX",
       "mail_zip": "77433-4011",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153350",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153350",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1324300010016&taxyear=2025&type=real",
       "flags": [
@@ -4165,7 +4165,7 @@
       "mail_city": "SPRING",
       "mail_state": "TX",
       "mail_zip": "77373-6203",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153349",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153349",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1089390000029&taxyear=2025&type=real",
       "flags": [
@@ -4192,7 +4192,7 @@
       "mail_city": "TUSTIN",
       "mail_state": "CA",
       "mail_zip": "92780-7333",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153348",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153348",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1276360010020&taxyear=2025&type=real",
       "flags": [
@@ -4219,7 +4219,7 @@
       "mail_city": "CYPRESS",
       "mail_state": "TX",
       "mail_zip": "77429-4328",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153347",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153347",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1255160020001&taxyear=2025&type=real",
       "flags": [
@@ -4246,7 +4246,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77033-4020",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153346",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153346",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=0770340220003&taxyear=2025&type=real",
       "flags": [
@@ -4273,7 +4273,7 @@
       "mail_city": "CYPRESS",
       "mail_state": "TX",
       "mail_zip": "77429-6424",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153345",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153345",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1227820010011&taxyear=2025&type=real",
       "flags": [
@@ -4300,7 +4300,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77089-7057",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153344",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153344",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1332850060002&taxyear=2025&type=real",
       "flags": [
@@ -4327,7 +4327,7 @@
       "mail_city": "SPRING",
       "mail_state": "TX",
       "mail_zip": "77373-7839",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153343",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153343",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1238540010023&taxyear=2025&type=real",
       "flags": [
@@ -4354,7 +4354,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77049-2069",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153342",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153342",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1441100050011&taxyear=2025&type=real",
       "flags": [
@@ -4381,7 +4381,7 @@
       "mail_city": "CYPRESS",
       "mail_state": "TX",
       "mail_zip": "77433-0363",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153341",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153341",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1463960040016&taxyear=2025&type=real",
       "flags": [
@@ -4408,7 +4408,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77014-",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153340",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153340",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1304290020015&taxyear=2025&type=real",
       "flags": [
@@ -4435,7 +4435,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77014-",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153339",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153339",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1304290020015&taxyear=2025&type=real",
       "flags": [
@@ -4462,7 +4462,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77099-4114",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153336",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153336",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1044010000024&taxyear=2025&type=real",
       "flags": [
@@ -4489,7 +4489,7 @@
       "mail_city": "HUMBLE",
       "mail_state": "TX",
       "mail_zip": "77346-5271",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153335",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153335",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1457180020019&taxyear=2025&type=real",
       "flags": [
@@ -4516,7 +4516,7 @@
       "mail_city": "CYPRESS",
       "mail_state": "TX",
       "mail_zip": "77433-7839",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153334",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153334",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1261420010001&taxyear=2025&type=real",
       "flags": [
@@ -4543,7 +4543,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77094-1169",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153333",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153333",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1185720010022&taxyear=2025&type=real",
       "flags": [
@@ -4570,7 +4570,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77080-3025",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153332",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153332",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=0660290110012&taxyear=2025&type=real",
       "flags": [
@@ -4597,7 +4597,7 @@
       "mail_city": "SPRING",
       "mail_state": "TX",
       "mail_zip": "77388-4745",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153330",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153330",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1249160030001&taxyear=2025&type=real",
       "flags": [
@@ -4624,7 +4624,7 @@
       "mail_city": "SPRING",
       "mail_state": "TX",
       "mail_zip": "77388-5389",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153328",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153328",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1231190040013&taxyear=2025&type=real",
       "flags": [
@@ -4651,7 +4651,7 @@
       "mail_city": "KATY",
       "mail_state": "TX",
       "mail_zip": "77493-5625",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153327",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153327",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1469730020006&taxyear=2025&type=real",
       "flags": [
@@ -4678,7 +4678,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77014-1926",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153326",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153326",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1255680010022&taxyear=2025&type=real",
       "flags": [
@@ -4705,7 +4705,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77095-1684",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153297",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153297",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1157750030038&taxyear=2025&type=real",
       "flags": [
@@ -4732,7 +4732,7 @@
       "mail_city": "KATY",
       "mail_state": "TX",
       "mail_zip": "77493-5529",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153293",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153293",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1466860020011&taxyear=2025&type=real",
       "flags": [
@@ -4759,7 +4759,7 @@
       "mail_city": "KATY",
       "mail_state": "TX",
       "mail_zip": "77493-7419",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153292",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153292",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1453320030034&taxyear=2025&type=real",
       "flags": [
@@ -4786,7 +4786,7 @@
       "mail_city": "BAYTOWN",
       "mail_state": "TX",
       "mail_zip": "77521-9278",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153291",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153291",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1250240000065&taxyear=2025&type=real",
       "flags": [
@@ -4813,7 +4813,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77067-1254",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153285",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153285",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1154170040087&taxyear=2025&type=real",
       "flags": [
@@ -4840,7 +4840,7 @@
       "mail_city": "CHANNELVIEW",
       "mail_state": "TX",
       "mail_zip": "77530-4806",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153276",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153276",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1113490000037&taxyear=2025&type=real",
       "flags": [
@@ -4867,7 +4867,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77008-6649",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153272",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153272",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1360860010002&taxyear=2025&type=real",
       "flags": [
@@ -4894,7 +4894,7 @@
       "mail_city": "PEARLAND",
       "mail_state": "TX",
       "mail_zip": "77581-5236",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153267",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153267",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1209540020004&taxyear=2025&type=real",
       "flags": [
@@ -4921,7 +4921,7 @@
       "mail_city": "KATY",
       "mail_state": "TX",
       "mail_zip": "77449-4634",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153265",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153265",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1232270010032&taxyear=2025&type=real",
       "flags": [
@@ -4948,7 +4948,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77067-4544",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153251",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153251",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1463050030014&taxyear=2025&type=real",
       "flags": [
@@ -4975,7 +4975,7 @@
       "mail_city": "BELLAIRE",
       "mail_state": "TX",
       "mail_zip": "77401-3209",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153245",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153245",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=0812970000035&taxyear=2025&type=real",
       "flags": [
@@ -5002,7 +5002,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77059-3288",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153234",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153234",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1356370010002&taxyear=2025&type=real",
       "flags": [
@@ -5029,7 +5029,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77047-2538",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153229",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153229",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1275020020022&taxyear=2025&type=real",
       "flags": [
@@ -5056,7 +5056,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77083-4814",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153226",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153226",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1123890000019&taxyear=2025&type=real",
       "flags": [
@@ -5083,7 +5083,7 @@
       "mail_city": "HUMBLE",
       "mail_state": "TX",
       "mail_zip": "77396-1700",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153210",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153210",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=0851680000079&taxyear=2025&type=real",
       "flags": [
@@ -5110,7 +5110,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77003-4733",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153206",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153206",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1360070010004&taxyear=2025&type=real",
       "flags": [
@@ -5137,7 +5137,7 @@
       "mail_city": "CYPRESS",
       "mail_state": "TX",
       "mail_zip": "77429-4599",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153201",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153201",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1223960040007&taxyear=2025&type=real",
       "flags": [
@@ -5164,7 +5164,7 @@
       "mail_city": "HUMBLE",
       "mail_state": "TX",
       "mail_zip": "77338-1170",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153200",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153200",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=0660250060844&taxyear=2025&type=real",
       "flags": [
@@ -5191,7 +5191,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77063-3070",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153197",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153197",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1133890000152&taxyear=2025&type=real",
       "flags": [
@@ -5218,7 +5218,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77044-5779",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-154162",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-154162",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1288790030006&taxyear=2025&type=real",
       "flags": [
@@ -5244,7 +5244,7 @@
       "mail_city": "HUMBLE",
       "mail_state": "TX",
       "mail_zip": "77346-3351",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-154131",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-154131",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1233850030015&taxyear=2025&type=real",
       "flags": [
@@ -5270,7 +5270,7 @@
       "mail_city": "BAYTOWN",
       "mail_state": "TX",
       "mail_zip": "77521-6552",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-154130",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-154130",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1305900050018&taxyear=2025&type=real",
       "flags": [
@@ -5296,7 +5296,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77099-3468",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-154128",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-154128",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1214440030004&taxyear=2025&type=real",
       "flags": [
@@ -5322,7 +5322,7 @@
       "mail_city": "CYPRESS",
       "mail_state": "TX",
       "mail_zip": "77433-7918",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-154127",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-154127",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1397720020008&taxyear=2025&type=real",
       "flags": [
@@ -5348,7 +5348,7 @@
       "mail_city": "HUMBLE",
       "mail_state": "TX",
       "mail_zip": "77396-4049",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-154125",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-154125",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1149440180015&taxyear=2025&type=real",
       "flags": [
@@ -5374,7 +5374,7 @@
       "mail_city": "CYPRESS",
       "mail_state": "TX",
       "mail_zip": "77429-3808",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-154124",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-154124",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1153430060026&taxyear=2025&type=real",
       "flags": [
@@ -5400,7 +5400,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77027-3749",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-154123",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-154123",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1388730090003&taxyear=2025&type=real",
       "flags": [
@@ -5426,7 +5426,7 @@
       "mail_city": "SPRING",
       "mail_state": "TX",
       "mail_zip": "77379-3788",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-154122",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-154122",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1283860010033&taxyear=2025&type=real",
       "flags": [
@@ -5452,7 +5452,7 @@
       "mail_city": "CYPRESS",
       "mail_state": "TX",
       "mail_zip": "77433-8626",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-154121",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-154121",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1478110020001&taxyear=2025&type=real",
       "flags": [
@@ -5478,7 +5478,7 @@
       "mail_city": "SPRING",
       "mail_state": "TX",
       "mail_zip": "77389-2161",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-154120",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-154120",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1337540010017&taxyear=2025&type=real",
       "flags": [
@@ -5504,7 +5504,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77006-1528",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-154119",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-154119",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1223430010011&taxyear=2025&type=real",
       "flags": [
@@ -5530,7 +5530,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77009-2115",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-154104",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-154104",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1458280010004&taxyear=2025&type=real",
       "flags": [
@@ -5556,7 +5556,7 @@
       "mail_city": "SUGAR LAND",
       "mail_state": "TX",
       "mail_zip": "77479-",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-154101",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-154101",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1268850060024&taxyear=2025&type=real",
       "flags": [
@@ -5582,7 +5582,7 @@
       "mail_city": "TUSTIN",
       "mail_state": "CA",
       "mail_zip": "92780-7333",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-154100",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-154100",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1412310040011&taxyear=2025&type=real",
       "flags": [
@@ -5608,7 +5608,7 @@
       "mail_city": "CYPRESS",
       "mail_state": "TX",
       "mail_zip": "77429-4686",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-154099",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-154099",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1264560020008&taxyear=2025&type=real",
       "flags": [
@@ -5634,7 +5634,7 @@
       "mail_city": "KATY",
       "mail_state": "TX",
       "mail_zip": "77449-8494",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-154070",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-154070",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1215390020005&taxyear=2025&type=real",
       "flags": [
@@ -5660,7 +5660,7 @@
       "mail_city": "PASADENA",
       "mail_state": "TX",
       "mail_zip": "77506-5147",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-154069",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-154069",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=0991450000010&taxyear=2025&type=real",
       "flags": [
@@ -5686,7 +5686,7 @@
       "mail_city": "BAYTOWN",
       "mail_state": "TX",
       "mail_zip": "77521-9318",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-154068",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-154068",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=0975290000002&taxyear=2025&type=real",
       "flags": [
@@ -5712,7 +5712,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77077-1072",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-154067",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-154067",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1268260040125&taxyear=2025&type=real",
       "flags": [
@@ -5738,7 +5738,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77008-6632",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-154066",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-154066",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1304730010002&taxyear=2025&type=real",
       "flags": [
@@ -5764,7 +5764,7 @@
       "mail_city": "SPRING",
       "mail_state": "TX",
       "mail_zip": "77381-4269",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-154064",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-154064",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1127630000018&taxyear=2025&type=real",
       "flags": [
@@ -5790,7 +5790,7 @@
       "mail_city": "TOMBALL",
       "mail_state": "TX",
       "mail_zip": "77377-7305",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-154060",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-154060",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1328580010008&taxyear=2025&type=real",
       "flags": [
@@ -5816,7 +5816,7 @@
       "mail_city": "CYPRESS",
       "mail_state": "TX",
       "mail_zip": "77429-6517",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-154056",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-154056",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1357980020015&taxyear=2025&type=real",
       "flags": [
@@ -5842,7 +5842,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77008-3631",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-154055",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-154055",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1280630010025&taxyear=2025&type=real",
       "flags": [
@@ -5868,7 +5868,7 @@
       "mail_city": "DALLAS",
       "mail_state": "TX",
       "mail_zip": "75201-2499",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-154054",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-154054",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1151210000002&taxyear=2025&type=real",
       "flags": [
@@ -5894,7 +5894,7 @@
       "mail_city": "CYPRESS",
       "mail_state": "TX",
       "mail_zip": "77433-6310",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-154053",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-154053",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1301260020001&taxyear=2025&type=real",
       "flags": [
@@ -5920,7 +5920,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77014-1727",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-154047",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-154047",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1189180020028&taxyear=2025&type=real",
       "flags": [
@@ -5946,7 +5946,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77015-3309",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-154025",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-154025",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1169060010023&taxyear=2025&type=real",
       "flags": [
@@ -5972,7 +5972,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77058-4230",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-154011",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-154011",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=0984830000008&taxyear=2025&type=real",
       "flags": [
@@ -5998,7 +5998,7 @@
       "mail_city": "CYPRESS",
       "mail_state": "TX",
       "mail_zip": "77433-5346",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-154010",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-154010",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1453700030007&taxyear=2025&type=real",
       "flags": [
@@ -6024,7 +6024,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77095-2441",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153938",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153938",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1262790020036&taxyear=2025&type=real",
       "flags": [
@@ -6050,7 +6050,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77008-1814",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153910",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153910",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1399000010002&taxyear=2025&type=real",
       "flags": [
@@ -6076,7 +6076,7 @@
       "mail_city": "SPRING",
       "mail_state": "TX",
       "mail_zip": "77379-5493",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153902",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153902",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1446970030028&taxyear=2025&type=real",
       "flags": [
@@ -6102,7 +6102,7 @@
       "mail_city": "SPRING",
       "mail_state": "TX",
       "mail_zip": "77379-8532",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153895",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153895",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1245280020067&taxyear=2025&type=real",
       "flags": [
@@ -6128,7 +6128,7 @@
       "mail_city": "SPRING",
       "mail_state": "TX",
       "mail_zip": "77379-8532",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153894",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153894",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1245280020067&taxyear=2025&type=real",
       "flags": [
@@ -6154,7 +6154,7 @@
       "mail_city": "TROY",
       "mail_state": "MO",
       "mail_zip": "63379-2013",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153889",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153889",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1353820060014&taxyear=2025&type=real",
       "flags": [
@@ -6180,7 +6180,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77084-1147",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153874",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153874",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1135970000066&taxyear=2025&type=real",
       "flags": [
@@ -6206,7 +6206,7 @@
       "mail_city": "FRIENDSWOOD",
       "mail_state": "TX",
       "mail_zip": "77549-1368",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153872",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153872",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1276990010001&taxyear=2025&type=real",
       "flags": [
@@ -6232,7 +6232,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77018-7611",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153871",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153871",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1386180010002&taxyear=2025&type=real",
       "flags": [
@@ -6258,7 +6258,7 @@
       "mail_city": "CYPRESS",
       "mail_state": "TX",
       "mail_zip": "77429-2600",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153870",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153870",
       "match_confidence": "low",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1087980000020&taxyear=2025&type=real",
       "flags": [
@@ -6284,7 +6284,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77009-8319",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153869",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153869",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1270780010003&taxyear=2025&type=real",
       "flags": [
@@ -6310,7 +6310,7 @@
       "mail_city": "HOCKLEY",
       "mail_state": "TX",
       "mail_zip": "77447-2345",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153868",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153868",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1451250020004&taxyear=2025&type=real",
       "flags": [
@@ -6336,7 +6336,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77084-1147",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153866",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153866",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1135940000017&taxyear=2025&type=real",
       "flags": [
@@ -6362,7 +6362,7 @@
       "mail_city": "CROSBY",
       "mail_state": "TX",
       "mail_zip": "77532-2149",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153863",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153863",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1413190040012&taxyear=2025&type=real",
       "flags": [
@@ -6388,7 +6388,7 @@
       "mail_city": "CROSBY",
       "mail_state": "TX",
       "mail_zip": "77532-6797",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153862",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153862",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1287530010031&taxyear=2025&type=real",
       "flags": [
@@ -6414,7 +6414,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77084-3090",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153861",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153861",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1151990020001&taxyear=2025&type=real",
       "flags": [
@@ -6440,7 +6440,7 @@
       "mail_city": "BAYTOWN",
       "mail_state": "TX",
       "mail_zip": "77521-1767",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153860",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153860",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=0410250050160&taxyear=2025&type=real",
       "flags": [
@@ -6466,7 +6466,7 @@
       "mail_city": "WALLER",
       "mail_state": "TX",
       "mail_zip": "77484-2237",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153859",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153859",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1463860070016&taxyear=2025&type=real",
       "flags": [
@@ -6492,7 +6492,7 @@
       "mail_city": "KINGWOOD",
       "mail_state": "TX",
       "mail_zip": "77345-2345",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153858",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153858",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1264870010042&taxyear=2025&type=real",
       "flags": [
@@ -6518,7 +6518,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77043-3568",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153857",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153857",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1372410010053&taxyear=2025&type=real",
       "flags": [
@@ -6544,7 +6544,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77043-3568",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153856",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153856",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1372410010053&taxyear=2025&type=real",
       "flags": [
@@ -6570,7 +6570,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77071-3321",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153854",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153854",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=0993970000004&taxyear=2025&type=real",
       "flags": [
@@ -6596,7 +6596,7 @@
       "mail_city": "SPRING",
       "mail_state": "TX",
       "mail_zip": "77380-2947",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153853",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153853",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1119920000009&taxyear=2025&type=real",
       "flags": [
@@ -6622,7 +6622,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77067-1820",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153852",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153852",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1125530000084&taxyear=2025&type=real",
       "flags": [
@@ -6648,7 +6648,7 @@
       "mail_city": "DALLAS",
       "mail_state": "TX",
       "mail_zip": "75215-6863",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153834",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153834",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1280450010024&taxyear=2025&type=real",
       "flags": [
@@ -6674,7 +6674,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77079-1043",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153810",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153810",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1219880010011&taxyear=2025&type=real",
       "flags": [
@@ -6700,7 +6700,7 @@
       "mail_city": "CYPRESS",
       "mail_state": "TX",
       "mail_zip": "77433-3550",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153737",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153737",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1296830080014&taxyear=2025&type=real",
       "flags": [
@@ -6726,7 +6726,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77062-3227",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153736",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153736",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1130020000028&taxyear=2025&type=real",
       "flags": [
@@ -6752,7 +6752,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77057-2279",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153735",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153735",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1303700010003&taxyear=2025&type=real",
       "flags": [
@@ -6778,7 +6778,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77089-1685",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153734",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153734",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1391180040007&taxyear=2025&type=real",
       "flags": [
@@ -6804,7 +6804,7 @@
       "mail_city": "SPRING",
       "mail_state": "TX",
       "mail_zip": "77373-8138",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153733",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153733",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1202100010002&taxyear=2025&type=real",
       "flags": [
@@ -6830,7 +6830,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77044-1770",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153732",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153732",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1388470030004&taxyear=2025&type=real",
       "flags": [
@@ -6856,7 +6856,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77020-6114",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153731",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153731",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1250510010004&taxyear=2025&type=real",
       "flags": [
@@ -6882,7 +6882,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77005-1956",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153730",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153730",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1226130010003&taxyear=2025&type=real",
       "flags": [
@@ -6908,7 +6908,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77084-6841",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153729",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153729",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1256020010002&taxyear=2025&type=real",
       "flags": [
@@ -6934,7 +6934,7 @@
       "mail_city": "HUMBLE",
       "mail_state": "TX",
       "mail_zip": "77396-3073",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153728",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153728",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1270050010034&taxyear=2025&type=real",
       "flags": [
@@ -6960,7 +6960,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77075-1469",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153727",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153727",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1441880010076&taxyear=2025&type=real",
       "flags": [
@@ -6986,7 +6986,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77047-6838",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153726",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153726",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1293360020023&taxyear=2025&type=real",
       "flags": [
@@ -7012,7 +7012,7 @@
       "mail_city": "CYPRESS",
       "mail_state": "TX",
       "mail_zip": "77429-1432",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153725",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153725",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1243720030047&taxyear=2025&type=real",
       "flags": [
@@ -7038,7 +7038,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77044-1826",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153724",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153724",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1116160000037&taxyear=2025&type=real",
       "flags": [
@@ -7064,7 +7064,7 @@
       "mail_city": "TOMBALL",
       "mail_state": "TX",
       "mail_zip": "77375-1304",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153723",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153723",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1386230020002&taxyear=2025&type=real",
       "flags": [
@@ -7090,7 +7090,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77018-5311",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153722",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153722",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1354320010005&taxyear=2025&type=real",
       "flags": [
@@ -7116,7 +7116,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77079-2175",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153721",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153721",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1295310010001&taxyear=2025&type=real",
       "flags": [
@@ -7142,7 +7142,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77084-1375",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153720",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153720",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1416380020012&taxyear=2025&type=real",
       "flags": [
@@ -7168,7 +7168,7 @@
       "mail_city": "SPRING",
       "mail_state": "TX",
       "mail_zip": "77380-3479",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153719",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153719",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1301020010052&taxyear=2025&type=real",
       "flags": [
@@ -7194,7 +7194,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77038-2711",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153718",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153718",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1288140030006&taxyear=2025&type=real",
       "flags": [
@@ -7220,7 +7220,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77014-3625",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153717",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153717",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1160050110040&taxyear=2025&type=real",
       "flags": [
@@ -7246,7 +7246,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77074-3306",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153716",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153716",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1138310000006&taxyear=2025&type=real",
       "flags": [
@@ -7272,7 +7272,7 @@
       "mail_city": "HUMBLE",
       "mail_state": "TX",
       "mail_zip": "77346-4242",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153676",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153676",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1384860050005&taxyear=2025&type=real",
       "flags": [
@@ -7298,7 +7298,7 @@
       "mail_city": "HIGHLANDS",
       "mail_state": "TX",
       "mail_zip": "77562-3244",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153671",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153671",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=0410210010172&taxyear=2025&type=real",
       "flags": [
@@ -7324,7 +7324,7 @@
       "mail_city": "HUMBLE",
       "mail_state": "TX",
       "mail_zip": "77338-1684",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153646",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153646",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1382150020001&taxyear=2025&type=real",
       "flags": [
@@ -7350,7 +7350,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77002-9000",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153645",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153645",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=0741510200008&taxyear=2025&type=real",
       "flags": [
@@ -7376,7 +7376,7 @@
       "mail_city": "PASADENA",
       "mail_state": "TX",
       "mail_zip": "77504-3138",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153644",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153644",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1422040020002&taxyear=2025&type=real",
       "flags": [
@@ -7402,7 +7402,7 @@
       "mail_city": "SPRING",
       "mail_state": "TX",
       "mail_zip": "77380-1177",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153643",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153643",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1424890010009&taxyear=2025&type=real",
       "flags": [
@@ -7428,7 +7428,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77084-1944",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153642",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153642",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1108540000016&taxyear=2025&type=real",
       "flags": [
@@ -7454,7 +7454,7 @@
       "mail_city": "SEABROOK",
       "mail_state": "TX",
       "mail_zip": "77586-1735",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153641",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153641",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1251880020010&taxyear=2025&type=real",
       "flags": [
@@ -7480,7 +7480,7 @@
       "mail_city": "CYPRESS",
       "mail_state": "TX",
       "mail_zip": "77433-8461",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153640",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153640",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1280010020010&taxyear=2025&type=real",
       "flags": [
@@ -7506,7 +7506,7 @@
       "mail_city": "SPRING",
       "mail_state": "TX",
       "mail_zip": "77389-3669",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153639",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153639",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1004630000005&taxyear=2025&type=real",
       "flags": [
@@ -7532,7 +7532,7 @@
       "mail_city": "SPRING",
       "mail_state": "TX",
       "mail_zip": "77388-3632",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153592",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153592",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1254060010001&taxyear=2025&type=real",
       "flags": [
@@ -7558,7 +7558,7 @@
       "mail_city": "KATY",
       "mail_state": "TX",
       "mail_zip": "77493-7416",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153591",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153591",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1453320040014&taxyear=2025&type=real",
       "flags": [
@@ -7584,7 +7584,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77082-2126",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153590",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153590",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1105040000011&taxyear=2025&type=real",
       "flags": [
@@ -7610,7 +7610,7 @@
       "mail_city": "HOCKLEY",
       "mail_state": "TX",
       "mail_zip": "77447-1448",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153589",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153589",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1471370010046&taxyear=2025&type=real",
       "flags": [
@@ -7636,7 +7636,7 @@
       "mail_city": "MONTEREY PARK",
       "mail_state": "CA",
       "mail_zip": "91754-6014",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153583",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153583",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1463990010004&taxyear=2025&type=real",
       "flags": [
@@ -7662,7 +7662,7 @@
       "mail_city": "MONTEREY PARK",
       "mail_state": "CA",
       "mail_zip": "91754-6014",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153582",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153582",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1463990010004&taxyear=2025&type=real",
       "flags": [
@@ -7688,7 +7688,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77062-5609",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153581",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153581",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1031360000023&taxyear=2025&type=real",
       "flags": [
@@ -7714,7 +7714,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77036-2768",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153559",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153559",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1150320040008&taxyear=2025&type=real",
       "flags": [
@@ -7740,7 +7740,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77098-1406",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153552",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153552",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1268640010002&taxyear=2025&type=real",
       "flags": [
@@ -7766,7 +7766,7 @@
       "mail_city": "BELLAIRE",
       "mail_state": "TX",
       "mail_zip": "77401-3301",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153550",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153550",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1289840010009&taxyear=2025&type=real",
       "flags": [
@@ -7792,7 +7792,7 @@
       "mail_city": "SPRING",
       "mail_state": "TX",
       "mail_zip": "77379-8063",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153548",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153548",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1286170060018&taxyear=2025&type=real",
       "flags": [
@@ -7818,7 +7818,7 @@
       "mail_city": "KATY",
       "mail_state": "TX",
       "mail_zip": "77493-4014",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153542",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153542",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1347880050003&taxyear=2025&type=real",
       "flags": [
@@ -7844,7 +7844,7 @@
       "mail_city": "DALLAS",
       "mail_state": "TX",
       "mail_zip": "75206-5181",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153534",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153534",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=0421850000530&taxyear=2025&type=real",
       "flags": [
@@ -7870,7 +7870,7 @@
       "mail_city": "CYPRESS",
       "mail_state": "TX",
       "mail_zip": "77433-8489",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153531",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153531",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1467020010002&taxyear=2025&type=real",
       "flags": [
@@ -7896,7 +7896,7 @@
       "mail_city": "SPRING",
       "mail_state": "TX",
       "mail_zip": "77379-3274",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153530",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153530",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1221180010048&taxyear=2025&type=real",
       "flags": [
@@ -7922,7 +7922,7 @@
       "mail_city": "SPRING",
       "mail_state": "TX",
       "mail_zip": "77373-2717",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153529",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153529",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1503660010028&taxyear=2025&type=real",
       "flags": [
@@ -7948,7 +7948,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77084-5868",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153526",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153526",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1229510030022&taxyear=2025&type=real",
       "flags": [
@@ -7974,7 +7974,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77089-1586",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153523",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153523",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1376010010023&taxyear=2025&type=real",
       "flags": [
@@ -8000,7 +8000,7 @@
       "mail_city": "CYPRESS",
       "mail_state": "TX",
       "mail_zip": "77433-2442",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153522",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153522",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1268300020004&taxyear=2025&type=real",
       "flags": [
@@ -8026,7 +8026,7 @@
       "mail_city": "HUMBLE",
       "mail_state": "TX",
       "mail_zip": "77396-1575",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153513",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153513",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1263860010015&taxyear=2025&type=real",
       "flags": [
@@ -8052,7 +8052,7 @@
       "mail_city": "BALDWIN PARK",
       "mail_state": "CA",
       "mail_zip": "91706-3600",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153512",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153512",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1087610000015&taxyear=2025&type=real",
       "flags": [
@@ -8078,7 +8078,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77048-5623",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153511",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153511",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1375220020024&taxyear=2025&type=real",
       "flags": [
@@ -8104,7 +8104,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77004-3098",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153508",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153508",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1292180000004&taxyear=2025&type=real",
       "flags": [
@@ -8130,7 +8130,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77085-3371",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153482",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153482",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1239470060019&taxyear=2025&type=real",
       "flags": [
@@ -8156,7 +8156,7 @@
       "mail_city": "SPRING",
       "mail_state": "TX",
       "mail_zip": "77379-3635",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153472",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153472",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1231190040005&taxyear=2025&type=real",
       "flags": [
@@ -8182,7 +8182,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77025-3819",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153469",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153469",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1288860000053&taxyear=2025&type=real",
       "flags": [
@@ -8208,7 +8208,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77060-4143",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153455",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153455",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1014640000004&taxyear=2025&type=real",
       "flags": [
@@ -8234,7 +8234,7 @@
       "mail_city": "HUMBLE",
       "mail_state": "TX",
       "mail_zip": "77346-4222",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153437",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153437",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1397650040004&taxyear=2025&type=real",
       "flags": [
@@ -8260,7 +8260,7 @@
       "mail_city": "SPRING",
       "mail_state": "TX",
       "mail_zip": "77389-4355",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153433",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153433",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1304830010006&taxyear=2025&type=real",
       "flags": [
@@ -8286,7 +8286,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77080-1132",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153432",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153432",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1454900040001&taxyear=2025&type=real",
       "flags": [
@@ -8312,7 +8312,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77072-2231",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153427",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153427",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1020410000067&taxyear=2025&type=real",
       "flags": [
@@ -8338,7 +8338,7 @@
       "mail_city": "KINGWOOD",
       "mail_state": "TX",
       "mail_zip": "77339-3210",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153411",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153411",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=0990120000017&taxyear=2025&type=real",
       "flags": [
@@ -8364,7 +8364,7 @@
       "mail_city": "SPRING",
       "mail_state": "TX",
       "mail_zip": "77388-2756",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153401",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153401",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1297940030013&taxyear=2025&type=real",
       "flags": [
@@ -8390,7 +8390,7 @@
       "mail_city": "TOMBALL",
       "mail_state": "TX",
       "mail_zip": "77377-3081",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153398",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153398",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1467690060023&taxyear=2025&type=real",
       "flags": [
@@ -8416,7 +8416,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77044-2574",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153395",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153395",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1242000020004&taxyear=2025&type=real",
       "flags": [
@@ -8442,7 +8442,7 @@
       "mail_city": "SPRING",
       "mail_state": "TX",
       "mail_zip": "77379-6692",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153389",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153389",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1282380010011&taxyear=2025&type=real",
       "flags": [
@@ -8468,7 +8468,7 @@
       "mail_city": "KATY",
       "mail_state": "TX",
       "mail_zip": "77493-8200",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153387",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153387",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1424780010037&taxyear=2025&type=real",
       "flags": [
@@ -8494,7 +8494,7 @@
       "mail_city": "SPRING",
       "mail_state": "TX",
       "mail_zip": "77379-4780",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153359",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153359",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1175340020001&taxyear=2025&type=real",
       "flags": [
@@ -8520,7 +8520,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77095-2852",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153331",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153331",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1279020010030&taxyear=2025&type=real",
       "flags": [
@@ -8546,7 +8546,7 @@
       "mail_city": "CYPRESS",
       "mail_state": "TX",
       "mail_zip": "77433-8361",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153306",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153306",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1461010020009&taxyear=2025&type=real",
       "flags": [
@@ -8572,7 +8572,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77095-4247",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153303",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153303",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1162390060026&taxyear=2025&type=real",
       "flags": [
@@ -8598,7 +8598,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77038-1727",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153302",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153302",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1147080010001&taxyear=2025&type=real",
       "flags": [
@@ -8624,7 +8624,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77082-3628",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153286",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153286",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1253650190003&taxyear=2025&type=real",
       "flags": [
@@ -8650,7 +8650,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77044-1374",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153280",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153280",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1309870020010&taxyear=2025&type=real",
       "flags": [
@@ -8676,7 +8676,7 @@
       "mail_city": "KATY",
       "mail_state": "TX",
       "mail_zip": "77493-3840",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153275",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153275",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1397770020015&taxyear=2025&type=real",
       "flags": [
@@ -8702,7 +8702,7 @@
       "mail_city": "FRIENDSWOOD",
       "mail_state": "TX",
       "mail_zip": "77546-2234",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153270",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153270",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1446950020019&taxyear=2025&type=real",
       "flags": [
@@ -8728,7 +8728,7 @@
       "mail_city": "KATY",
       "mail_state": "TX",
       "mail_zip": "77493-5243",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153254",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153254",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1461730040013&taxyear=2025&type=real",
       "flags": [
@@ -8754,7 +8754,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77076-3630",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153242",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153242",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=0740910000014&taxyear=2025&type=real",
       "flags": [
@@ -8780,7 +8780,7 @@
       "mail_city": "HOCKLEY",
       "mail_state": "TX",
       "mail_zip": "77447-9155",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153241",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153241",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1163510010059&taxyear=2025&type=real",
       "flags": [
@@ -8806,7 +8806,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77045-4534",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153238",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153238",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1041940000019&taxyear=2025&type=real",
       "flags": [
@@ -8832,7 +8832,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77067-1278",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153231",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153231",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1154170010027&taxyear=2025&type=real",
       "flags": [
@@ -8858,7 +8858,7 @@
       "mail_city": "CYPRESS",
       "mail_state": "TX",
       "mail_zip": "77433-6764",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153224",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153224",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1377680010008&taxyear=2025&type=real",
       "flags": [
@@ -8884,7 +8884,7 @@
       "mail_city": "BAYTOWN",
       "mail_state": "TX",
       "mail_zip": "77521-2952",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153220",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153220",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1288150000083&taxyear=2025&type=real",
       "flags": [
@@ -8910,7 +8910,7 @@
       "mail_city": "KATY",
       "mail_state": "TX",
       "mail_zip": "77493-2773",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153217",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153217",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1308980010018&taxyear=2025&type=real",
       "flags": [
@@ -8936,7 +8936,7 @@
       "mail_city": "KATY",
       "mail_state": "TX",
       "mail_zip": "77449-0080",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153211",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153211",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1013370000047&taxyear=2025&type=real",
       "flags": [
@@ -8962,7 +8962,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77095-3470",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153199",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153199",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1160540050021&taxyear=2025&type=real",
       "flags": [
@@ -8988,7 +8988,7 @@
       "mail_city": "SPRING",
       "mail_state": "TX",
       "mail_zip": "77379-3470",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153195",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153195",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1288900020003&taxyear=2025&type=real",
       "flags": [
@@ -9014,7 +9014,7 @@
       "mail_city": "CYPRESS",
       "mail_state": "TX",
       "mail_zip": "77433-3597",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153190",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153190",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1446770020006&taxyear=2025&type=real",
       "flags": [
@@ -9040,7 +9040,7 @@
       "mail_city": "HOUSTON",
       "mail_state": "TX",
       "mail_zip": "77009-7325",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153189",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153189",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1291260010057&taxyear=2025&type=real",
       "flags": [
@@ -9066,7 +9066,7 @@
       "mail_city": "CYPRESS",
       "mail_state": "TX",
       "mail_zip": "77433-3850",
-      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?FileID=RP-2026-153186",
+      "clerk_url": "https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM=RP-2026-153186",
       "match_confidence": "high",
       "hcad_url": "https://public.hcad.org/records/details.asp?crypt=&acct=1444680010014&taxyear=2025&type=real",
       "flags": [
