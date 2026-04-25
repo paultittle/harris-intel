@@ -938,7 +938,7 @@ function renderTable() {
       <td style="max-width:160px;color:var(--muted2)" title="${esc(r.prop_address)}">${esc(r.prop_address) || `<span style='color:var(--muted)'>—</span>`}</td>
       <td style="font-family:var(--font-mono);color:var(--muted2)">${r.amount ? "$" + r.amount.toLocaleString() : "—"}</td>
       <td><div class="flags-cell">${flagPills(r.flags)}</div></td>
-      <td>${r.doc_num ? `<a class="doc-link" href="https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx" target="_blank" onclick="event.stopPropagation();navigator.clipboard.writeText('${esc(r.doc_num)}').catch(()=>{});showToast('Doc # ${esc(r.doc_num)} copied')">↗ View</a>` : "—"}</td>
+      <td>${r.doc_num ? `<a class="doc-link" href="https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx" target="_blank" onclick="event.stopPropagation();navigator.clipboard.writeText('${esc(r.doc_num)}').catch(()=>{});showToast('📋 ${esc(r.doc_num)} copied — paste into File Number field')">↗ View</a>` : "—"}</td>
     </tr>
   `).join("");
 
@@ -1133,13 +1133,11 @@ function showToast(msg) {
 function openDoc(e) {
   if (!CURRENT_REC) return;
   const docNum = CURRENT_REC.doc_num || '';
-  // Copy doc number to clipboard so user can paste into Film Code field
+  e.preventDefault();
   if (docNum) {
     navigator.clipboard.writeText(docNum).catch(()=>{});
-    showToast('Doc # ' + docNum + ' copied — paste into Film Code field on portal');
+    showToast('📋 ' + docNum + ' copied — paste into File Number on portal');
   }
-  // Open portal search page in new tab
-  e.preventDefault();
   window.open('https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx', '_blank');
 }
 
