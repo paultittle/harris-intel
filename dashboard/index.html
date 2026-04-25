@@ -938,7 +938,7 @@ function renderTable() {
       <td style="max-width:160px;color:var(--muted2)" title="${esc(r.prop_address)}">${esc(r.prop_address) || `<span style='color:var(--muted)'>—</span>`}</td>
       <td style="font-family:var(--font-mono);color:var(--muted2)">${r.amount ? "$" + r.amount.toLocaleString() : "—"}</td>
       <td><div class="flags-cell">${flagPills(r.flags)}</div></td>
-      <td>${r.clerk_url ? `<a class="doc-link" href="${esc(r.clerk_url)}" target="_blank" onclick="event.stopPropagation()">↗ View</a>` : "—"}</td>
+      <td>${r.doc_num ? `<a class="doc-link" href="https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx" target="_blank" onclick="event.stopPropagation();navigator.clipboard.writeText('${esc(r.doc_num)}').catch(()=>{});showToast('Doc # ${esc(r.doc_num)} copied')">↗ View</a>` : "—"}</td>
     </tr>
   `).join("");
 
