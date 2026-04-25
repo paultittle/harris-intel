@@ -114,18 +114,26 @@ def _is_person(n):
 
 def _extract_names(raw):
     if not raw: return "",""
-    norm=re.sub(r'Grantor\s*:','Grantor:',raw)
-    norm=re.sub(r'Grantee\s*:','Grantee:',norm)
+    # Normalize spacing around colons
+    norm = re.sub(r'Grantor\s*:\s*', 'Grantor:', raw)
+    norm = re.sub(r'Grantee\s*:\s*', 'Grantee:', norm)
+    norm = re.sub(r'Trustee\s*:\s*', 'Grantee:', norm)  # treat Trustee as Grantee
+
     if "Grantor:" not in norm and "Grantee:" not in norm:
         parts=[p.strip() for p in raw.split("\n") if p.strip()]
         return parts[0] if parts else "",parts[1] if len(parts)>1 else ""
+
+    # Extract ALL grantors and grantees
     grantors=re.findall(r"Grantor:([^G]+?)(?=Grantor:|Grantee:|$)",norm)
     grantees=re.findall(r"Grantee:([^G]+?)(?=Grantor:|Grantee:|$)",norm)
     grantors=[n.strip() for n in grantors if n.strip()]
     grantees=[n.strip() for n in grantees if n.strip()]
-    bg=next((n for n in grantors if _is_person(n)),grantors[0] if grantors else "")
-    be=next((n for n in grantees if _is_person(n)),grantees[0] if grantees else "")
-    return bg,be
+
+    # Join ALL grantors with semicolon — show complete picture
+    all_grantors = "; ".join(g for g in grantors if g)
+    all_grantees = "; ".join(g for g in grantees if g)
+
+    return all_grantors, all_grantees
 
 def _parse_legal(legal):
     if not legal: return {}
