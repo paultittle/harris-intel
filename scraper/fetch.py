@@ -304,19 +304,30 @@ def parse_row_8cell(cells):
             txt=cell.get_text(strip=True)
             if re.match(r'^RP-\d{4}-\d+$',txt): doc_num=txt; break
     clerk_url=""
-    # Build proper clerk URL from doc_num — don't use javascript: links
-    if doc_num:
-        clerk_url=f"{CLERK_BASE}?FileID={doc_num}"
-    else:
-        # Try to get URL from any anchor that isn't javascript
-        for cell in cells:
-            a=cell.find("a",href=True)
-            if a:
-                h=a["href"]
-                if h.startswith("http"):
-                    clerk_url=h; break
-                elif h.startswith("/") and "javascript" not in h.lower():
-                    clerk_url="https://www.cclerk.hctx.net"+h; break
+    # Col 7 = Film Code — contains the actual document viewer link
+    if len(cells)>7:
+        film_cell=cells[7]
+        # Get the film code text
+        film_text=film_cell.get_text(strip=True)
+        # Check for any anchor in the cell
+        a=film_cell.find("a",href=True)
+        if a:
+            h=a["href"]
+            if h.startswith("http"):
+                clerk_url=h
+            elif h.startswith("/"):
+                clerk_url="https://www.cclerk.hctx.net"+h
+            # javascript:__doPostBack links — build search URL instead
+            elif "doPostBack" in h or "javascript" in h.lower():
+                # Use Film Code search URL — user clicks Search to get to doc
+                clerk_url=(f"https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx"
+                           f"?PT=RP&ST=FM&FM={film_text}")
+        elif film_text:
+            clerk_url=(f"https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx"
+                       f"?PT=RP&ST=FM&FM={film_text}")
+    if not clerk_url and doc_num:
+        clerk_url=(f"https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx"
+                   f"?PT=RP&ST=FM&FM={doc_num}")
     grantor,grantee=_extract_names(raw_names)
     return {"doc_num":doc_num,"doc_type":raw_type,"filed":parse_date(filed),
             "cat":cat,"cat_label":cat_label,"owner":grantor,"grantee":grantee,
