@@ -320,9 +320,9 @@ def parse_row_8cell(cells):
             # javascript:__doPostBack links — build search URL instead
             elif "doPostBack" in h or "javascript" in h.lower():
                 # Use Film Code search URL — user clicks Search to get to doc
-                clerk_url=(f"https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM={film_text}")
+                clerk_url=("https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx")
         elif film_text:
-            clerk_url=(f"https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx?PT=RP&ST=FM&FM={film_text}")
+            clerk_url=("https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx")
     if not clerk_url and doc_num:
         clerk_url=(f"https://www.cclerk.hctx.net/Applications/WebSearch/WI.aspx"
                    f"?ID={doc_num}")
