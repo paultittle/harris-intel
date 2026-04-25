@@ -431,10 +431,25 @@ def http_search(session, start_date, end_date):
                          [(i.get("name",""),len(i.get("value",""))) for i in inputs[:5]])
                 break
 
+            ev  = vs("__EVENTVALIDATION")
+            vsg = vs("__VIEWSTATEGENERATOR")
+            log.info("  VIEWSTATE=%d EV=%d VSG=%d",
+                     len(viewstate), len(ev), len(vsg))
+
+            # Log all hidden inputs for debugging
+            hidden = soup.find_all("input", {"type":"hidden"})
+            log.info("  Hidden fields: %s",
+                     [(h.get("name",""), len(h.get("value",""))) for h in hidden])
+
+            # Log all visible inputs
+            visible = soup.find_all("input", {"type":["text","submit"]})
+            log.info("  Visible inputs: %s",
+                     [(v.get("name",""), v.get("id",""), v.get("value","")) for v in visible])
+
             payload={
                 "__VIEWSTATE":          viewstate,
-                "__VIEWSTATEGENERATOR": vs("__VIEWSTATEGENERATOR"),
-                "__EVENTVALIDATION":    vs("__EVENTVALIDATION"),
+                "__VIEWSTATEGENERATOR": vsg,
+                "__EVENTVALIDATION":    ev,
                 "__EVENTTARGET":        "",
                 "__EVENTARGUMENT":      "",
                 "ctl00$ContentPlaceHolder1$txtFrom":   start_date,
@@ -443,7 +458,13 @@ def http_search(session, start_date, end_date):
             }
 
             log.info("  POSTing form with dates %s → %s ...", start_date, end_date)
-            r2=session.post(CLERK_BASE, data=payload, timeout=60, allow_redirects=True)
+            r2=session.post(CLERK_BASE, data=payload, timeout=60,
+                           allow_redirects=True,
+                           headers={
+                               "Content-Type": "application/x-www-form-urlencoded",
+                               "Referer": CLERK_BASE,
+                               "Origin": "https://www.cclerk.hctx.net",
+                           })
             log.info("  POST: HTTP %d, %d bytes, url=%s",
                      r2.status_code, len(r2.content), r2.url[:80])
 
