@@ -742,7 +742,7 @@
   </div>
   <div class="drawer-body" id="drawerBody"></div>
   <div class="drawer-footer">
-    <a class="btn btn-accent" id="drawerViewLink" href="#" target="_blank" onclick="openDoc(event)">View Document ↗</a>
+    <a class="btn btn-accent" id="drawerViewLink" href="#" target="_blank" onclick="openDoc(event)">Open Portal + Copy Doc # ↗</a>
     <button class="btn" onclick="copyRecord()">Copy Record</button>
   </div>
 </div>
@@ -1132,17 +1132,15 @@ function showToast(msg) {
 // ─── DOCUMENT VIEWER ──────────────────────────────────────────────────────────
 function openDoc(e) {
   if (!CURRENT_REC) return;
-  const url = CURRENT_REC.clerk_url;
-  if (!url) return;
-  // If it's a Film Code search URL, open and note user needs to click Search
-  if (url.includes('ST=FM')) {
-    e.preventDefault();
-    // Open in new tab
-    const w = window.open(url, '_blank');
-    showToast('Page opens → click Search → click Film Code to view document');
-    return false;
+  const docNum = CURRENT_REC.doc_num || '';
+  // Copy doc number to clipboard so user can paste into Film Code field
+  if (docNum) {
+    navigator.clipboard.writeText(docNum).catch(()=>{});
+    showToast('Doc # ' + docNum + ' copied — paste into Film Code field on portal');
   }
-  // Otherwise open normally
+  // Open portal search page in new tab
+  e.preventDefault();
+  window.open('https://www.cclerk.hctx.net/Applications/WebSearch/RP.aspx', '_blank');
 }
 
 // ─── BOOT ─────────────────────────────────────────────────────────────────────
