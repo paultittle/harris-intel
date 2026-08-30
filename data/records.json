@@ -1,9 +1,9 @@
 {
-  "fetched_at": "2026-08-29T12:52:12.987626+00:00",
+  "fetched_at": "2026-08-30T12:21:42.289779+00:00",
   "source": "Harris County Clerk - Real Property Records",
   "date_range": {
-    "from": "2026-08-22",
-    "to": "2026-08-29"
+    "from": "2026-08-23",
+    "to": "2026-08-30"
   },
   "total": 295,
   "with_address": 288,
